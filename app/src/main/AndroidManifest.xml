@@ -32,8 +32,8 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Define the scheme, host, and path for your deep link -->
-                <data android:scheme="http" android:host="e-corpcompanygroupmovieslander.github.io" android:path="/Movie-Lander-Build/app/src/main/assets/app/index.html" />
-                <data android:scheme="https" android:host="e-corpcompanygroupmovieslander.github.io" android:path="/Movie-Lander-Build/app/src/main/assets/app/index.html" />
+                <data android:scheme="http" android:host="e-corpcompanygroupmovieslander.github.io" android:path="/Movie_Lander_Build/app/src/main/assets/App/index.html" />
+                <data android:scheme="https" android:host="e-corpcompanygroupmovieslander.github.io" android:path="/Movie_Lander_Build/app/src/main/assets/App/index.html" />
             </intent-filter>
 
         </activity>
