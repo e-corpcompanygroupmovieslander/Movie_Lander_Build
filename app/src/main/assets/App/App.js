@@ -1,8 +1,11 @@
 APPMODE(localStorage.getItem('AppColour'),'','#121212');
+STORE('local','AppVersion','0.0.3');
 
 APPCOLOR('','#ffffff');
 
 const APPSTART=()=>{
+
+    EXTERNALCSS('https://e-corpcompanygroupmovieslander.github.io/Movie_Lander_Build/app/src/main/assets/Connection/Connection.css')
 
     CHECK('',(result)=>{
 
