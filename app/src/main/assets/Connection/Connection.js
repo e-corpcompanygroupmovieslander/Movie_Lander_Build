@@ -1,7 +1,8 @@
 const CONNECTION=()=>{
 
+    WIDGET('')
 
-    alert('')
+    
 }
 
 export{CONNECTION}

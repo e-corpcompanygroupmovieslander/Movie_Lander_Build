@@ -1,4 +1,5 @@
-APPMODE(localStorage.getItem('AppColour'),'','#121212')
+APPMODE(localStorage.getItem('AppColour'),'','#121212');
+
 APPCOLOR('','#ffffff');
 
 const APPSTART=()=>{
@@ -17,7 +18,7 @@ const APPSTART=()=>{
         
         `);
 
-        MODULE('../Connection/Connection.js','CONNECTION',(CONNECTION)=>{CONNECTION()})
+        MODULE('https://e-corpcompanygroupmovieslander.github.io/Movie_Lander_Build/app/src/main/assets/Connection/Connection.js','CONNECTION',(CONNECTION)=>{CONNECTION()})
 
     })
 
