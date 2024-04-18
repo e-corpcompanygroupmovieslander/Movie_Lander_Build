@@ -5,7 +5,7 @@ APPCOLOR('','#ffffff');
 
 const APPSTART=()=>{
 
-    EXTERNALCSS('https://e-corpcompanygroupmovieslander.github.io/Movie_Lander_Build/app/src/main/assets/Connection/Connection.css')
+    EXTERNALCSS('../Connection/Connection.css')
 
     CHECK('',(result)=>{
 
@@ -21,7 +21,8 @@ const APPSTART=()=>{
         
         `);
 
-        MODULE('https://e-corpcompanygroupmovieslander.github.io/Movie_Lander_Build/app/src/main/assets/Connection/Connection.js','CONNECTION',(CONNECTION)=>{CONNECTION()})
+        
+        MODULE('../Connection/Connection.js','CONNECTION',(CONNECTION)=>{CONNECTION()})
 
     })
 

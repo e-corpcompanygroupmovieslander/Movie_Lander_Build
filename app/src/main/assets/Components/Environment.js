@@ -1,1 +1,1 @@
-ENVIRONMENT('');STORE('local','FrameWork','Advance-Native');STORE('local','FrameWorkVersion','0.0.1');STORE('local','Device','Android');ZOOM();CLICKED('body',()=>{HIDENAVIGATIONBAR()});
+ENVIRONMENT('Test');STORE('local','FrameWork','Advance-Native');STORE('local','FrameWorkVersion','0.0.1');STORE('local','Device','Android');ZOOM();CLICKED('body',()=>{HIDENAVIGATIONBAR()});
