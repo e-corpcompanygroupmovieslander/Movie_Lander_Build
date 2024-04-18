@@ -1,0 +1,15 @@
+.AppLogo{
+    width: 30%;
+    border-radius: 20px;
+    margin: 10% 35% ;
+}
+
+#OfflineImage{
+    width: 8%;
+    height: auto;
+    margin: 5% 45% ;
+}
+
+.LoaderMessage{
+    font-size: 20px;
+}
