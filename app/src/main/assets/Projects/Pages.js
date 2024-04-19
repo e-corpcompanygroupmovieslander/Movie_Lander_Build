@@ -12,7 +12,7 @@ const CREATEACCOUNTPAGE=()=>{
         <input class='UserPassword' type='password' placeholder='Enter User Password' />
         <input class='UserDate' type='text' placeholder='Enter Date Of Birth' />
         <input class='Userlocation' type='text' placeholder='Enter User Location' Readonly />
-        <h1 class='CodeDisplay'>+</h1>
+        <h1 class='CodeDisplay'></h1>
         <input class='UserTel' maxlength='10' type='tel' placeholder='Enter User Telephone' />
         <button class='forestgreen'>Create Account</button>
         <button class='blue'>Login</button>
@@ -109,6 +109,7 @@ const CREATEACCOUNTPAGE=()=>{
             "UserDate":UserDate.value,
             "Userlocation":Userlocation.value,
             "UserTel":UserTel.value,
+            "UserCode":"+"
         }
         JSONIFICATION(STOREDDATA,(data)=>{
             STORE('','UserData',data);
