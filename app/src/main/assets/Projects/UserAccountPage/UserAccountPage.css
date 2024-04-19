@@ -11,6 +11,8 @@
 .Button{
     display: inline-flex;
     background: brown;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .Title{
