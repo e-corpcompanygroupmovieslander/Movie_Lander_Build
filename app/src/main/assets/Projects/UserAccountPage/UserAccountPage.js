@@ -4,6 +4,7 @@ import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
 import { CONTACTUSPAGE } from "../ContactUsPage/ContactUsPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
 import { LIBRARYPAGE } from "../Library/Library.js";
+import { MOREAPPSPAGE } from "../MoreAppPage/MoreAppPage.js";
 import { SETTINGSPAGE } from "../SettingsPage/SettingsPage.js";
 
 export const USERACCOUNTPAGE=()=>{
@@ -56,7 +57,7 @@ export const USERACCOUNTPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button  id='MoreApps' class='Button'>
 
             <h1 class='Title' >More Apps</h1>
 
@@ -89,6 +90,8 @@ export const USERACCOUNTPAGE=()=>{
     CLICKED('#Library',()=>{LIBRARYPAGE()});
 
     CLICKED('#SettingsPage',()=>{SETTINGSPAGE()});
+
+    CLICKED('#MoreApps',()=>{MOREAPPSPAGE()});
 
     CLICKED('#ContactUs',()=>{CONTACTUSPAGE()});
 

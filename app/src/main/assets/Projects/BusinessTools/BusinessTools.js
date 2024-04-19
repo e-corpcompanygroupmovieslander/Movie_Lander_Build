@@ -5,7 +5,7 @@ export const BUSINESSTOOLSPAGE=()=>{
 
     BACKHEADERWIDGET(()=>{USERACCOUNTPAGE()}, 
     `
-    <h1 class='Profile'>Community</h1>
+    <h1 class='Profile'>Business Tools</h1>
 
     `,
     `
