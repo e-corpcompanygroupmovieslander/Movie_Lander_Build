@@ -1,9 +1,31 @@
+import { ICONMODULE } from "../../Modules/Module.js"
+
 export const  HOMEPAGE=()=>{
 
     ROUNDFOOTERWIDGET(`
 
+        <div class='View'></div>
+
+        <div class='View'></div>
+
+        <div class='View'></div>
+
+        <div class='View'></div>
+
+        <div class='View'></div>
+
+        <div class='View'></div>
+
+        <div class='View'></div>
+
+        <br><br><br>
+
     `,`
-    <img src='${ICONM}'
+        <img src='${ICONMODULE}list.png'/>
+
+        <img src='${ICONMODULE}movies.png'/>
+
+        <img src='${ICONMODULE}profile.png'/>
 
     `)
 
