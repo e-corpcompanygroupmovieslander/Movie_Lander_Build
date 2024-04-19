@@ -2,14 +2,13 @@ import { ICONMODULE } from "../../Modules/Module.js"
 import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { FREEWATCHPAGE } from "../FreeWatchPage/FreeWatchPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
+import { LATESTANIMATION } from "./HomeMovies/LatestAnimation/LatestAnimation.js";
 
 export const  HOMEPAGE=()=>{
 
-    DISPLAY('',``);
-
     ROUNDFOOTERWIDGET(`
 
-        <div class='View'></div>
+        <div id='LatestAnimation' class='View'></div>
 
         <div class='View'></div>
 
@@ -39,5 +38,8 @@ export const  HOMEPAGE=()=>{
     CLICKED('.FreeWatch',()=>{FREEWATCHPAGE()})
 
     CLICKED('.UserAccount',()=>{USERACCOUNTPAGE()})
+
+    //IMPORT HOME SECTIONS
+    LATESTANIMATION();
 
 }

@@ -1,4 +1,4 @@
-import { CATERGORYAPI, FREEMOVIESAPI } from "../../Modules/Module.js"
+import { ANIMATIONAPI, CATERGORYAPI, FREEMOVIESAPI, MOVIESAPI } from "../../Modules/Module.js"
 
 const AUTOAPPDATADOWNLOAD=()=>{
 
@@ -12,6 +12,15 @@ const AUTOAPPDATADOWNLOAD=()=>{
         JSONIFICATION(data,(data)=>{STORE('local','FreeMoviesData',data)})
     })
 
+    //ANIMATION SECTION
+    GETPACKAGE(ANIMATIONAPI,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{STORE('local','AnimationsMovies',data)})
+    })
+
+    //ACTION SECTION
+    GETPACKAGE(MOVIESAPI,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{STORE('local','ActionMovies',data)})
+    })
 
 }
 export{AUTOAPPDATADOWNLOAD}
