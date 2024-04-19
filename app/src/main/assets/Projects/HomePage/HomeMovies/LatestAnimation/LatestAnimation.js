@@ -10,7 +10,7 @@ export const LATESTANIMATION=()=>{
 
                 DISPLAY(ELEMENT,`
 
-                    <img id='LatestImage' class='MovieImage' src='${MOVIESPATH+data.MovieImage}'/>
+                    <img class='LatestImage' src='${MOVIESPATH+data.MovieImage}'/>
                 
                 `)
 
