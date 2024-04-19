@@ -1,12 +1,1 @@
-.Name{
-    font-size: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 0.5rem;
-}
-
-.LocationIcons{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 0.5rem;
-}
+@import url('../Projects/LoginPage/LoginPage.css');

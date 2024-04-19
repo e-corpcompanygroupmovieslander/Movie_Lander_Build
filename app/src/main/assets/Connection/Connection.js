@@ -1,15 +1,14 @@
 import { HOMEPAGE } from "../Projects/HomePage/HomePage.js";
-import { CREATACCOUNTVERIFICATION, LOGINPAGE } from "../Projects/Pages.js";
+import { LOGINPAGE } from "../Projects/LoginPage/LoginPage.js";
 
 const CONNECTION = () => {
 
-    CONDITION(localStorage.getItem("User"),
-        () => HOMEPAGE(),
-        () => CONDITION(localStorage.getItem('UserData') && !localStorage.getItem('User'),
-            ()=>CREATACCOUNTVERIFICATION(),
-            ()=>LOGINPAGE()
-        )
-    );
+    CONDITION(localStorage.getItem('User'),
+
+    ()=>HOMEPAGE(),
+    ()=>LOGINPAGE()
+
+    )
 
 };
 
