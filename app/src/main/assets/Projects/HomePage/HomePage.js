@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 
 export const  HOMEPAGE=()=>{
 
@@ -25,8 +26,10 @@ export const  HOMEPAGE=()=>{
 
         <img src='${ICONMODULE}movies.png'/>
 
-        <img src='${ICONMODULE}profile.png'/>
+        <img class='UserAccount' src='${ICONMODULE}profile.png'/>
 
     `)
+
+    CLICKED('.UserAccount',()=>{USERACCOUNTPAGE()})
 
 }
