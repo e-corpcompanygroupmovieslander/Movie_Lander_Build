@@ -1,4 +1,4 @@
-import { ICONMODULE } from "../Modules/IconsModule.js"
+import { ICONMODULE } from "../../Modules/IconsModule.js"
 
 const HOMEPAGE=()=>{
 
