@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
 
 export const USERACCOUNTPAGE=()=>{
@@ -19,7 +20,7 @@ export const USERACCOUNTPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='Community' class='Button'>
 
             <h1 class='Title' >Community</h1>
 
@@ -75,6 +76,10 @@ export const USERACCOUNTPAGE=()=>{
         
         </button>
 
-    `)
+    `);
+
+    CLICKED('#Community',()=>{COMMUNITYPAGE()});
+
+
 
 }
