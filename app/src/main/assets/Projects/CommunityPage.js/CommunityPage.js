@@ -36,6 +36,14 @@ export const COMMUNITYPAGE=()=>{
             <img class='Icons' src='${ICONMODULE}chat.png'/>
         
         </button>
+
+        <button class='Button'>
+
+            <h1 class='Title' >Movie Night</h1>
+
+            <img class='Icons' src='${ICONMODULE}movie-night.png'/>
+        
+        </button>
     
     ` 
 

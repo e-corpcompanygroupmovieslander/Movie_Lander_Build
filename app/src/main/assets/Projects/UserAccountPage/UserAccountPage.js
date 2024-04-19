@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { BUSINESSTOOLSPAGE } from "../BusinessTools/BusinessTools.js";
 import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
 
@@ -28,7 +29,7 @@ export const USERACCOUNTPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='BusinessTools' class='Button'>
 
             <h1 class='Title' >Business Tools</h1>
 
@@ -79,6 +80,8 @@ export const USERACCOUNTPAGE=()=>{
     `);
 
     CLICKED('#Community',()=>{COMMUNITYPAGE()});
+
+    CLICKED('#BusinessTools',()=>{BUSINESSTOOLSPAGE()});
 
 
 
