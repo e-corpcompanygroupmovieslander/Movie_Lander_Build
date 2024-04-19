@@ -11,8 +11,8 @@ const CREATEACCOUNTPAGE=()=>{
     <input type='email' placeholder='Enter UserEmail' />
     <input type='password' placeholder='Enter User Password' />
     <input type='text' placeholder='Enter Date Of Birth' />
-    <input type='text' placeholder='Enter User Location' />
-    <input type='text' placeholder='Enter User Telephone' />
+    <input type='text' placeholder='Enter User Location' Readonly />
+    <input type='tel' placeholder='Enter User Telephone' />
     <button class='forestgreen'>Create Account</button>
     <button class='blue'>Login</button>
     `)
