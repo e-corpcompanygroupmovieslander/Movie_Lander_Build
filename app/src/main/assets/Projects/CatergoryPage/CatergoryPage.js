@@ -33,15 +33,7 @@ export const CATERGORYPAGE=()=>{
 
                     EVENT(HOLDER,'click',()=>{
 
-                        BACKHEADERWIDGET(()=>{FREEWATCHPAGE()},`
-
-                            <h1 class='Profile'>${element.MovieName}</h1>
-                        
-                        `,`
-                            <iframe src='https://www.youtube.com/embed/${element.MoveTrailer}'/></iframe>
-                        
-                        `)
-                        
+                       
                     })
                     
                     ADD(ELEMENT,HOLDER);
