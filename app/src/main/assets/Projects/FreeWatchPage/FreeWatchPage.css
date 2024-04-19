@@ -1,0 +1,14 @@
+.FreeDivHolder{
+    position: relative;
+    width: 30%;
+    height: 30%;
+    display: inline-table;
+    border-radius: 10px;
+    margin: 1% 1.2%;
+}
+
+.MovieImage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
