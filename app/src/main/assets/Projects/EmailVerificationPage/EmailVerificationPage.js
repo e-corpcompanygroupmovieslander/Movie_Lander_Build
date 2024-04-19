@@ -6,8 +6,6 @@ export const EMAILVERIFICATIONPAGE=()=>{
 
         <img class='AppLogo' src='../Library/Images/app_icon.png'/>
 
-        <h1 class='LoaderMessage'>Enter Verification Code Sent</h1>
-
         <input type='email' placeholder='Enter Verification Code'/>
 
         <h1 class='ForgotPassword'>Resend Code? </h1>
