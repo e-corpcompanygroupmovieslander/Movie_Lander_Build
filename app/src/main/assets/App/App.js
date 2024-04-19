@@ -1,5 +1,5 @@
 APPMODE(localStorage.getItem("AppColour"), "", "#121212");
-STORE("local", "AppVersion", "0.0.3");
+STORE("local", "AppVersion", "0.0.4");
 APPCOLOR("", "#ffffff");
 const APPSTART = () => {
     EXTERNALCSS("../Connection/Connection.css");
