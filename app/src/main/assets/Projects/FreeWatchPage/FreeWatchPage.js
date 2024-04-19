@@ -19,8 +19,6 @@ export const FREEWATCHPAGE=()=>{
 
             REDUX(data,(element)=>{
 
-               console.log(element)
-
                 CREATEELEMENT('div','FreeDivHolder',(HOLDER)=>{
 
                     DISPLAY(HOLDER,`
