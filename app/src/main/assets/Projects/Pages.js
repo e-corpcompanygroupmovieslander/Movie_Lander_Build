@@ -102,6 +102,8 @@ const CREATEACCOUNTPAGE=()=>{
         <button class='brown'>Close</button>
         <div class='CountryDivHolder'></div>
         `)
+
+        CLICKED('.brown',()=>{CREATEACCOUNTPAGE()});
         DECLARATION('.CountryDivHolder',(ELEMENT)=>{
             STYLED(ELEMENT,'top','75px'),STYLED(ELEMENT,'borderTop','1px solid #dcdcdc50'); STYLED(ELEMENT,'overflowY','auto')
             REDUX(COUNTRYDATA,(element)=>{
@@ -113,9 +115,24 @@ const CREATEACCOUNTPAGE=()=>{
                     <h1 class='Name'>${element.name}</h1>
                     <img class='LocationIcons' src='${ICONMODULE}location.png'/>
                     `)
-                   
+                    EVENT(BUTTON,'click',()=>{
+                        DEJSON('','UserData',(data)=>{
+                            const STOREDDATA={
+                                "UserName":data.UserName,
+                                "UserEmail":data.UserEmail,
+                                "UserPassword":data.UserPassword,
+                                "UserDate":data.UserDate,
+                                "Userlocation":element.name,
+                                "UserTel":element.phoneCode,
+                            }
+                            JSONIFICATION(STOREDDATA,(data)=>{
+                                STORE('','UserData',data);
+                            })
+                            CREATEACCOUNTPAGE()
+                        })
+                    })
                     ADD(ELEMENT,BUTTON)
-   
+                    
                 })
 
             })
