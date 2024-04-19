@@ -1,6 +1,10 @@
 const HOMEPAGE=()=>{
 
-    WIDGET(``)
+        ROUNDFOOTERWIDGET(`
+        `,`
+        <img src=''/>
+        `)
+
 }
 
 export{HOMEPAGE}
