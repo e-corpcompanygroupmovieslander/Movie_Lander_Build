@@ -2,6 +2,8 @@ import { ICONMODULE } from "../../Modules/Module.js"
 import { BUSINESSTOOLSPAGE } from "../BusinessTools/BusinessTools.js";
 import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
+import { LIBRARYPAGE } from "../Library/Library.js";
+import { SETTINGSPAGE } from "../SettingsPage/SettingsPage.js";
 
 export const USERACCOUNTPAGE=()=>{
 
@@ -37,7 +39,7 @@ export const USERACCOUNTPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='Library' class='Button'>
 
             <h1 class='Title' >My Library</h1>
 
@@ -45,7 +47,7 @@ export const USERACCOUNTPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='SettingsPage' class='Button'>
 
             <h1 class='Title' >Settings</h1>
 
@@ -82,6 +84,10 @@ export const USERACCOUNTPAGE=()=>{
     CLICKED('#Community',()=>{COMMUNITYPAGE()});
 
     CLICKED('#BusinessTools',()=>{BUSINESSTOOLSPAGE()});
+
+    CLICKED('#Library',()=>{LIBRARYPAGE()});
+
+    CLICKED('#SettingsPage',()=>{SETTINGSPAGE()});
 
 
 
