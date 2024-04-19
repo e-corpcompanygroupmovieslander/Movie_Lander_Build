@@ -1,7 +1,11 @@
 .Profile{
-    margin: auto auto auto 80% ;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1rem;
+    margin-left: auto;
     font-size: 16px;
     text-align: right;
+    width: auto
 }
 
 .Button{

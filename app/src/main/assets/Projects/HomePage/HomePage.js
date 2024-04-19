@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { FREEWATCHPAGE } from "../FreeWatchPage/FreeWatchPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 
 export const  HOMEPAGE=()=>{
@@ -24,11 +25,13 @@ export const  HOMEPAGE=()=>{
     `,`
         <img src='${ICONMODULE}list.png'/>
 
-        <img src='${ICONMODULE}movies.png'/>
+        <img  class='FreeWatch' src='${ICONMODULE}movies.png'/>
 
         <img class='UserAccount' src='${ICONMODULE}profile.png'/>
 
-    `)
+    `);
+
+    CLICKED('.FreeWatch',()=>{FREEWATCHPAGE()})
 
     CLICKED('.UserAccount',()=>{USERACCOUNTPAGE()})
 
