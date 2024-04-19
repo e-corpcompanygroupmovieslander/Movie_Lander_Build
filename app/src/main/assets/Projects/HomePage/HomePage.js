@@ -5,6 +5,8 @@ import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 
 export const  HOMEPAGE=()=>{
 
+    DISPLAY('',``);
+
     ROUNDFOOTERWIDGET(`
 
         <div class='View'></div>
