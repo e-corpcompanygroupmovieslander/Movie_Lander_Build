@@ -15,7 +15,6 @@ const CREATEACCOUNTPAGE=()=>{
     <input type='text' placeholder='Enter User Telephone' />
     <button class='forestgreen'>Create Account</button>
     <button class='blue'>Login</button>
-
     `)
 
     CLICKED('.blue',()=>{LOGINPAGE()})
