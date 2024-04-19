@@ -18,7 +18,9 @@ const HOMEPAGE=()=>{
         <img src='${ICONMODULE}list.png'/>
         <img src='${ICONMODULE}movies.png'/>
         <img src='${ICONMODULE}profile.png'/>
-    `)
+    `);
+
+    
 
 }
 
