@@ -12,10 +12,25 @@ const CREATEACCOUNTPAGE=()=>{
         <input class='UserPassword' type='password' placeholder='Enter User Password' />
         <input class='UserDate' type='text' placeholder='Enter Date Of Birth' />
         <input class='Userlocation' type='text' placeholder='Enter User Location' Readonly />
-        <input class='UserTel' type='tel' placeholder='Enter User Telephone' />
+        <h1 class='CodeDisplay'>+</h1>
+        <input class='UserTel' maxlength='10' type='tel' placeholder='Enter User Telephone' />
         <button class='forestgreen'>Create Account</button>
         <button class='blue'>Login</button>
     `)
+    DECLARATION('.CodeDisplay',(ELEMENT)=>{
+        STYLED(ELEMENT,'position','absolute');
+        STYLED(ELEMENT,'left','5%');
+        STYLED(ELEMENT,'fontSize','20px');
+        CONDITION(sessionStorage.getItem('UserData'),
+        ()=>CHECK(sessionStorage.getItem('UserData'),(result)=>{
+            DEJSON('','UserData',(data)=>{
+                DISPLAY(ELEMENT,data.UserCode);
+            })
+        }),
+        ()=>DISPLAY(ELEMENT,'+')
+        ) 
+        
+    })
     DECLARATION('.UserName',(ELEMENT)=>{
         CONDITION(sessionStorage.getItem('UserData'),
         ()=>CHECK(sessionStorage.getItem('UserData'),(result)=>{
@@ -68,6 +83,8 @@ const CREATEACCOUNTPAGE=()=>{
         )  
     });
     DECLARATION('.UserTel',(ELEMENT)=>{
+        STYLED(ELEMENT,'width','75%');
+        STYLED(ELEMENT,'left','20%');
         CONDITION(sessionStorage.getItem('UserData'),
         ()=>CHECK(sessionStorage.getItem('UserData'),(result)=>{
             DEJSON('','UserData',(data)=>{
@@ -123,7 +140,8 @@ const CREATEACCOUNTPAGE=()=>{
                                 "UserPassword":data.UserPassword,
                                 "UserDate":data.UserDate,
                                 "Userlocation":element.name,
-                                "UserTel":element.phoneCode,
+                                "UserTel":data.UserTel,
+                                "UserCode":element.phoneCode
                             }
                             JSONIFICATION(STOREDDATA,(data)=>{
                                 STORE('','UserData',data);
