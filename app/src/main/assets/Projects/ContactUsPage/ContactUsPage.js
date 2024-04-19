@@ -5,7 +5,7 @@ export const CONTACTUSPAGE=()=>{
 
     BACKHEADERWIDGET(()=>{USERACCOUNTPAGE()}, 
     `
-    <h1 class='Profile'>Settings</h1>
+    <h1 class='Profile'>Contact Us</h1>
 
     `,
     `
