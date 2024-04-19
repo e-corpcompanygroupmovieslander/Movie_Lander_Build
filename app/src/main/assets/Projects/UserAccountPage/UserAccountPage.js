@@ -1,6 +1,7 @@
 import { ICONMODULE } from "../../Modules/Module.js"
 import { BUSINESSTOOLSPAGE } from "../BusinessTools/BusinessTools.js";
 import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
+import { CONTACTUSPAGE } from "../ContactUsPage/ContactUsPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
 import { LIBRARYPAGE } from "../Library/Library.js";
 import { SETTINGSPAGE } from "../SettingsPage/SettingsPage.js";
@@ -63,7 +64,7 @@ export const USERACCOUNTPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='ContactUs' class='Button'>
 
             <h1 class='Title' >Contact Us</h1>
 
@@ -88,6 +89,9 @@ export const USERACCOUNTPAGE=()=>{
     CLICKED('#Library',()=>{LIBRARYPAGE()});
 
     CLICKED('#SettingsPage',()=>{SETTINGSPAGE()});
+
+    CLICKED('#ContactUs',()=>{CONTACTUSPAGE()});
+
 
 
 
