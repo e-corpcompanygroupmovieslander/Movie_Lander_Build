@@ -11,11 +11,11 @@ export const FREEWATCHPAGE=()=>{
         ``,'FreeWatchDiv'
     );
 
-    GETPACKAGE(FREEMOVIESAPI,'cors',(data)=>{
+    DEJSON('local','FreeMoviesData',(data)=>{
 
         DECLARATION('#FreeWatchDiv',(ELEMENT)=>{
 
-            DISPLAY(ELEMENT,'')
+            CLEAR(ELEMENT)
 
             REDUX(data,(element)=>{
 
@@ -50,4 +50,5 @@ export const FREEWATCHPAGE=()=>{
 
     })
 
+        
 }
