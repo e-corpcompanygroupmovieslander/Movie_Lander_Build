@@ -3,7 +3,7 @@ import { LOGINPAGE } from "../Projects/LoginPage/LoginPage.js";
 
 const CONNECTION = () => {
 
-    CONDITION(!localStorage.getItem('User'),
+    CONDITION(localStorage.getItem('User'),
 
     ()=>HOMEPAGE(),
     ()=>LOGINPAGE()

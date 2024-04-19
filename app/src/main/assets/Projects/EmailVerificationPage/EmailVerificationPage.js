@@ -1,4 +1,6 @@
 import { CREATEACCOUNTPAGE } from "../CreateAccountPage/CreateAccountPage.js"
+import { HOMEPAGE } from "../HomePage/HomePage.js";
+import { RESENDVERIFICATIONPAGE } from "./ResendVerification.js";
 
 export const EMAILVERIFICATIONPAGE=()=>{
 
@@ -16,6 +18,10 @@ export const EMAILVERIFICATIONPAGE=()=>{
 
     `)
 
-    CLICKED('.brown',()=>{CREATEACCOUNTPAGE()})
+    CLICKED('.brown',()=>{CREATEACCOUNTPAGE()});
+
+    CLICKED('.forestgreen',()=>{HOMEPAGE()})
+
+    CLICKED('.ForgotPassword',()=>{RESENDVERIFICATIONPAGE()})
     
 }

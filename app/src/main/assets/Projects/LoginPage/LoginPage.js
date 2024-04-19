@@ -1,5 +1,6 @@
 import { CREATEACCOUNTPAGE } from "../CreateAccountPage/CreateAccountPage.js"
 import { FORGOTPASSWORDPAGE } from "../ForgotPasswordPage/ForgotPasswordPage.js";
+import { HOMEPAGE } from "../HomePage/HomePage.js";
 
 export const LOGINPAGE=()=>{
     
@@ -22,6 +23,8 @@ export const LOGINPAGE=()=>{
     CLICKED('.blue',()=>{CREATEACCOUNTPAGE()});
 
     CLICKED('.ForgotPassword',()=>{FORGOTPASSWORDPAGE()})
+
+    CLICKED('.forestgreen',()=>{HOMEPAGE()});
 
 }
 

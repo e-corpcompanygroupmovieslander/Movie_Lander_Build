@@ -1,3 +1,4 @@
+import { EMAILVERIFICATIONPAGE } from "../EmailVerificationPage/EmailVerificationPage.js";
 import { LOGINPAGE } from "../LoginPage/LoginPage.js";
 
 export const CREATEACCOUNTPAGE=()=>{
@@ -24,6 +25,8 @@ export const CREATEACCOUNTPAGE=()=>{
 
     `);
 
-    CLICKED('.blue',()=>{LOGINPAGE()})
+    CLICKED('.blue',()=>{LOGINPAGE()});
+
+    CLICKED('.forestgreen',()=>{EMAILVERIFICATIONPAGE()})
 
 }

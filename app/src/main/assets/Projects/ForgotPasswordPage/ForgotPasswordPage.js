@@ -1,4 +1,5 @@
 import { LOGINPAGE } from "../LoginPage/LoginPage.js"
+import { FORGOTPASSWORDMESSAGEPAGE } from "./ForgotPasswordMessage.js"
 
 export const FORGOTPASSWORDPAGE=()=>{
 
@@ -15,5 +16,7 @@ export const FORGOTPASSWORDPAGE=()=>{
     `)
 
     CLICKED('.brown',()=>{LOGINPAGE()})
+
+    CLICKED('.forestgreen',()=>{FORGOTPASSWORDMESSAGEPAGE()})
     
 }
