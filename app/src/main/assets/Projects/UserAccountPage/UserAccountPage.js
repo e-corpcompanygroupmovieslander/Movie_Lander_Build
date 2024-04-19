@@ -5,6 +5,7 @@ import { CONTACTUSPAGE } from "../ContactUsPage/ContactUsPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
 import { LIBRARYPAGE } from "../Library/Library.js";
 import { MOREAPPSPAGE } from "../MoreAppPage/MoreAppPage.js";
+import { PREMIUMPAGE } from "../PremiumPage/PremiumPage.js";
 import { SETTINGSPAGE } from "../SettingsPage/SettingsPage.js";
 
 export const USERACCOUNTPAGE=()=>{
@@ -17,7 +18,7 @@ export const USERACCOUNTPAGE=()=>{
     `
         <div class='View'></div>
 
-        <button class='Button'>
+        <button id='Premium' class='Button'>
 
             <h1 class='Title' >Premium</h1>
 
@@ -82,6 +83,8 @@ export const USERACCOUNTPAGE=()=>{
         </button>
 
     `);
+
+    CLICKED('#Premium',()=>{PREMIUMPAGE()});
 
     CLICKED('#Community',()=>{COMMUNITYPAGE()});
 
