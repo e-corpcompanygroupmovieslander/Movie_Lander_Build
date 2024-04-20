@@ -1,4 +1,4 @@
-import { ANIMATIONAPI, CATERGORYAPI, FREEMOVIESAPI, MARATHONAPI, MOVIESAPI, SERIESAPI } from "../../Modules/Module.js"
+import { ANIMATIONAPI, CATERGORYAPI, FREEMOVIESAPI, MARATHONAPI, MOVIESAPI, NIGERIANAPI, SERIESAPI } from "../../Modules/Module.js"
 
 const AUTOAPPDATADOWNLOAD=()=>{
 
@@ -30,6 +30,11 @@ const AUTOAPPDATADOWNLOAD=()=>{
     //MARATHON SECTION
     GETPACKAGE(SERIESAPI,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{STORE('local','SeriesMovies',data)})
+    })
+
+    //NIGERIAN SECTION
+    GETPACKAGE(NIGERIANAPI,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{STORE('local','NigerianMovies',data)})
     })
 
 }

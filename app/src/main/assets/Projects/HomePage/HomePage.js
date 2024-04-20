@@ -8,6 +8,7 @@ import { HOMEMOVIES } from "./HomeMovies/HomeMovies/HomeMovies.js";
 import { HOMESERIES } from "./HomeMovies/HomeSeries/HomeSeries.js";
 import { LATESTANIMATION } from "./HomeMovies/LatestAnimation/LatestAnimation.js";
 import { LATESTACTIONMOVIE } from "./HomeMovies/LatestMovies/LatestMovies.js";
+import { LATESTNIGERIANMOVIE } from "./HomeMovies/LatestNigerian/LatestNigerian.js";
 
 export const  HOMEPAGE=()=>{
 
@@ -169,5 +170,6 @@ export const  HOMEPAGE=()=>{
     LATESTACTIONMOVIE();
     HOMEMARATHON();
     HOMESERIES();
+    LATESTNIGERIANMOVIE();
 
 }
