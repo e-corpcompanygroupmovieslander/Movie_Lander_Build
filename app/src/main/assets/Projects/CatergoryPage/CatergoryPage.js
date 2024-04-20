@@ -1,5 +1,6 @@
 import { CATERGORIESPATH, CATERGORYAPI } from "../../Modules/Module.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js";
+import { MOVIESSELECTIONPAGE } from "../MoviesSelectionPage/MovieSelectionPage.js";
 
 export const CATERGORYPAGE=()=>{
 
@@ -30,8 +31,13 @@ export const CATERGORYPAGE=()=>{
                     `);
      
                     EVENT(HOLDER,'click',()=>{
-     
-                            
+
+                        STORE('','Path','CATERGORYPAGE');
+
+                        STORE('local','CurrentSection',element.Sections);
+
+                        MOVIESSELECTIONPAGE();
+          
                     })
                          
                     ADD(ELEMENT,HOLDER);

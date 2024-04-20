@@ -1,6 +1,7 @@
 import { ICONMODULE } from "../../Modules/Module.js"
 import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { FREEWATCHPAGE } from "../FreeWatchPage/FreeWatchPage.js";
+import { MOVIESSELECTIONPAGE } from "../MoviesSelectionPage/MovieSelectionPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 import { HOMEANIMATION } from "./HomeMovies/AnimationMovies/AnimationMovies.js";
 import { HOMEADVENTURE } from "./HomeMovies/HomeAdventure/HomeAdventure.js";
@@ -177,5 +178,67 @@ export const  HOMEPAGE=()=>{
     HOMEADVENTURE();
     HOMEHORROR();
     LATESTROMANCENMOVIE();
+
+    
+    //MORE SECTIONS CLICKED
+    CLICKED('#MoreAnimations',()=>{
+
+        STORE('','Path','HOMEPAGE');
+
+        STORE('local','CurrentSection','Animations');
+
+        MOVIESSELECTIONPAGE();
+
+    })
+
+    CLICKED('#MoreMovies',()=>{
+
+        STORE('','Path','HOMEPAGE');
+
+        STORE('local','CurrentSection','Action');
+
+        MOVIESSELECTIONPAGE();
+
+    })
+
+    CLICKED('#MoreMarathons',()=>{
+
+        STORE('','Path','HOMEPAGE');
+
+        STORE('local','CurrentSection','Marathons');
+
+        MOVIESSELECTIONPAGE();
+
+    })
+
+    CLICKED('#MoreSeries',()=>{
+
+        STORE('','Path','HOMEPAGE');
+
+        STORE('local','CurrentSection','Series');
+
+        MOVIESSELECTIONPAGE();
+
+    })
+
+    CLICKED('#MoreAdventure',()=>{
+
+        STORE('','Path','HOMEPAGE');
+
+        STORE('local','CurrentSection','Adventure');
+
+        MOVIESSELECTIONPAGE();
+
+    })
+
+    CLICKED('#MoreHorror',()=>{
+
+        STORE('','Path','HOMEPAGE');
+
+        STORE('local','CurrentSection','Horror');
+
+        MOVIESSELECTIONPAGE();
+
+    })
 
 }

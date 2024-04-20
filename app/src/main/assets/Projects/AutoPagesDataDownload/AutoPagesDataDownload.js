@@ -6,10 +6,9 @@ const AUTOAPPDATADOWNLOAD=()=>{
     GETPACKAGE(CATERGORYAPI,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{STORE('local','CatergoriesData',data)})
         REDUX(data,(element)=>{
-            console.log(element)
             GETPACKAGE(element.link,'cors',(data)=>{
                 JSONIFICATION(data,(data)=>{
-                    STORE('local',element.Sections,data)
+                    STORE('local',element.Sections,data);
                 }) 
             })
         })

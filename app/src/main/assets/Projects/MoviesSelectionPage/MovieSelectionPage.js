@@ -1,17 +1,28 @@
 import { MOVIESPATH } from "../../Modules/Module.js";
+import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
 
-export const FREEWATCHPAGE=()=>{
-    
-    BACKHEADERWIDGET(()=>{HOMEPAGE()},`
+export const MOVIESSELECTIONPAGE=()=>{
 
-        <h1 class='Profile'>Free Watch</h1>
+    let NAVIGATION='';
+
+    CONDITION(sessionStorage.getItem('Path') === 'CATERGORYPAGE' ,
+        
+        ()=>NAVIGATION=CATERGORYPAGE,
+
+        ()=>NAVIGATION=HOMEPAGE
+    
+    )
+
+    BACKHEADERWIDGET(()=>{NAVIGATION()},`
+
+        <h1 class='Profile'>${localStorage.getItem('CurrentSection')}</h1>
         
         `,
         ``,'FreeWatchDiv'
     );
 
-    DEJSON('local','FreeMovies',(data)=>{
+    DEJSON('local',localStorage.getItem('CurrentSection'),(data)=>{
 
         DECLARATION('#FreeWatchDiv',(ELEMENT)=>{
 
@@ -29,14 +40,7 @@ export const FREEWATCHPAGE=()=>{
 
                     EVENT(HOLDER,'click',()=>{
 
-                        BACKHEADERWIDGET(()=>{FREEWATCHPAGE()},`
-
-                            <h1 class='Profile'>${element.MovieName}</h1>
-                        
-                        `,`
-                            <iframe src='https://www.youtube.com/embed/${element.MoveTrailer}'/></iframe>
-                        
-                        `)
+                        alert('ok')
                         
                     })
                     

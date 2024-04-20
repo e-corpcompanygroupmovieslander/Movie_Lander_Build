@@ -26,8 +26,6 @@ export const HOMEMARATHON=()=>{
     
                             STORE('','MovieData',JSON.stringify(element));
     
-                            EXTERNALJS(MOVIEDETAILSPAGEAPI,()=>{MOVIESDETAILSPAGE()})
-                           
                         })
     
                         ADD(ELEMENT,ANIME);
