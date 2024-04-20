@@ -1,1 +1,32 @@
 @import url('./HomeMovies/LatestAnimation/LatestAnimation.css');
+@import url('./HomeMovies/AnimationMovies/AnimationMovies.css');
+
+.SectionName{
+    font-size: 16px;
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.SeeMoreIcon{
+    margin-right: 1rem;
+    width: 20px;
+    height: auto;
+    transform: rotate(180deg);
+}
+
+#homeHolder{
+    height: 250px;
+}
+
+#Series{
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    top: 50px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: inline-flex;
+    background: transparent;
+}
