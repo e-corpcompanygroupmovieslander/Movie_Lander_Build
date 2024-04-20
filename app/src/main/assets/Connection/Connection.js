@@ -6,8 +6,8 @@ const CONNECTION = () => {
 
     CONDITION(localStorage.getItem('User'),
 
-    ()=>HOMEPAGE(),
-    ()=>LOGINPAGE()
+        ()=>HOMEPAGE(),
+        ()=>LOGINPAGE()
 
     );
 
