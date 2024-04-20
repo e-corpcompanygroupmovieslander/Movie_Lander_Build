@@ -1,4 +1,5 @@
 import { ICONMODULE, MOVIESPATH, YOUTUBELINK } from "../../Modules/Module.js";
+import { COMMENTSPAGE } from "../CommentsPage/CommentsPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js";
 import { MOVIESDATAPAGE } from "../MoviesDataPage/MovieDataPage.js";
 import { MOVIESSELECTIONPAGE } from "../MoviesSelectionPage/MovieSelectionPage.js";
@@ -84,6 +85,10 @@ export const MOVIESDETAILSPAGE=()=>{
 
         CLICKED('#Moviedata',()=>{
             MOVIESDATAPAGE()
+        })
+
+        CLICKED('#MovieComments',()=>{
+            COMMENTSPAGE();
         })
 
     })

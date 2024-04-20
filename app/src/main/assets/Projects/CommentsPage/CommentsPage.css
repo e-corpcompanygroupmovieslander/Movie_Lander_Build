@@ -1,0 +1,29 @@
+.CommentsPage{
+    overflow: hidden;
+}
+
+.CommentsDiv{
+    position: absolute;
+    top: 0;
+    bottom: 50px;
+    background:transparent;
+    border-bottom: 1px solid gainsboro;
+}
+
+.Comment{
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+}
+
+#CommentsButton{
+    width: 20%;
+    bottom: 1%;
+    height: 32px;
+    top: auto;
+    position: absolute;
+    right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    left: 78%;
+}

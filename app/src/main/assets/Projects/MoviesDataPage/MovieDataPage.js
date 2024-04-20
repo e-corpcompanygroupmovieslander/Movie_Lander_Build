@@ -6,6 +6,8 @@ export const MOVIESDATAPAGE=()=>{
 
         BACKHEADERWIDGET(()=>{MOVIESDETAILSPAGE()},
         `
+
+        <h1 class='Profile'>${data.MovieName}</h1>
     
         `,
         `

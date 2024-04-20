@@ -3,7 +3,7 @@ import { BUSINESSTOOLSPAGE } from "../BusinessTools/BusinessTools.js";
 import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
 import { CONTACTUSPAGE } from "../ContactUsPage/ContactUsPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
-import { LIBRARYPAGE } from "../Library/Library.js";
+import { LIBRARYPAGE } from "../LibraryPage/Library.js";
 import { MOREAPPSPAGE } from "../MoreAppPage/MoreAppPage.js";
 import { PREMIUMPAGE } from "../PremiumPage/PremiumPage.js";
 import { SETTINGSPAGE } from "../SettingsPage/SettingsPage.js";
