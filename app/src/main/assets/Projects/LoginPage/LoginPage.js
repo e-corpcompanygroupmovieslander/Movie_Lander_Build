@@ -53,11 +53,7 @@ export const LOGINPAGE=()=>{
                                                        "Date":new Date()
                                                     }
                                                     // Functions to get browser and OS information
-                                                    function getBrowserName() { return navigator.appName; }
                                                     function getBrowserVersion() { return navigator.appVersion; }
-                                                    function getOSName() { return navigator.platform; }
-                                                    function getOSVersion() { return navigator.userAgent; }
-
                                                     POSTPACKAGE(DEVICELOGINAPI,'no-cors',DEVICEDATA,(data)=>{
                                                         STORE('local','User',user.SecretCode);
                                                         JSONIFICATION(user,(data)=>{
