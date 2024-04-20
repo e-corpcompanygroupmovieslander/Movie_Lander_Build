@@ -1,4 +1,5 @@
 import { MOVIESPATH } from "../../../../Modules/Module.js"
+import { MOVIESDETAILSPAGE } from "../../../MoviesDetailsPage/MoviesDetailsPage.js"
 
 export const LATESTROMANCENMOVIE=()=>{
     
@@ -18,6 +19,16 @@ export const LATESTROMANCENMOVIE=()=>{
                         
                 `)
 
+                CLICKED('#LatestRomance',()=>{
+
+                    STORE('','Path','HOMEPAGE');
+    
+                    STORE('','MovieData',JSON.stringify(data));
+
+                    MOVIESDETAILSPAGE();
+
+                })
+                
             })
     
         })

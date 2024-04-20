@@ -1,4 +1,5 @@
 import { MOVIESPATH } from "../../../../Modules/Module.js"
+import { MOVIESDETAILSPAGE } from "../../../MoviesDetailsPage/MoviesDetailsPage.js"
 
 export const LATESTNIGERIANMOVIE=()=>{
     
@@ -17,6 +18,16 @@ export const LATESTNIGERIANMOVIE=()=>{
                     <h1 id='LatestTitle' class='UserName'>${data.MovieName}</h1>
                         
                 `)
+
+                CLICKED('#LatestNigerian',()=>{
+
+                    STORE('','Path','HOMEPAGE');
+    
+                    STORE('','MovieData',JSON.stringify(data));
+
+                    MOVIESDETAILSPAGE();
+
+                })
 
             })
     

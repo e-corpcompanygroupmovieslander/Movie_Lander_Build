@@ -1,4 +1,5 @@
 import { MOVIESPATH } from "../../../../Modules/Module.js";
+import { MOVIESDETAILSPAGE } from "../../../MoviesDetailsPage/MoviesDetailsPage.js";
 
 export const HOMEMARATHON=()=>{
 
@@ -22,10 +23,12 @@ export const HOMEMARATHON=()=>{
     
                         EVENT(ANIME,'click',()=>{
     
-                            STORE('','Path','HomePage');
+                            STORE('','Path','HOMEPAGE');
     
                             STORE('','MovieData',JSON.stringify(element));
     
+                            MOVIESDETAILSPAGE();
+
                         })
     
                         ADD(ELEMENT,ANIME);

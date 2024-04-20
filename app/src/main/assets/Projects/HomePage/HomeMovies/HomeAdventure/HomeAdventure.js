@@ -1,4 +1,5 @@
 import { MOVIESPATH } from "../../../../Modules/Module.js";
+import { MOVIESDETAILSPAGE } from "../../../MoviesDetailsPage/MoviesDetailsPage.js";
 
 export const HOMEADVENTURE=()=>{
 
@@ -22,9 +23,11 @@ export const HOMEADVENTURE=()=>{
     
                         EVENT(ANIME,'click',()=>{
     
-                            STORE('','Path','HomePage');
+                            STORE('','Path','HOMEPAGE');
     
                             STORE('','MovieData',JSON.stringify(element));
+
+                            MOVIESDETAILSPAGE();
 
                         })
     

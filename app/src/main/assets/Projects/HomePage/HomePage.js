@@ -183,7 +183,7 @@ export const  HOMEPAGE=()=>{
     //MORE SECTIONS CLICKED
     CLICKED('#MoreAnimations',()=>{
 
-        STORE('','Path','HOMEPAGE');
+        STORE('','Path','SEEMORE');
 
         STORE('local','CurrentSection','Animations');
 
@@ -193,7 +193,7 @@ export const  HOMEPAGE=()=>{
 
     CLICKED('#MoreMovies',()=>{
 
-        STORE('','Path','HOMEPAGE');
+        STORE('','Path','SEEMORE');
 
         STORE('local','CurrentSection','Action');
 
@@ -203,7 +203,7 @@ export const  HOMEPAGE=()=>{
 
     CLICKED('#MoreMarathons',()=>{
 
-        STORE('','Path','HOMEPAGE');
+        STORE('','Path','SEEMORE');
 
         STORE('local','CurrentSection','Marathons');
 
@@ -213,7 +213,7 @@ export const  HOMEPAGE=()=>{
 
     CLICKED('#MoreSeries',()=>{
 
-        STORE('','Path','HOMEPAGE');
+        STORE('','Path','SEEMORE');
 
         STORE('local','CurrentSection','Series');
 
@@ -223,7 +223,7 @@ export const  HOMEPAGE=()=>{
 
     CLICKED('#MoreAdventure',()=>{
 
-        STORE('','Path','HOMEPAGE');
+        STORE('','Path','SEEMORE');
 
         STORE('local','CurrentSection','Adventure');
 
@@ -233,7 +233,7 @@ export const  HOMEPAGE=()=>{
 
     CLICKED('#MoreHorror',()=>{
 
-        STORE('','Path','HOMEPAGE');
+        STORE('','Path','SEEMORE');
 
         STORE('local','CurrentSection','Horror');
 

@@ -1,4 +1,5 @@
 import { MOVIESPATH } from "../../../../Modules/Module.js"
+import { MOVIESDETAILSPAGE } from "../../../MoviesDetailsPage/MoviesDetailsPage.js"
 
 export const LATESTACTIONMOVIE=()=>{
     
@@ -17,6 +18,16 @@ export const LATESTACTIONMOVIE=()=>{
                     <h1 id='LatestTitle' class='UserName'>${data.MovieName}</h1>
                         
                 `)
+
+                CLICKED('#LatestMovies',()=>{
+
+                    STORE('','Path','HOMEPAGE');
+    
+                    STORE('','MovieData',JSON.stringify(data));
+
+                    MOVIESDETAILSPAGE();
+
+                })
 
             })
     

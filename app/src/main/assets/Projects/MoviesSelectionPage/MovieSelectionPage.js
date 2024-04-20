@@ -1,6 +1,7 @@
 import { MOVIESPATH } from "../../Modules/Module.js";
 import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
+import { MOVIESDETAILSPAGE } from "../MoviesDetailsPage/MoviesDetailsPage.js";
 
 export const MOVIESSELECTIONPAGE=()=>{
 
@@ -40,7 +41,9 @@ export const MOVIESSELECTIONPAGE=()=>{
 
                     EVENT(HOLDER,'click',()=>{
 
-                        alert('ok')
+                        STORE('','MovieData',JSON.stringify(element));
+    
+                        MOVIESDETAILSPAGE();
                         
                     })
                     
