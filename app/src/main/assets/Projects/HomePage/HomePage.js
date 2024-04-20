@@ -3,7 +3,9 @@ import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { FREEWATCHPAGE } from "../FreeWatchPage/FreeWatchPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 import { HOMEANIMATION } from "./HomeMovies/AnimationMovies/AnimationMovies.js";
+import { HOMEMARATHON } from "./HomeMovies/HomeMarathons/HomeMarathons.js";
 import { HOMEMOVIES } from "./HomeMovies/HomeMovies/HomeMovies.js";
+import { HOMESERIES } from "./HomeMovies/HomeSeries/HomeSeries.js";
 import { LATESTANIMATION } from "./HomeMovies/LatestAnimation/LatestAnimation.js";
 import { LATESTACTIONMOVIE } from "./HomeMovies/LatestMovies/LatestMovies.js";
 
@@ -165,5 +167,7 @@ export const  HOMEPAGE=()=>{
     HOMEANIMATION();
     HOMEMOVIES();
     LATESTACTIONMOVIE();
+    HOMEMARATHON();
+    HOMESERIES();
 
 }

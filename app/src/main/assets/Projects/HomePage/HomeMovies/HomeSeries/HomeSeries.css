@@ -1,0 +1,10 @@
+#Series{
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    top: 50px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: inline-flex;
+    background: transparent;
+}

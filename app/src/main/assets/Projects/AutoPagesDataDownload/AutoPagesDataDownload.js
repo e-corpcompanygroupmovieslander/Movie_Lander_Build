@@ -1,4 +1,4 @@
-import { ANIMATIONAPI, CATERGORYAPI, FREEMOVIESAPI, MOVIESAPI } from "../../Modules/Module.js"
+import { ANIMATIONAPI, CATERGORYAPI, FREEMOVIESAPI, MARATHONAPI, MOVIESAPI, SERIESAPI } from "../../Modules/Module.js"
 
 const AUTOAPPDATADOWNLOAD=()=>{
 
@@ -20,6 +20,16 @@ const AUTOAPPDATADOWNLOAD=()=>{
     //ACTION SECTION
     GETPACKAGE(MOVIESAPI,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{STORE('local','ActionMovies',data)})
+    })
+
+    //MARATHON SECTION
+    GETPACKAGE(MARATHONAPI,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{STORE('local','MarathonMovies',data)})
+    })
+
+    //MARATHON SECTION
+    GETPACKAGE(SERIESAPI,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{STORE('local','SeriesMovies',data)})
     })
 
 }
