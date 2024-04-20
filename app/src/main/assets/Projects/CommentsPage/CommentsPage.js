@@ -15,9 +15,14 @@ export const COMMENTSPAGE=()=>{
     
     </div>
 
-    <input  class='Comment' type='text' placeholder='Write Your Comment' />
-    
-    <button id='CommentsButton' class='forestgreen' >Send</button>
+    <form action="#" >
+
+        <input  class='Comment' type='text' placeholder='Write Your Comment' />
+        
+        <button id='CommentsButton' class='forestgreen' >Send</button>
+
+    </form>
+
 
     `,'CommentsPage'
     );
