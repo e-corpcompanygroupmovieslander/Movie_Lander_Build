@@ -1,6 +1,7 @@
 import { ICONMODULE, MOVIESPATH, YOUTUBELINK } from "../../Modules/Module.js";
 import { COMMENTSPAGE } from "../CommentsPage/CommentsPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js";
+import { INSIGHTPAGE } from "../InsightPage/InsightPage.js";
 import { MOVIESDATAPAGE } from "../MoviesDataPage/MovieDataPage.js";
 import { MOVIESSELECTIONPAGE } from "../MoviesSelectionPage/MovieSelectionPage.js";
 
@@ -56,7 +57,7 @@ export const MOVIESDETAILSPAGE=()=>{
                     
                     <footer class='Footer'>
 
-                        <button class='Bottomdata'>Insight</button>
+                        <button id='Insight' class='Bottomdata'>Insight</button>
 
                         <button id='Moviedata' class='Bottomdata'>Details</button>
 
@@ -89,6 +90,10 @@ export const MOVIESDETAILSPAGE=()=>{
 
         CLICKED('#MovieComments',()=>{
             COMMENTSPAGE();
+        })
+
+        CLICKED('#Insight',()=>{
+            INSIGHTPAGE();
         })
 
     })
