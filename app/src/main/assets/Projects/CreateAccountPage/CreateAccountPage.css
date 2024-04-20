@@ -1,0 +1,42 @@
+.CountryDiv{
+    background: #121212;
+    display: none;
+}
+
+.CoutryDivs{
+    background: transparent;
+    top: 80px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.LocationButton{
+    display: inline-flex;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.LocationText{
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5rem;
+    margin-right: auto;
+}
+
+.LocationImage{
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.Telephone{
+    width: 75%;
+    left: 20%;
+}
+
+.DisplayCode{
+    position: absolute;
+    left: 5%;
+    font-size: 20px;
+    margin: 3% 1%;
+}
