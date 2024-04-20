@@ -19,7 +19,7 @@ export const LOGINPAGE=()=>{
 
         <button class='blue' >Create Account</button>
     
-    `)
+    `);
 
     CLICKED('.blue',()=>{CREATEACCOUNTPAGE()});
 
@@ -81,7 +81,6 @@ export const LOGINPAGE=()=>{
         )
 
     });
-
 
 }
 
