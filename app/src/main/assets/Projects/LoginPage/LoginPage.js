@@ -72,7 +72,6 @@ export const LOGINPAGE=()=>{
                                         MESSAGE('Wrong User Password')
                                         ORIGIN(BUTTON,'Login')
                                     })
-                                
                                 ),
                                 ()=>CHECK(user,(result)=>{
                                     MESSAGE('Wrong User Email')
