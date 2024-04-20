@@ -3,6 +3,7 @@ import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { FREEWATCHPAGE } from "../FreeWatchPage/FreeWatchPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 import { HOMEANIMATION } from "./HomeMovies/AnimationMovies/AnimationMovies.js";
+import { HOMEMOVIES } from "./HomeMovies/HomeMovies/HomeMovies.js";
 import { LATESTANIMATION } from "./HomeMovies/LatestAnimation/LatestAnimation.js";
 
 export const  HOMEPAGE=()=>{
@@ -160,6 +161,7 @@ export const  HOMEPAGE=()=>{
 
     //IMPORT HOME SECTIONS
     LATESTANIMATION();
-    HOMEANIMATION()
+    HOMEANIMATION();
+    HOMEMOVIES();
 
 }

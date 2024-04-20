@@ -1,5 +1,6 @@
 @import url('./HomeMovies/LatestAnimation/LatestAnimation.css');
 @import url('./HomeMovies/AnimationMovies/AnimationMovies.css');
+@import url('./HomeMovies/HomeMovies/HomeMovies.css');
 
 .SectionName{
     font-size: 16px;
