@@ -4,7 +4,7 @@ export const LATESTROMANCENMOVIE=()=>{
     
     DECLARATION('#LatestRomance',(ELEMENT)=>{
 
-        DEJSON('local','RomanceMovies',(data)=>{
+        DEJSON('local','Romance',(data)=>{
 
             SINGLESHUFFLE(data,(data)=>{
 

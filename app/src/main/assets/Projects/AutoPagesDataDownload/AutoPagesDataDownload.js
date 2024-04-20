@@ -5,51 +5,22 @@ const AUTOAPPDATADOWNLOAD=()=>{
     //CATERGORIES DATA
     GETPACKAGE(CATERGORYAPI,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{STORE('local','CatergoriesData',data)})
+        REDUX(data,(element)=>{
+            console.log(element)
+            GETPACKAGE(element.link,'cors',(data)=>{
+                JSONIFICATION(data,(data)=>{
+                    STORE('local',element.Sections,data)
+                }) 
+            })
+        })
     })
 
-    //FREE MOVIES
+    //FREE MOVIES SECTION
     GETPACKAGE(FREEMOVIESAPI,'cors',(data)=>{
-        JSONIFICATION(data,(data)=>{STORE('local','FreeMoviesData',data)})
+        JSONIFICATION(data,(data)=>{
+            STORE('local','FreeMovies',data)
+        })
     })
 
-    //ANIMATION SECTION
-    GETPACKAGE(ANIMATIONAPI,'cors',(data)=>{
-        JSONIFICATION(data,(data)=>{STORE('local','AnimationsMovies',data)})
-    })
-
-    //ACTION SECTION
-    GETPACKAGE(MOVIESAPI,'cors',(data)=>{
-        JSONIFICATION(data,(data)=>{STORE('local','ActionMovies',data)})
-    })
-
-    //MARATHON SECTION
-    GETPACKAGE(MARATHONAPI,'cors',(data)=>{
-        JSONIFICATION(data,(data)=>{STORE('local','MarathonMovies',data)})
-    })
-
-    //MARATHON SECTION
-    GETPACKAGE(SERIESAPI,'cors',(data)=>{
-        JSONIFICATION(data,(data)=>{STORE('local','SeriesMovies',data)})
-    })
-
-    //NIGERIAN SECTION
-    GETPACKAGE(NIGERIANAPI,'cors',(data)=>{
-        JSONIFICATION(data,(data)=>{STORE('local','NigerianMovies',data)})
-    })
-
-    //ADVENTURE SECTION
-    GETPACKAGE(ADVENTUREAPI,'cors',(data)=>{
-        JSONIFICATION(data,(data)=>{STORE('local','AdventureMovies',data)})
-    })
-
-    //HORROR SECTION
-    GETPACKAGE(HORRORAPI,'cors',(data)=>{
-        JSONIFICATION(data,(data)=>{STORE('local','HorrorMovies',data)})
-    })
-    
-    //ROMANCE SECTION
-    GETPACKAGE(ROMANCEAPI,'cors',(data)=>{
-        JSONIFICATION(data,(data)=>{STORE('local','RomanceMovies',data)})
-    })
 }
 export{AUTOAPPDATADOWNLOAD}

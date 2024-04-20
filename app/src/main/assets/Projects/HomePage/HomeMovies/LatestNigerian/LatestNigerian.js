@@ -4,7 +4,7 @@ export const LATESTNIGERIANMOVIE=()=>{
     
     DECLARATION('#LatestNigerian',(ELEMENT)=>{
 
-        DEJSON('local','NigerianMovies',(data)=>{
+        DEJSON('local','Nigerian',(data)=>{
 
             SINGLESHUFFLE(data,(data)=>{
 

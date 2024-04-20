@@ -2,7 +2,7 @@ import { MOVIESPATH } from "../../../../Modules/Module.js";
 
 export const HOMEANIMATION=()=>{
 
-    DEJSON('local','AnimationsMovies',(data)=>{
+    DEJSON('local','Animations',(data)=>{
 
         DECLARATION('#Animations',(ELEMENT)=>{
     

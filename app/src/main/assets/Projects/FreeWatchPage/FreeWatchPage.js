@@ -11,7 +11,7 @@ export const FREEWATCHPAGE=()=>{
         ``,'FreeWatchDiv'
     );
 
-    DEJSON('local','FreeMoviesData',(data)=>{
+    DEJSON('local','FreeMovies',(data)=>{
 
         DECLARATION('#FreeWatchDiv',(ELEMENT)=>{
 
