@@ -5,6 +5,7 @@ import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 import { HOMEANIMATION } from "./HomeMovies/AnimationMovies/AnimationMovies.js";
 import { HOMEMOVIES } from "./HomeMovies/HomeMovies/HomeMovies.js";
 import { LATESTANIMATION } from "./HomeMovies/LatestAnimation/LatestAnimation.js";
+import { LATESTACTIONMOVIE } from "./HomeMovies/LatestMovies/LatestMovies.js";
 
 export const  HOMEPAGE=()=>{
 
@@ -163,5 +164,6 @@ export const  HOMEPAGE=()=>{
     LATESTANIMATION();
     HOMEANIMATION();
     HOMEMOVIES();
+    LATESTACTIONMOVIE();
 
 }
