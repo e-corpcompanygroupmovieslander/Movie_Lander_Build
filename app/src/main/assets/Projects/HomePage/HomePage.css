@@ -3,6 +3,8 @@
 @import url('./HomeMovies/HomeMovies/HomeMovies.css');
 @import url('./HomeMovies/HomeMarathons/HomeMarathon.css');
 @import url('./HomeMovies/HomeSeries/HomeSeries.css');
+@import url('./HomeMovies/HomeAdventure/HomeAdventure.css');
+@import url('./HomeMovies/HomeHorror/HomeHorror.css');
 
 .SectionName{
     font-size: 16px;

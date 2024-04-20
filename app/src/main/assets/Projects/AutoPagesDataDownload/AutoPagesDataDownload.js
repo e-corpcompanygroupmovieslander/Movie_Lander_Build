@@ -1,4 +1,4 @@
-import { ANIMATIONAPI, CATERGORYAPI, FREEMOVIESAPI, MARATHONAPI, MOVIESAPI, NIGERIANAPI, SERIESAPI } from "../../Modules/Module.js"
+import { ADVENTUREAPI, ANIMATIONAPI, CATERGORYAPI, FREEMOVIESAPI, HORRORAPI, MARATHONAPI, MOVIESAPI, NIGERIANAPI, ROMANCEAPI, SERIESAPI } from "../../Modules/Module.js"
 
 const AUTOAPPDATADOWNLOAD=()=>{
 
@@ -37,5 +37,19 @@ const AUTOAPPDATADOWNLOAD=()=>{
         JSONIFICATION(data,(data)=>{STORE('local','NigerianMovies',data)})
     })
 
+    //ADVENTURE SECTION
+    GETPACKAGE(ADVENTUREAPI,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{STORE('local','AdventureMovies',data)})
+    })
+
+    //HORROR SECTION
+    GETPACKAGE(HORRORAPI,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{STORE('local','HorrorMovies',data)})
+    })
+    
+    //ROMANCE SECTION
+    GETPACKAGE(ROMANCEAPI,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{STORE('local','RomanceMovies',data)})
+    })
 }
 export{AUTOAPPDATADOWNLOAD}

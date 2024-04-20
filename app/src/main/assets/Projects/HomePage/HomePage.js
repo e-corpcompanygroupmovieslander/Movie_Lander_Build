@@ -3,12 +3,15 @@ import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { FREEWATCHPAGE } from "../FreeWatchPage/FreeWatchPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 import { HOMEANIMATION } from "./HomeMovies/AnimationMovies/AnimationMovies.js";
+import { HOMEADVENTURE } from "./HomeMovies/HomeAdventure/HomeAdventure.js";
+import { HOMEHORROR } from "./HomeMovies/HomeHorror/HomeHorror.js";
 import { HOMEMARATHON } from "./HomeMovies/HomeMarathons/HomeMarathons.js";
 import { HOMEMOVIES } from "./HomeMovies/HomeMovies/HomeMovies.js";
 import { HOMESERIES } from "./HomeMovies/HomeSeries/HomeSeries.js";
 import { LATESTANIMATION } from "./HomeMovies/LatestAnimation/LatestAnimation.js";
 import { LATESTACTIONMOVIE } from "./HomeMovies/LatestMovies/LatestMovies.js";
 import { LATESTNIGERIANMOVIE } from "./HomeMovies/LatestNigerian/LatestNigerian.js";
+import { LATESTROMANCENMOVIE } from "./HomeMovies/LatestRomance/LatestRomance.js";
 
 export const  HOMEPAGE=()=>{
 
@@ -171,5 +174,8 @@ export const  HOMEPAGE=()=>{
     HOMEMARATHON();
     HOMESERIES();
     LATESTNIGERIANMOVIE();
+    HOMEADVENTURE();
+    HOMEHORROR();
+    LATESTROMANCENMOVIE();
 
 }
