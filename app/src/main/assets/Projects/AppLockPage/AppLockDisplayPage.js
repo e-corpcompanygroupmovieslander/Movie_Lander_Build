@@ -9,7 +9,7 @@ export const APPLOCKDISPLAY=()=>{
 
         <img class='AppLogo' src='../Library/Images/app_icon.png'/>
 
-        <input maxlength='5' class='VerificationCode' type='email' placeholder='Enter App Lock Pin'/>
+        <input maxlength='5' class='VerificationCode' type='password' placeholder='Enter App Lock Pin'/>
 
         <h1 class='ForgotPassword'>Forgot Pin? </h1>
         
