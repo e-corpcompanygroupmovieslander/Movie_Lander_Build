@@ -29,7 +29,6 @@ export const USERACCOUNTPAGE=()=>{
 
             <img id='UserSettingsAccount' class='UserSettingsImage' src='${ICONMODULE}setting.png'/>
                 
-
         </div>
 
         <button id='Premium' class='Button'>

@@ -12,7 +12,23 @@ export const AUTOSYNC=()=>{
             REDUX(data,(element)=>{
                 GETPACKAGE(element.link,'cors',(data)=>{
                     JSONIFICATION(data,(data)=>{
+
                         STORE('local',element.Sections,data);
+
+                        setTimeout(() => {
+
+                            MESSAGE('Data Sync Successful')
+
+                            ORIGIN(ELEMENT,`
+        
+                                <h1 class='Title' >App Sync</h1>
+        
+                                <img class='Icons' src='${ICONMODULE}sync.png'/>
+        
+                            `)
+                            
+                        }, 1000);
+
                     }) 
                 })
             })
@@ -51,15 +67,8 @@ export const AUTOSYNC=()=>{
                 }),
                 ()=>CHECK(user,(result)=>{
 
-                    MESSAGE('Data Sync Successful')
+                    console.log('Account Still Active')
 
-                    ORIGIN(ELEMENT,`
-
-                        <h1 class='Title' >App Sync</h1>
-
-                        <img class='Icons' src='${ICONMODULE}sync.png'/>
-
-                    `)
                 })
             )
             })
