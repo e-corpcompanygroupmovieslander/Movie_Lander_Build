@@ -19,14 +19,6 @@ export const USERACCOUNTPAGE=()=>{
     `
         <div class='View'></div>
 
-        <button id='Sync' class='Button'>
-
-            <h1 class='Title' >App Sync</h1>
-
-            <img class='Icons' src='${ICONMODULE}sync.png'/>
-        
-        </button>
-
         <button id='Premium' class='Button'>
 
             <h1 class='Title' >Premium</h1>
@@ -88,6 +80,14 @@ export const USERACCOUNTPAGE=()=>{
             <h1 class='Title' >Updates</h1>
 
             <img class='Icons' src='${ICONMODULE}app.png'/>
+        
+        </button>
+
+        <button id='Sync' class='Button'>
+
+            <h1 class='Title' >App Sync</h1>
+
+            <img class='Icons' src='${ICONMODULE}sync.png'/>
         
         </button>
 
