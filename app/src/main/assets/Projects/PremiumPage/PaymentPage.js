@@ -32,12 +32,12 @@ export const PAYMENTPAGE = () => {
         
         </div>
 
-        <button id='LogOut' class='Continue'>Pay</button>
+        <button class='forestgreen'>Pay</button>
 
     `,'HomePaymentDiv'
     )
 
-    CLICKED('.Continue',()=>{
+    CLICKED('.forestgreen',()=>{
 
         DECLARATION('#HomePaymentDiv',(ELEMENT)=>{
             DISPLAY(ELEMENT,`
