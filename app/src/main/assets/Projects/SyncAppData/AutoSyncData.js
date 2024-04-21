@@ -17,8 +17,6 @@ export const AUTOSYNC=()=>{
 
                         setTimeout(() => {
 
-                            MESSAGE('Data Sync Successful')
-
                             ORIGIN(ELEMENT,`
         
                                 <h1 class='Title' >App Sync</h1>
@@ -67,7 +65,7 @@ export const AUTOSYNC=()=>{
                 }),
                 ()=>CHECK(user,(result)=>{
 
-                    console.log('Account Still Active')
+                    MESSAGE('Data Sync Successful');
 
                 })
             )
