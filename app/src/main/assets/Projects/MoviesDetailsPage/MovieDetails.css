@@ -115,3 +115,8 @@
     background: #00000099;
     top: auto;
 }
+
+#DarkImage{
+    background: #00000099;
+    border-radius: 50px;
+}

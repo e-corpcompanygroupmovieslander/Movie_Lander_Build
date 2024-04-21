@@ -16,9 +16,9 @@ export const MOVIESDETAILSPAGE=()=>{
 
             <header class='AppHeader'>
 
-                <img class='BackIcon' src='${ICONMODULE}arrow.png'/>
+                <img id='DarkImage' class='BackIcon' src='${ICONMODULE}arrow.png'/>
 
-                <h1 class='Profile'>${data.MovieName}</h1>
+                <h1 id='DarkImage' class='Profile'>${data.MovieName}</h1>
 
             </header>
 
