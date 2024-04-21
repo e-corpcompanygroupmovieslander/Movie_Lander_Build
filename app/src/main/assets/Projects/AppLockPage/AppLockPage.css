@@ -1,0 +1,16 @@
+#AppLockbtn{
+    background: #0000ff90;
+}
+
+#Unlock{
+    background: #00800090;
+}
+
+.Login{
+    background: #00800090;
+}
+
+#DeleteAccountPolicy{
+    border-top: 1px solid #dcdcdc20;
+    border-bottom: 1px solid #dcdcdc20;
+}

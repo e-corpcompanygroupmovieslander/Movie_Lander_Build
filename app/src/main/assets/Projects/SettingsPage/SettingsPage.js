@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { APPLOCKPAGE } from "../AppLockPage/AppLockPage.js";
 import { HELPPAGE } from "../HelpPage/HelpPage.js";
 import { PRIVACYPOLICYPAGE } from "../PrivacyPolicyPage/PrivacyPolicyPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
@@ -15,7 +16,7 @@ export const SETTINGSPAGE=()=>{
 
         <h1 class='LoaderMessage'>Customize App</h1>
 
-        <button class='Button'>
+        <button id='AppLock' class='Button'>
 
             <h1 class='Title' >App Lock</h1>
 
@@ -50,6 +51,8 @@ export const SETTINGSPAGE=()=>{
     ` 
 
     );
+
+    CLICKED('#AppLock',()=>{APPLOCKPAGE()});
 
     CLICKED('#PrivacyPolicy',()=>{PRIVACYPOLICYPAGE()});
 
