@@ -4,6 +4,7 @@ import { HOMEPAGE } from "../HomePage/HomePage.js";
 import { INSIGHTPAGE } from "../InsightPage/InsightPage.js";
 import { MOVIESDATAPAGE } from "../MoviesDataPage/MovieDataPage.js";
 import { MOVIESSELECTIONPAGE } from "../MoviesSelectionPage/MovieSelectionPage.js";
+import { PREMIUMPAGE } from "../PremiumPage/PremiumPage.js";
 
 export const MOVIESDETAILSPAGE=()=>{
 
@@ -27,7 +28,7 @@ export const MOVIESDETAILSPAGE=()=>{
                     
                 <button class='brown'>Watch</button>
 
-                <div class='DataDisplayDiv'>
+                    <div class='DataDisplayDiv'>
 
                         <h1 id='Movietitle' class='Message'>${data.MovieName}</h1>
 
@@ -87,6 +88,20 @@ export const MOVIESDETAILSPAGE=()=>{
                 CONDITION(result === true ,
                     ()=>ELEMENT.src=ICONMODULE+'PG.png',
                     ()=>ELEMENT.src=ICONMODULE+'G.png'
+                )
+            })
+        })
+
+        DECLARATION('.brown',(ELEMENT)=>{
+            STORE('','PremiumPath','MoviesDetails');
+            CLICKED('.brown',()=>{
+                CONDITION(data.Subscription ,
+                ()=>CONDITION(data.Subscription && localStorage.getItem('Premium'),
+                    ()=>WEBSITE(`https://drive.google.com/uc?export=download&id=${data.MovieSource}`),
+                    ()=>PREMIUMPAGE()
+                )
+                ,
+                ()=>WEBSITE(`https://drive.google.com/uc?export=download&id=${data.MovieSource}`)
                 )
             })
         })

@@ -108,7 +108,7 @@ export const USERACCOUNTPAGE=()=>{
 
         CLICKED('#Sync',()=>{AUTOSYNC()});
 
-        CLICKED('#Premium',()=>{PREMIUMPAGE()});
+        CLICKED('#Premium',()=>{STORE('','PremiumPath','Direct'),PREMIUMPAGE()});
 
         CLICKED('#Community',()=>{COMMUNITYPAGE()});
 

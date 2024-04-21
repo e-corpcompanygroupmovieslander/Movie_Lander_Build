@@ -1,13 +1,20 @@
-import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
+import { UGANDANPREMIUMPAGE } from "./UgandanPremium.js"
+import { USPREMIUMPAGE } from "./UsPremiumPage.js"
 
 export const PREMIUMPAGE=()=>{
 
-    BACKHEADERWIDGET(()=>{USERACCOUNTPAGE()},
-    `
-        <h1 class='Profile'>Subscirptions</h1>
+    DEJSON('local','UserData',(data)=>{
 
-    `,
-    ``
-    );
+        CONDITION( data.Location === 'Uganda',
+
+        ()=>UGANDANPREMIUMPAGE(),
+
+        ()=>USPREMIUMPAGE()
+    
+        )
+
+    })
 
 }
+
+// PremiumPath
