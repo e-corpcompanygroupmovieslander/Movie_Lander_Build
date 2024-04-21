@@ -13,7 +13,7 @@ export const CONTACTUSPAGE=()=>{
 
         <h1 class='LoaderMessage'>Reach Us</h1>
 
-        <button class='Button'>
+        <button id='Gmail' class='Button'>
 
             <h1 class='Title' >Gmail</h1>
 
@@ -21,7 +21,7 @@ export const CONTACTUSPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='Instagram'  class='Button'>
 
             <h1 class='Title' >Instagram</h1>
 
@@ -29,7 +29,7 @@ export const CONTACTUSPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='facebook' class='Button'>
 
             <h1 class='Title' >Facebook</h1>
 
@@ -37,7 +37,7 @@ export const CONTACTUSPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='Site' class='Button'>
 
             <h1 class='Title' >WebSite</h1>
 
@@ -47,6 +47,24 @@ export const CONTACTUSPAGE=()=>{
     
     ` 
 
-    )
-    
+    );
+
+    CLICKED('#Gmail',()=>{
+
+        GMAIL('movielander1999@gmail.com');
+
+    })
+
+    CLICKED('#Instagram',()=>{
+
+        INSTAGRAM('e_corpCompanygroup');
+
+    })
+
+    CLICKED('#Site',()=>{
+
+        WEBSITE('https://www.e-corpcompanygroup.com');
+
+    })
+
 }
