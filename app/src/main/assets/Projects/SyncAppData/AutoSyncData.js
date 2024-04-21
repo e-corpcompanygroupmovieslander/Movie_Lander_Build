@@ -64,6 +64,7 @@ export const AUTOSYNC=()=>{
                         STORE('local','UserData',data);
                         MESSAGE('Data Sync Successful');
                         DISPLAY(UpdatingData,'User Account Synced ');
+                        NOTIFICATIONS('Data Sync','User Data Sync Success');
                         setTimeout(() => {
                             CONDITION(localStorage.getItem('User'),
                             ()=>USERACCOUNTPAGE(),
