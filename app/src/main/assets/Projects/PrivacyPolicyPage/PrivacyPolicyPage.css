@@ -32,3 +32,12 @@
     left: 1rem;
     color: gainsboro;
 }
+
+/*===FOR PRIVACY POLICY PAGE===*/
+#AppLogo{
+    margin-left: 1rem;
+}
+
+#PolicyPage{
+    overflow-y: auto;
+}
