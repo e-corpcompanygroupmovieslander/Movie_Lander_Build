@@ -1,3 +1,4 @@
+import { CONNECTION } from "../../Connection/Connection.js";
 import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, LOGINAPI } from "../../Modules/Module.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js";
 
@@ -13,8 +14,6 @@ export const AUTOSYNC=()=>{
     `);
 
     DECLARATION('.forestgreen',(ELEMENT)=>{
-
-        const LOADERSYNC=document.querySelector('#OfflineImage');
      
         //CATERGORIES DATA
         GETPACKAGE(CATERGORYAPI,'cors',(data)=>{
@@ -22,15 +21,13 @@ export const AUTOSYNC=()=>{
             REDUX(data,(element)=>{
                 GETPACKAGE(element.link,'cors',(data)=>{
                     JSONIFICATION(data,(data)=>{
-
                         STORE('local',element.Sections,data);
-
                         setTimeout(() => {
-
-                            USERACCOUNTPAGE()
-
+                            CONDITION(localStorage.getItem('User'),
+                            ()=>USERACCOUNTPAGE(),
+                            ()=>CONNECTION()
+                            )
                         }, 1000);
-
                     }) 
                 })
             })
@@ -53,7 +50,9 @@ export const AUTOSYNC=()=>{
                     })
                 }),
                 ()=>CHECK(User,(result)=>{
-                    console.log('User Account Doesnot Exist');
+                    REMOVESTORE('local','User');
+                    REMOVESTORE('local','UserData');
+                    CONNECTION();                
                 })
             )
             })
@@ -68,9 +67,7 @@ export const AUTOSYNC=()=>{
                     CONNECTION();
                 }),
                 ()=>CHECK(user,(result)=>{
-
                     MESSAGE('Data Sync Successful');
-
                 })
             )
             })
