@@ -1,0 +1,8 @@
+<h1 class='SubTopic'>Series Section</h1>
+
+<p class='Details'>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp
+The series on the app are all zipped per season, so you cannot watch them on the app. However, you can download the zip files to your device. To unzip the series, download ZArchiver
+
+</p>
