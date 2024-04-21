@@ -19,68 +19,6 @@ export const AUTOSYNC=()=>{
     DISPLAY(UpdatingData,'Sync Started')
 
     DECLARATION('.forestgreen',(ELEMENT)=>{
-     
-        //CATERGORIES DATA
-        GETPACKAGE(CATERGORYAPI,'cors',(data)=>{
-            JSONIFICATION(data,(data)=>{STORE('local','CatergoriesData',data)})
-            REDUX(data,(element)=>{
-                GETPACKAGE(element.link,'cors',(data)=>{
-                    JSONIFICATION(data,(data)=>{
-                        STORE('local',element.Sections,data);
-                        DISPLAY(UpdatingData,'Movies Synced ');
-                    }) 
-                })
-            })
-        })
-
-        //FREE MOVIES SECTION
-        GETPACKAGE(FREEMOVIESAPI,'cors',(data)=>{
-            JSONIFICATION(data,(data)=>{
-                STORE('local','FreeMovies',data)
-                DISPLAY(UpdatingData,'Free Movies Synced ');
-            })
-        })
-
-        //MORE APPS SECTION
-        GETPACKAGE(MOREAPPSAPI,'cors',(data)=>{
-            JSONIFICATION(data,(data)=>{
-                STORE('local','MoreAppps',data)
-            })
-        })
-
-        //PAYMENTS MESSAGES
-        GETPACKAGE(MTNPREMIUMPAYGET,'cors',(data)=>{
-            JSONIFICATION(data,(data)=>{
-                STORE('local','Payments',data)
-            })
-        })
-
-        //USER DETAILS UPDATE
-        GETPACKAGE(LOGINAPI,'cors',(data)=>{
-            FINDER(data,'SecretCode',localStorage.getItem('User'),(User)=>{
-                CONDITION(User.SecretCode === localStorage.getItem('User'),
-                ()=>CHECK(User,(result)=>{
-                    JSONIFICATION(result,(data)=>{
-                        STORE('local','UserData',data);
-                        MESSAGE('Data Sync Successful');
-                        DISPLAY(UpdatingData,'User Account Synced ');
-                        NOTIFICATIONS('Data Sync','Movie Lander has been Updated Successfully');
-                        setTimeout(() => {
-                            CONDITION(localStorage.getItem('User'),
-                            ()=>USERACCOUNTPAGE(),
-                            ()=>CONNECTION()
-                            )   
-                        }, 2000);
-                    })
-                }),
-                ()=>CHECK(User,(result)=>{
-                    REMOVESTORE('local','User');
-                    REMOVESTORE('local','UserData');
-                    CONNECTION();                
-                })
-            )
-            })
-        })
 
         //USER DELETED ACCOUNT
         GETPACKAGE(DELETEACCOUNTGET,'cors',(data)=>{
@@ -91,30 +29,87 @@ export const AUTOSYNC=()=>{
                     CONNECTION();
                 }),
                 ()=>CHECK(user,(result)=>{
-                    console.log('Active Account')
+                    DISPLAY(UpdatingData,'Movies Sync ');
+                    //FREE MOVIES SECTION
+                    GETPACKAGE(FREEMOVIESAPI,'cors',(data)=>{
+                        JSONIFICATION(data,(data)=>{
+                            STORE('local','FreeMovies',data)
+
+                            //MORE APPS SECTION
+                            DISPLAY(UpdatingData,'App Sync ');
+                            GETPACKAGE(MOREAPPSAPI,'cors',(data)=>{
+                                JSONIFICATION(data,(data)=>{
+                                    STORE('local','MoreAppps',data)
+                                    //PAYMENTS MESSAGES
+                                    GETPACKAGE(MTNPREMIUMPAYGET,'cors',(data)=>{
+                                        JSONIFICATION(data,(data)=>{
+                                            STORE('local','Payments',data)
+                                            //AUTOPREMIUM USERS
+                                            DISPLAY(UpdatingData,'Account Sync ');
+                                            GETPACKAGE(MTNPREMIUMPAYGET, 'cors', (data) => {
+                                                REVERSE(data,(result)=>{
+                                                    FINDER(result, 'User', localStorage.getItem('User'), (user) => {
+                                                        if (new Date() <= new Date(user.ExpiryDate)) {
+                                                            CHECK(user, (result) => {
+                                                                STORE('local', 'PremiumUser', JSON.stringify(result));
+                                                                STORE('local', 'Premium', 'ON');
+                                                            });
+                                                        } else {
+                                                            REMOVESTORE('local', 'PremiumUser');
+                                                            REMOVESTORE('local', 'Premium');
+                                                        }
+                                                    });
+                                                });
+                                                //USER DETAILS UPDATE
+                                                DISPLAY(UpdatingData,'Updates Sync ');
+                                                GETPACKAGE(LOGINAPI,'cors',(data)=>{
+                                                    FINDER(data,'SecretCode',localStorage.getItem('User'),(User)=>{
+                                                        CONDITION(User.SecretCode === localStorage.getItem('User'),
+                                                        ()=>CHECK(User,(result)=>{
+                                                            JSONIFICATION(result,(data)=>{
+                                                                STORE('local','UserData',data);
+                                                                MESSAGE('Data Sync Successful');
+                                                                DISPLAY(UpdatingData,'User Account Synced ');
+                                                                NOTIFICATIONS('Data Sync','Movie Lander has been Updated Successfully');
+                                                                setTimeout(() => {
+                                                                    CONDITION(localStorage.getItem('User'),
+                                                                    ()=>USERACCOUNTPAGE(),
+                                                                    ()=>CONNECTION()
+                                                                    )   
+                                                                }, 2000);
+                                                            })
+                                                        }),
+                                                        ()=>CHECK(User,(result)=>{
+                                                            REMOVESTORE('local','User');
+                                                            REMOVESTORE('local','UserData');
+                                                            CONNECTION();                
+                                                        })
+                                                    )
+                                                    })
+                                                })
+                                            });
+                                        })
+                                    })
+                                })
+                            })    
+                        })
+                    })
+                    //CATERGORIES DATA
+                    GETPACKAGE(CATERGORYAPI,'cors',(data)=>{
+                        JSONIFICATION(data,(data)=>{STORE('local','CatergoriesData',data)})
+                        REDUX(data,(element)=>{
+                            GETPACKAGE(element.link,'cors',(data)=>{
+                                JSONIFICATION(data,(data)=>{
+                                    STORE('local',element.Sections,data);
+                                }) 
+                            })
+                        })
+                    })
                 })
             )
             })
         })
-
-        //AUTOPREMIUM USERS
-        GETPACKAGE(MTNPREMIUMPAYGET, 'cors', (data) => {
-            REVERSE(data,(result)=>{
-                FINDER(result, 'User', localStorage.getItem('User'), (user) => {
-                    if (new Date() <= new Date(user.ExpiryDate)) {
-                        CHECK(user, (result) => {
-                            STORE('local', 'PremiumUser', JSON.stringify(result));
-                            STORE('local', 'Premium', 'ON');
-                        });
-                    } else {
-                        REMOVESTORE('local', 'PremiumUser');
-                        REMOVESTORE('local', 'Premium');
-                    }
-                });
-            });    
-        });
     
-
     })
 
 }
