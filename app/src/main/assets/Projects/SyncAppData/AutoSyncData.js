@@ -34,6 +34,7 @@ export const AUTOSYNC=()=>{
                     GETPACKAGE(FREEMOVIESAPI,'cors',(data)=>{
                         JSONIFICATION(data,(data)=>{
                             STORE('local','FreeMovies',data)
+                            DISPLAY(ELEMENT,'Movies Synced ');
 
                             //MORE APPS SECTION
                             DISPLAY(UpdatingData,'App Sync ');
@@ -60,6 +61,7 @@ export const AUTOSYNC=()=>{
                                                         }
                                                     });
                                                 });
+                                                DISPLAY(ELEMENT,'Account Synced ');
                                                 //USER DETAILS UPDATE
                                                 DISPLAY(UpdatingData,'Updates Sync ');
                                                 GETPACKAGE(LOGINAPI,'cors',(data)=>{
@@ -70,7 +72,7 @@ export const AUTOSYNC=()=>{
                                                                 STORE('local','UserData',data);
                                                                 MESSAGE('Data Sync Successful');
                                                                 DISPLAY(UpdatingData,'User Account Synced ');
-                                                                NOTIFICATIONS('Data Sync','Movie Lander has been Updated Successfully');
+                                                                NOTIFICATIONS('Data Synced','Movie Lander has been Updated Successfully');
                                                                 setTimeout(() => {
                                                                     CONDITION(localStorage.getItem('User'),
                                                                     ()=>USERACCOUNTPAGE(),
