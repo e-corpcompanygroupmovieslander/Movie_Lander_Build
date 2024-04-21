@@ -9,7 +9,6 @@ export const INSIGHTPAGE=()=>{
                 STORE('','MovieInsight',data.MyInsight)
             }),
             ()=>STORE('','MovieInsight','')
-        
         )
 
         BACKHEADERWIDGET(()=>{MOVIESDETAILSPAGE()},
@@ -44,6 +43,5 @@ export const INSIGHTPAGE=()=>{
         })
 
     })
-
 
 }
