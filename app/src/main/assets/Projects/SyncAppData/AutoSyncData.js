@@ -1,11 +1,21 @@
 import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, ICONMODULE, LOGINAPI } from "../../Modules/Module.js";
+import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js";
 
 export const AUTOSYNC=()=>{
 
-    DECLARATION('#Sync',(ELEMENT)=>{
-     
-        LOADER(ELEMENT);
+    WIDGET(` 
+            
+        <img class='AppLogo' src='../Library/Images/app_icon.png'/>
+        <h1 class='LoaderMessage'>Movie Lander Updating</h1>
+        <img id='OfflineImage' class='LoadingIcon' src='${LOADERICON}'/>
+        <button class='forestgreen'>Please Wait</button>
 
+    `);
+
+    DECLARATION('.forestgreen',(ELEMENT)=>{
+
+        const LOADERSYNC=document.querySelector('#OfflineImage');
+     
         //CATERGORIES DATA
         GETPACKAGE(CATERGORYAPI,'cors',(data)=>{
             JSONIFICATION(data,(data)=>{STORE('local','CatergoriesData',data)})
@@ -17,14 +27,29 @@ export const AUTOSYNC=()=>{
 
                         setTimeout(() => {
 
-                            ORIGIN(ELEMENT,`
-        
-                                <h1 class='Title' >App Sync</h1>
-        
-                                <img class='Icons' src='${ICONMODULE}sync.png'/>
-        
-                            `)
-                            
+                            WIDGET(` 
+                
+                                <img class='AppLogo' src='../Library/Images/app_icon.png'/>
+                                <h1 class='LoaderMessage'>Movie Lander Updated</h1>
+                                <img id='OfflineImage'  src='${ICONMODULE}check.png'/>
+
+                                <p>
+                                    Movies Updated
+                                    <br><br>
+                                    User Account Updated
+                                    <br><br>
+                                    User Settings Updated
+                                    <br><br>
+                                    App Errors And Bug Fix Worked Erectified
+                                
+                                </p>
+                        
+                            `);
+
+                            setTimeout(() => {
+                                USERACCOUNTPAGE()
+                            }, 2000);
+
                         }, 1000);
 
                     }) 
