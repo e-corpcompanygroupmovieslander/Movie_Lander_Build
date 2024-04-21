@@ -8,7 +8,7 @@ export const AUTOSYNC=()=>{
         <img class='AppLogo' src='../Library/Images/app_icon.png'/>
         <h1 class='LoaderMessage'>Movie Lander Updating</h1>
         <img id='OfflineImage' class='LoadingIcon' src='${LOADERICON}'/>
-        <button class='forestgreen'>Please Wait</button>
+        <button class='forestgreen'>Syncing...</button>
 
     `);
 
@@ -27,28 +27,7 @@ export const AUTOSYNC=()=>{
 
                         setTimeout(() => {
 
-                            WIDGET(` 
-                
-                                <img class='AppLogo' src='../Library/Images/app_icon.png'/>
-                                <h1 class='LoaderMessage'>Movie Lander Updated</h1>
-                                <img id='OfflineImage'  src='${ICONMODULE}check.png'/>
-
-                                <p>
-                                    Movies Updated
-                                    <br><br>
-                                    User Account Updated
-                                    <br><br>
-                                    User Settings Updated
-                                    <br><br>
-                                    App Errors And Bug Fix Worked Erectified
-                                
-                                </p>
-                        
-                            `);
-
-                            setTimeout(() => {
-                                USERACCOUNTPAGE()
-                            }, 2000);
+                            USERACCOUNTPAGE()
 
                         }, 1000);
 
