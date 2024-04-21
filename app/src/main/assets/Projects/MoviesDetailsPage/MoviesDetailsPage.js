@@ -45,7 +45,7 @@ export const MOVIESDETAILSPAGE=()=>{
 
                                 <img id='Catergories' src='${ICONMODULE}lock.png'/>
 
-                                <img id='ParentalControl' src='${ICONMODULE}PG.png'/>
+                                <img id='ParentalControl' src='${ICONMODULE}G.png'/>
 
                                 <img id='SaveMovie' src='${ICONMODULE}save.png'/>
                                                 
@@ -72,6 +72,15 @@ export const MOVIESDETAILSPAGE=()=>{
         
         
         `);
+
+        DECLARATION('#ParentalControl',(ELEMENT)=>{
+            CHECK(data.ParentalControl,(result)=>{
+                CONDITION(result === true ,
+                    ()=>ELEMENT.src=ICONMODULE+'PG.png',
+                    ()=>ELEMENT.src=ICONMODULE+'G.png'
+                )
+            })
+        })
 
         CLICKED('.BackIcon',()=>{
 
