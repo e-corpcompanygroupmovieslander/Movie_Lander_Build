@@ -1,4 +1,4 @@
-import { ICONMODULE } from "../../Modules/Module.js"
+import { ICONMODULE, UPDATEAPI } from "../../Modules/Module.js"
 import { ABOUTMEPAGE } from "../AboutMePage/AboutMePage.js";
 import { BUSINESSTOOLSPAGE } from "../BusinessTools/BusinessTools.js";
 import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
@@ -88,7 +88,7 @@ export const USERACCOUNTPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='Update' class='Button'>
 
             <h1 class='Title' >Updates</h1>
 
@@ -123,6 +123,8 @@ export const USERACCOUNTPAGE=()=>{
         CLICKED('#ContactUs',()=>{CONTACTUSPAGE()});
 
         CLICKED('.About',()=>{ABOUTMEPAGE()})
+
+        CLICKED('#Update',()=>{WEBSITE(UPDATEAPI)})
 
     });
 

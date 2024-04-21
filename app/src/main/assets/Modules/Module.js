@@ -20,7 +20,7 @@ const CATERGORIESPATH=`https://e-corpcompanygroupmovieslander.github.io/MovieLan
 
 const HELPTEXT=`https://e-corpcompanygroupmovieslander.github.io/Movie_Lander_Build/app/src/main/assets/Projects/HelpPage/HelpText.txt`;
 
-const UPDATEAPI=`https://play.google.com/store/apps/details?id=com.ecorpcompanygroup.movie_lander`;
+const UPDATEAPI=`https://play.google.com/store/apps/details?id=com.movie_lander&pcampaignid=web_share`;
 
 const PRIVACYTEXT=`https://e-corpcompanygroupmovieslander.github.io/Movie_Lander_Build/app/src/main/assets/Projects/PrivacyPolicyPage/PrivacyPolicyText.txt`;
 
