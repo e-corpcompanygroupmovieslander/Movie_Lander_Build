@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { PRIVACYPOLICYPAGE } from "../PrivacyPolicyPage/PrivacyPolicyPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 
 export const SETTINGSPAGE=()=>{
@@ -37,7 +38,7 @@ export const SETTINGSPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='PrivacyPolicy' class='Button'>
 
             <h1 class='Title' >Privacy Policy</h1>
 
@@ -47,6 +48,9 @@ export const SETTINGSPAGE=()=>{
     
     ` 
 
-    )
+    );
+
+    CLICKED('#PrivacyPolicy',()=>{PRIVACYPOLICYPAGE()})
+
     
 }
