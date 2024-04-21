@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { AUTOREMOVEACCOUNT } from "../AutoRemoveAccout/AutoRemoveAccount.js";
 import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { FREEWATCHPAGE } from "../FreeWatchPage/FreeWatchPage.js";
 import { MOVIESSELECTIONPAGE } from "../MoviesSelectionPage/MovieSelectionPage.js";
@@ -15,6 +16,8 @@ import { LATESTNIGERIANMOVIE } from "./HomeMovies/LatestNigerian/LatestNigerian.
 import { LATESTROMANCENMOVIE } from "./HomeMovies/LatestRomance/LatestRomance.js";
 
 export const  HOMEPAGE=()=>{
+
+    AUTOREMOVEACCOUNT();
 
     ROUNDFOOTERWIDGET(`
 
