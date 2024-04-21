@@ -7,6 +7,7 @@ import { LIBRARYPAGE } from "../LibraryPage/Library.js";
 import { MOREAPPSPAGE } from "../MoreAppPage/MoreAppPage.js";
 import { PREMIUMPAGE } from "../PremiumPage/PremiumPage.js";
 import { SETTINGSPAGE } from "../SettingsPage/SettingsPage.js";
+import { AUTOSYNC } from "../SyncAppData/AutoSyncData.js";
 
 export const USERACCOUNTPAGE=()=>{
 
@@ -91,6 +92,8 @@ export const USERACCOUNTPAGE=()=>{
         </button>
 
     `);
+
+    CLICKED('#Sync',()=>{AUTOSYNC()});
 
     CLICKED('#Premium',()=>{PREMIUMPAGE()});
 
