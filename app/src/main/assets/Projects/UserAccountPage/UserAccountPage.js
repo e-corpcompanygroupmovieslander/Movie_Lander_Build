@@ -11,13 +11,26 @@ import { AUTOSYNC } from "../SyncAppData/AutoSyncData.js";
 
 export const USERACCOUNTPAGE=()=>{
 
-    BACKHEADERWIDGET(()=>{HOMEPAGE()},`
+    DEJSON('local','UserData',(data)=>{
+
+        BACKHEADERWIDGET(()=>{HOMEPAGE()},`
 
         <h1 class='Profile'>Profile</h1>
 
     `,
     `
-        <div class='View'></div>
+        <div id='ProfileImageHolder' class='View'>
+
+            <img class='ProfileImage' src='../Library/Images/app_icon.png'/>
+                    
+            <button class='About'>About</button>
+
+            <h1 class='UserName'>${data.UserName}</h1>
+
+            <img id='UserSettingsAccount' class='UserSettingsImage' src='${ICONMODULE}setting.png'/>
+                
+
+        </div>
 
         <button id='Premium' class='Button'>
 
@@ -109,7 +122,6 @@ export const USERACCOUNTPAGE=()=>{
 
     CLICKED('#ContactUs',()=>{CONTACTUSPAGE()});
 
-
-
+    });
 
 }

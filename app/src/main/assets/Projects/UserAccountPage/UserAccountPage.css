@@ -32,3 +32,64 @@
 #Sync{
     background: forestgreen;
 }
+
+/*==PROFILE PAGE==*/
+#ProfileImageHolder{
+    display: inline-flex;
+}
+
+.ProfileImage{
+    width: 40%;
+    height: auto;
+    background: transparent;
+    border-radius: 100px;
+    margin-top:0.5rem;
+}
+
+.About{
+    position: absolute;
+    width: 20%;
+    height: 35px;
+    bottom: 0;
+    left: 77%;
+    background: brown;
+}
+
+.UserName{
+    position: absolute;
+    font-size: 15px;
+    bottom: 0;
+    border-top: 1px solid #a52a2a;
+    margin-left: 0.5rem;
+    padding: 1%;
+}
+
+.Button{
+    display: inline-flex;
+    margin-top: 0.2rem;
+    background: #a52a2a50;
+}
+
+.Buttontitle{
+    font-size: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1rem;
+    margin-right: auto;
+}
+
+.ButtonIcon{
+    width: 25px;
+    margin-right: 1rem;
+}
+
+.UserSettingsImage{
+    position: absolute;
+    right: 0;
+    margin-right: 0.3rem;
+    margin-top: 1rem;
+    padding: 1%;
+    border-radius: 50px;
+    width: 25px;
+    border:  1px solid #a52a2a50;
+}
