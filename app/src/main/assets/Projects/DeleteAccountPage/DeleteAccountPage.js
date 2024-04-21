@@ -1,5 +1,5 @@
 import { CONNECTION } from "../../Connection/Connection.js";
-import { DELETEACCOUNTPOLICY, DELETEACCOUNTPOST, ICONMODULE } from "../../Modules/Module.js";
+import { DELETEACCOUNTPOLICY, DELETEACCOUNTPOST, EMAILSENDERAPI, ICONMODULE } from "../../Modules/Module.js";
 import { ABOUTMEPAGE } from "../AboutMePage/AboutMePage.js"
 
 export const DELETEACCOUNTPAGE=()=>{
@@ -55,11 +55,27 @@ export const DELETEACCOUNTPAGE=()=>{
                         "Date":new Date()
                     }
     
-                    POSTPACKAGE(DELETEACCOUNTPOST,'cors',DATA,(data)=>{
-    
-                        CLEARDATA()
+                    POSTPACKAGE(DELETEACCOUNTPOST,'cors',DATA,(users)=>{
 
-                        CONNECTION();
+                        var EMAILDATA = {
+                            recipientEmail: data.Email,
+                            subject: "Movie Lander Account Deletion",
+                            body: `Dear ${data.UserName},\n\nThank you for using Movie Lander. \n\n Your User Account  has been \n\n For More Information \n\n movielander1999@gmail.com \n\n https://www.e-corpcompanygroup.com`
+                        };
+                        
+                        POSTPACKAGE(EMAILSENDERAPI,'no-cors',EMAILDATA,(user)=>{
+
+                            MESSAGE('User Account Deleted');
+
+                            setTimeout(() => {
+
+                                CLEARDATA()
+
+                                CONNECTION();
+                                
+                            }, 2000);
+
+                        })
     
                     })
 
