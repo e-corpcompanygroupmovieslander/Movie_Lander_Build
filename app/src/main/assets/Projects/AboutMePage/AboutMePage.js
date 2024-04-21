@@ -1,5 +1,6 @@
 import { CONNECTION } from "../../Connection/Connection.js"
 import { ICONMODULE } from "../../Modules/Module.js";
+import { DELETEACCOUNTPAGE } from "../DeleteAccountPage/DeleteAccountPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 
 export const ABOUTMEPAGE=()=>{
@@ -102,7 +103,7 @@ export const ABOUTMEPAGE=()=>{
 
         CLICKED('#DeleteAccount',()=>{
 
-           // EXTERNALJS('../project/DeleteAccountPage/DeleteAccountPage.js',()=>{DELETEACCOUNTPAGE()})
+           DELETEACCOUNTPAGE();
 
         })
 
