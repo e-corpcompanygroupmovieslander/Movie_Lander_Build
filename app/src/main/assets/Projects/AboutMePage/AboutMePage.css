@@ -1,0 +1,43 @@
+.MyDataButton{
+    display: inline-flex;
+    height: 100px;
+    background: transparent;
+    border-bottom: 1px solid brown;
+    border-radius: 0px;
+}
+
+.mytitle{
+    position: absolute;
+    font-size: 15px;
+    top: 0;
+    margin-left: 0.1rem;
+}
+
+.myIcon{
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    width: 20px;
+    height: auto;
+}
+
+.MyData{
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+    margin-left: 0.1rem;
+    font-size: 18px;
+}
+
+#DeleteAccount{
+
+    background: red;
+
+}
+
+#LogOut{
+
+    background: #00800090;
+
+}

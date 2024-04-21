@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { ABOUTMEPAGE } from "../AboutMePage/AboutMePage.js";
 import { BUSINESSTOOLSPAGE } from "../BusinessTools/BusinessTools.js";
 import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
 import { CONTACTUSPAGE } from "../ContactUsPage/ContactUsPage.js";
@@ -105,21 +106,23 @@ export const USERACCOUNTPAGE=()=>{
 
     `);
 
-    CLICKED('#Sync',()=>{AUTOSYNC()});
+        CLICKED('#Sync',()=>{AUTOSYNC()});
 
-    CLICKED('#Premium',()=>{PREMIUMPAGE()});
+        CLICKED('#Premium',()=>{PREMIUMPAGE()});
 
-    CLICKED('#Community',()=>{COMMUNITYPAGE()});
+        CLICKED('#Community',()=>{COMMUNITYPAGE()});
 
-    CLICKED('#BusinessTools',()=>{BUSINESSTOOLSPAGE()});
+        CLICKED('#BusinessTools',()=>{BUSINESSTOOLSPAGE()});
 
-    CLICKED('#Library',()=>{LIBRARYPAGE()});
+        CLICKED('#Library',()=>{LIBRARYPAGE()});
 
-    CLICKED('#SettingsPage',()=>{SETTINGSPAGE()});
+        CLICKED('#SettingsPage',()=>{SETTINGSPAGE()});
 
-    CLICKED('#MoreApps',()=>{MOREAPPSPAGE()});
+        CLICKED('#MoreApps',()=>{MOREAPPSPAGE()});
 
-    CLICKED('#ContactUs',()=>{CONTACTUSPAGE()});
+        CLICKED('#ContactUs',()=>{CONTACTUSPAGE()});
+
+        CLICKED('.About',()=>{ABOUTMEPAGE()})
 
     });
 
