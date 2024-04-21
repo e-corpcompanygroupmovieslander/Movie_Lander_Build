@@ -22,7 +22,7 @@ const HELPTEXT=`https://e-corpcompanygroupmovieslander.github.io/MovieLanderApp/
 
 const UPDATEAPI=`https://play.google.com/store/apps/details?id=com.ecorpcompanygroup.movie_lander`;
 
-const PRIVACYTEXT=`https://e-corpcompanygroupmovieslander.github.io/MovieLanderApp/DOCUMENTS/PrivacyPolicyPage/PrivacyPolicy.txt`;
+const PRIVACYTEXT=`https://e-corpcompanygroupmovieslander.github.io/Movie_Lander_Build/app/src/main/assets/Projects/PrivacyPolicyPage/PrivacyPolicyText.txt`;
 
 const PARENTALCONTROLTEXT=`https://e-corpcompanygroupmovieslander.github.io/MovieLanderApp/DOCUMENTS/ParentalControl/ParentalControl.txt`;
 
