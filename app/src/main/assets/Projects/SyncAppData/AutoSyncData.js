@@ -48,6 +48,13 @@ export const AUTOSYNC=()=>{
             })
         })
 
+        //PAYMENTS MESSAGES
+        GETPACKAGE(MTNPREMIUMPAYGET,'cors',(data)=>{
+            JSONIFICATION(data,(data)=>{
+                STORE('local','Payments',data)
+            })
+        })
+
         //USER DETAILS UPDATE
         GETPACKAGE(LOGINAPI,'cors',(data)=>{
             FINDER(data,'SecretCode',localStorage.getItem('User'),(User)=>{
