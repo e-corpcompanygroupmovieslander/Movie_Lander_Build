@@ -1,4 +1,4 @@
-import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, ICONMODULE, LOGINAPI } from "../../Modules/Module.js";
+import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, LOGINAPI } from "../../Modules/Module.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js";
 
 export const AUTOSYNC=()=>{
