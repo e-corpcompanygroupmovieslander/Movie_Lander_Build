@@ -32,7 +32,7 @@ const AUTOAPPDATADOWNLOAD=()=>{
                 })
             }),
             ()=>CHECK(User,(result)=>{
-                REMOVESTORE('local','UserData');
+                console.log('User Account Doesnot Exist');
             })
           )
         })
@@ -47,7 +47,7 @@ const AUTOAPPDATADOWNLOAD=()=>{
                 CONNECTION();
             }),
             ()=>CHECK(user,(result)=>{
-                console.log('User Account Still Active')
+                console.log('User Account Still Active');
             })
           )
         })
