@@ -30,14 +30,7 @@ export const MOREAPPSPAGE=()=>{
 
                     EVENT(HOLDER,'click',()=>{
 
-                        BACKHEADERWIDGET(()=>{MOREAPPSPAGE()},`
-
-                            <h1 class='Profile'>${element.APPNAME}</h1>
-                        
-                        `,`
-                            <iframe src='${element.APPLINK}'/></iframe>
-                        
-                        `)
+                        WEBSITE(element.APPLINK);
                         
                     })
                     
