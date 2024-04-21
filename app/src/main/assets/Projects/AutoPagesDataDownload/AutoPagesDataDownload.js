@@ -1,5 +1,5 @@
 import { CONNECTION } from "../../Connection/Connection.js"
-import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, LOGINAPI, MTNPREMIUMPAYGET } from "../../Modules/Module.js"
+import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET } from "../../Modules/Module.js"
 
 const AUTOAPPDATADOWNLOAD=()=>{
 
@@ -19,6 +19,13 @@ const AUTOAPPDATADOWNLOAD=()=>{
     GETPACKAGE(FREEMOVIESAPI,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{
             STORE('local','FreeMovies',data)
+        })
+    })
+
+    //MORE APPS SECTION
+    GETPACKAGE(MOREAPPSAPI,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{
+            STORE('local','MoreAppps',data)
         })
     })
 
