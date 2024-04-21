@@ -64,9 +64,7 @@ export const AUTOSYNC=()=>{
                         STORE('local','UserData',data);
                         MESSAGE('Data Sync Successful');
                         DISPLAY(UpdatingData,'User Account Synced ');
-                        NOTIFICATIONS('Data Sync',`
-                        Movie Lander has been Updated Successfully,Enjoy Its Usage
-                        `);
+                        NOTIFICATIONS('Data Sync','Movie Lander has been Updated Successfully,Enjoy Its Usage');
                         setTimeout(() => {
                             CONDITION(localStorage.getItem('User'),
                             ()=>USERACCOUNTPAGE(),
