@@ -7,7 +7,8 @@ export const LIBRARYPAGE=()=>{
         <h1 class='Profile'>Library</h1>
 
     `,
-    ``
+    ``,''
     );
+    
 
 }

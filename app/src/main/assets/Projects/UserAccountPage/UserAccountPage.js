@@ -1,5 +1,6 @@
 import { ICONMODULE, UPDATEAPI } from "../../Modules/Module.js"
 import { ABOUTMEPAGE } from "../AboutMePage/AboutMePage.js";
+import { ACCOUNTSETTINGSPAGE } from "../AccountSettingsPage/AccountSettingsPage.js";
 import { BUSINESSTOOLSPAGE } from "../BusinessTools/BusinessTools.js";
 import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
 import { CONTACTUSPAGE } from "../ContactUsPage/ContactUsPage.js";
@@ -105,6 +106,8 @@ export const USERACCOUNTPAGE=()=>{
         </button>
 
     `);
+        
+        CLICKED('#UserSettingsAccount',()=>{ACCOUNTSETTINGSPAGE()});
 
         CLICKED('#Sync',()=>{AUTOSYNC()});
 

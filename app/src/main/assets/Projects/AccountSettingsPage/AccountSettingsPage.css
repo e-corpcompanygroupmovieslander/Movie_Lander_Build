@@ -1,0 +1,10 @@
+.PremiumMessageDiv{
+    position: relative;
+    background: blue;
+    width: 95%;
+    height: 100px;
+    border-bottom: 1px solid #a52a2a90;
+    display: block;
+    left: 2%;
+    
+}
