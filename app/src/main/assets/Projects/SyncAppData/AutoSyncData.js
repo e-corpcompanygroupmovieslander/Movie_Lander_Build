@@ -8,10 +8,13 @@ export const AUTOSYNC=()=>{
             
         <img class='AppLogo' src='../Library/Images/app_icon.png'/>
         <h1 class='LoaderMessage'>Movie Lander Updating</h1>
+        <p class='UpdatingData'></p>
         <img id='OfflineImage' class='LoadingIcon' src='${LOADERICON}'/>
         <button class='forestgreen'>Syncing...</button>
 
     `);
+
+    const UpdatingData=document.querySelector('.UpdatingData');
 
     DECLARATION('.forestgreen',(ELEMENT)=>{
      
@@ -22,12 +25,7 @@ export const AUTOSYNC=()=>{
                 GETPACKAGE(element.link,'cors',(data)=>{
                     JSONIFICATION(data,(data)=>{
                         STORE('local',element.Sections,data);
-                        setTimeout(() => {
-                            CONDITION(localStorage.getItem('User'),
-                            ()=>USERACCOUNTPAGE(),
-                            ()=>CONNECTION()
-                            )
-                        }, 1000);
+                        DISPLAY(UpdatingData,'Movies Sync Successful');
                     }) 
                 })
             })
@@ -37,6 +35,7 @@ export const AUTOSYNC=()=>{
         GETPACKAGE(FREEMOVIESAPI,'cors',(data)=>{
             JSONIFICATION(data,(data)=>{
                 STORE('local','FreeMovies',data)
+                DISPLAY(UpdatingData,'Free Movies Sync Successful');
             })
         })
 
@@ -46,7 +45,15 @@ export const AUTOSYNC=()=>{
                 CONDITION(User.SecretCode === localStorage.getItem('User'),
                 ()=>CHECK(User,(result)=>{
                     JSONIFICATION(result,(data)=>{
-                        STORE('local','UserData',data)
+                        STORE('local','UserData',data);
+                        MESSAGE('Data Sync Successful');
+                        DISPLAY(UpdatingData,'User Account Sync Successful');
+                        setTimeout(() => {
+                            CONDITION(localStorage.getItem('User'),
+                            ()=>USERACCOUNTPAGE(),
+                            ()=>CONNECTION()
+                            )   
+                        }, 2000);
                     })
                 }),
                 ()=>CHECK(User,(result)=>{
@@ -67,7 +74,7 @@ export const AUTOSYNC=()=>{
                     CONNECTION();
                 }),
                 ()=>CHECK(user,(result)=>{
-                    MESSAGE('Data Sync Successful');
+                    console.log('Active Account')
                 })
             )
             })
