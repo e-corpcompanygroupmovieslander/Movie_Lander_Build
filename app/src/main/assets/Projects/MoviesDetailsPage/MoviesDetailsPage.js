@@ -73,6 +73,15 @@ export const MOVIESDETAILSPAGE=()=>{
         
         `);
 
+        DECLARATION('#Catergories',(ELEMENT)=>{
+            CHECK(data.Subscription,(result)=>{
+                CONDITION(result === true ,
+                    ()=>ELEMENT.src=ICONMODULE+'lock.png',
+                    ()=>ELEMENT.src=ICONMODULE+'unlocked.png'
+                )
+            })
+        })
+
         DECLARATION('#ParentalControl',(ELEMENT)=>{
             CHECK(data.ParentalControl,(result)=>{
                 CONDITION(result === true ,
