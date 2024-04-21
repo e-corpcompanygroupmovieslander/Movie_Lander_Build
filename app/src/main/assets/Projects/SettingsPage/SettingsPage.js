@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { HELPPAGE } from "../HelpPage/HelpPage.js";
 import { PRIVACYPOLICYPAGE } from "../PrivacyPolicyPage/PrivacyPolicyPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 
@@ -30,7 +31,7 @@ export const SETTINGSPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='Help' class='Button'>
 
             <h1 class='Title' >Help</h1>
 
@@ -50,7 +51,10 @@ export const SETTINGSPAGE=()=>{
 
     );
 
-    CLICKED('#PrivacyPolicy',()=>{PRIVACYPOLICYPAGE()})
+    CLICKED('#PrivacyPolicy',()=>{PRIVACYPOLICYPAGE()});
+
+    CLICKED('#Help',()=>{HELPPAGE()});
+    
 
     
 }
