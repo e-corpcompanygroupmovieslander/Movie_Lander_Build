@@ -60,7 +60,7 @@ export const DELETEACCOUNTPAGE=()=>{
                         var EMAILDATA = {
                             recipientEmail: data.Email,
                             subject: "Movie Lander Account Deletion",
-                            body: `Dear ${data.UserName},\n\nThank you for using Movie Lander. \n\n Your User Account  has been \n\n For More Information \n\n movielander1999@gmail.com \n\n https://www.e-corpcompanygroup.com`
+                            body: `Dear ${data.UserName},\n\nThank you for using Movie Lander. \n\n Your User Account  has been Deleted. \n\n For More Information \n\n movielander1999@gmail.com \n\n https://www.e-corpcompanygroup.com`
                         };
                         
                         POSTPACKAGE(EMAILSENDERAPI,'no-cors',EMAILDATA,(user)=>{

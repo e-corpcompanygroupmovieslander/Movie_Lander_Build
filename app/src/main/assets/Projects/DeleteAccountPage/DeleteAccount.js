@@ -60,7 +60,7 @@ CLICKED('.DeleteButton',()=>{
                                     var EMAILDATA = {
                                         recipientEmail: result.Email,
                                         subject: "Movie Lander Account Deletion",
-                                        body: `Dear ${result.UserName},\n\nThank you for using Movie Lander. \n\n Your User Account  has been \n\n For More Information \n\n movielander1999@gmail.com \n\n https://www.e-corpcompanygroup.com`
+                                        body: `Dear ${result.UserName},\n\nThank you for using Movie Lander. \n\n Your User Account  has been Deleted. \n\n For More Information \n\n movielander1999@gmail.com \n\n https://www.e-corpcompanygroup.com`
                                     };
                                     
                                     POSTPACKAGE(EMAILSENDERAPI,'no-cors',EMAILDATA,(user)=>{

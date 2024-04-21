@@ -16,6 +16,8 @@ export const AUTOSYNC=()=>{
 
     const UpdatingData=document.querySelector('.UpdatingData');
 
+    DISPLAY(UpdatingData,'Sync Started')
+
     DECLARATION('.forestgreen',(ELEMENT)=>{
      
         //CATERGORIES DATA
@@ -25,7 +27,7 @@ export const AUTOSYNC=()=>{
                 GETPACKAGE(element.link,'cors',(data)=>{
                     JSONIFICATION(data,(data)=>{
                         STORE('local',element.Sections,data);
-                        DISPLAY(UpdatingData,'Movies Sync Successful');
+                        DISPLAY(UpdatingData,'Movies Synced ');
                     }) 
                 })
             })
@@ -35,7 +37,7 @@ export const AUTOSYNC=()=>{
         GETPACKAGE(FREEMOVIESAPI,'cors',(data)=>{
             JSONIFICATION(data,(data)=>{
                 STORE('local','FreeMovies',data)
-                DISPLAY(UpdatingData,'Free Movies Sync Successful');
+                DISPLAY(UpdatingData,'Free Movies Synced ');
             })
         })
 
@@ -47,7 +49,7 @@ export const AUTOSYNC=()=>{
                     JSONIFICATION(result,(data)=>{
                         STORE('local','UserData',data);
                         MESSAGE('Data Sync Successful');
-                        DISPLAY(UpdatingData,'User Account Sync Successful');
+                        DISPLAY(UpdatingData,'User Account Synced ');
                         setTimeout(() => {
                             CONDITION(localStorage.getItem('User'),
                             ()=>USERACCOUNTPAGE(),
