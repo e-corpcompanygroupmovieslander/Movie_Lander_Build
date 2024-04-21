@@ -98,7 +98,7 @@ export const USERACCOUNTPAGE=()=>{
 
         <button id='Sync' class='Button'>
 
-            <h1 class='Title' >App Sync</h1>
+            <h1 class='Title' >Sync</h1>
 
             <img class='Icons' src='${ICONMODULE}sync.png'/>
         
