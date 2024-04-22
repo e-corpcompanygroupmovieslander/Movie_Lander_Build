@@ -101,10 +101,9 @@ export const  HOMEPAGE=()=>{
         <img  class='FreeWatch' src='${ICONMODULE}movies.png'/>
         <img class='UserAccount' src='${ICONMODULE}profile.png'/>
     `);
-    
-    CLICKED('.CatergoryPage',()=>{CATERGORYPAGE()})
-    CLICKED('.FreeWatch',()=>{FREEWATCHPAGE()})
-    CLICKED('.UserAccount',()=>{USERACCOUNTPAGE()})
+    CLICKED('.CatergoryPage',()=>{CATERGORYPAGE()});
+    CLICKED('.FreeWatch',()=>{FREEWATCHPAGE()});
+    CLICKED('.UserAccount',()=>{USERACCOUNTPAGE()});
     //IMPORT HOME SECTIONS
     LATESTANIMATION();
     HOMEANIMATION();
@@ -121,36 +120,30 @@ export const  HOMEPAGE=()=>{
         STORE('','Path','SEEMORE');
         STORE('local','CurrentSection','Animations');
         MOVIESSELECTIONPAGE();
-    })
-
+    });
     CLICKED('#MoreMovies',()=>{
         STORE('','Path','SEEMORE');
         STORE('local','CurrentSection','Action');
         MOVIESSELECTIONPAGE();
-    })
-
+    });
     CLICKED('#MoreMarathons',()=>{
         STORE('','Path','SEEMORE');
         STORE('local','CurrentSection','Marathons');
         MOVIESSELECTIONPAGE();
-    })
-
+    });
     CLICKED('#MoreSeries',()=>{
         STORE('','Path','SEEMORE');
         STORE('local','CurrentSection','Series');
         MOVIESSELECTIONPAGE();
-    })
-
+    });
     CLICKED('#MoreAdventure',()=>{
         STORE('','Path','SEEMORE');
         STORE('local','CurrentSection','Adventure');
         MOVIESSELECTIONPAGE();
-    })
-
+    });
     CLICKED('#MoreHorror',()=>{
         STORE('','Path','SEEMORE');
         STORE('local','CurrentSection','Horror');
         MOVIESSELECTIONPAGE();
-    })
-
+    });
 }
