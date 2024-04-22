@@ -1,6 +1,7 @@
 import { CREATEACCOUNTAPI, DEVICELOGINAPI, EMAILSENDERAPI, LOGINAPI } from "../../Modules/Module.js";
 import { CREATEACCOUNTPAGE } from "../CreateAccountPage/CreateAccountPage.js"
 import { HOMEPAGE } from "../HomePage/HomePage.js";
+import { TERMSANDCONDITIONPAGE } from "../TermAndConditionPage/TermsAndConditionPage.js";
 import { RESENDVERIFICATIONPAGE } from "./ResendVerification.js";
 
 export const EMAILVERIFICATIONPAGE=()=>{
@@ -54,7 +55,7 @@ export const EMAILVERIFICATIONPAGE=()=>{
                                             function getBrowserVersion() { return navigator.appVersion; }
                                             POSTPACKAGE(DEVICELOGINAPI,'no-cors',DEVICEDATA,(data)=>{
                                                 STORE('local','User',DATA.SecretCode);
-                                                HOMEPAGE()
+                                                TERMSANDCONDITIONPAGE();
                                             })
                                         })
                                     )
