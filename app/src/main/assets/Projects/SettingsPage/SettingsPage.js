@@ -1,6 +1,7 @@
 import { ICONMODULE } from "../../Modules/Module.js"
 import { APPLOCKPAGE } from "../AppLockPage/AppLockPage.js";
 import { HELPPAGE } from "../HelpPage/HelpPage.js";
+import { PARENTALCONTROLPAGE } from "../ParentalControlPage/ParentalControl.js";
 import { PRIVACYPOLICYPAGE } from "../PrivacyPolicyPage/PrivacyPolicyPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 
@@ -24,7 +25,7 @@ export const SETTINGSPAGE=()=>{
         
         </button>
 
-        <button class='Button'>
+        <button id='ParentalControl' class='Button'>
 
             <h1 class='Title' >Parental Control</h1>
 
@@ -53,6 +54,8 @@ export const SETTINGSPAGE=()=>{
     );
 
     CLICKED('#AppLock',()=>{APPLOCKPAGE()});
+
+    CLICKED('#ParentalControl',()=>{PARENTALCONTROLPAGE()});
 
     CLICKED('#PrivacyPolicy',()=>{PRIVACYPOLICYPAGE()});
 
