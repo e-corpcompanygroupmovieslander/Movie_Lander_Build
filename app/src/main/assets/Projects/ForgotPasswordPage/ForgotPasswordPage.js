@@ -3,26 +3,16 @@ import { LOGINPAGE } from "../LoginPage/LoginPage.js"
 import { FORGOTPASSWORDMESSAGEPAGE } from "./ForgotPasswordMessage.js"
 
 export const FORGOTPASSWORDPAGE=()=>{
-
     WIDGET(`
-
         <img class='AppLogo' src='../Library/Images/app_icon.png'/>
-
         <input class='Email' type='email' placeholder='Enter Email'/>
-        
         <button class='forestgreen' >Recover</button>
-
         <button class='brown' >Cancel</button>
-
     `)
-
     CLICKED('.brown',()=>{LOGINPAGE()})
-
     CLICKED('.forestgreen',()=>{
-
         const Email=document.querySelector('.Email');
         const BUTTON=document.querySelector('.forestgreen');
-
         CONDITION(Email.value,
             ()=>CHECK(Email.value,(result)=>{
                 LOADER(BUTTON);
@@ -51,7 +41,5 @@ export const FORGOTPASSWORDPAGE=()=>{
             ),
             ()=>MESSAGE('Enter User Email')
         )
-
     })
-    
 }
