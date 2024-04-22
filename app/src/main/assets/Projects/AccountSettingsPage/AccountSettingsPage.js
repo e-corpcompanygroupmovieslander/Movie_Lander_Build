@@ -13,24 +13,15 @@ export const ACCOUNTSETTINGSPAGE=()=>{
     `
 
         <button id='Update' class='Button'>
-
             <h1 class='Title' >User</h1>
-
             <img class='Icons' src='${ICONMODULE}user.png'/>
-
         </button>
 
         <button id='Messages' class='Button'>
-
             <h1 class='Title' >Messages</h1>
-
             <img class='Icons' src='${ICONMODULE}chat.png'/>
-
         </button>
 
-
-
-    
     `,''
     );
     

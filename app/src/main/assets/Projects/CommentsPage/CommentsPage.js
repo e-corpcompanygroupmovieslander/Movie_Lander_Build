@@ -10,16 +10,10 @@ export const COMMENTSPAGE=()=>{
     `,
     `
     <div class='CommentsDiv'>
-
         <img id='AnimationsLoader' class='LoadingIcon' src='${ICONMODULE}loading.png'/>
-    
     </div>
-
-    <input  class='Comment' type='text' placeholder='Write Your Comment' />
-        
+    <input  class='Comment' type='text' placeholder='Write Your Comment' />   
     <button id='CommentsButton' class='forestgreen' >Send</button>
-
-
     `,'CommentsPage'
     );
 

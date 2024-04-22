@@ -2,7 +2,6 @@ import { CONNECTION } from "../../Connection/Connection.js"
 import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET } from "../../Modules/Module.js"
 
 const AUTOAPPDATADOWNLOAD=()=>{
-
     //CATERGORIES DATA
     GETPACKAGE(CATERGORYAPI,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{STORE('local','CatergoriesData',data)})
@@ -14,28 +13,24 @@ const AUTOAPPDATADOWNLOAD=()=>{
             })
         })
     })
-
     //FREE MOVIES SECTION
     GETPACKAGE(FREEMOVIESAPI,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{
             STORE('local','FreeMovies',data)
         })
     })
-
     //MORE APPS SECTION
     GETPACKAGE(MOREAPPSAPI,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{
             STORE('local','MoreAppps',data)
         })
     })
-
     //PAYMENTS MESSAGES
     GETPACKAGE(MTNPREMIUMPAYGET,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{
             STORE('local','Payments',data)
         })
     })
-
     //USER DETAILS UPDATE
     GETPACKAGE(LOGINAPI,'cors',(data)=>{
         FINDER(data,'SecretCode',localStorage.getItem('User'),(User)=>{
@@ -51,7 +46,6 @@ const AUTOAPPDATADOWNLOAD=()=>{
           )
         })
     })
-
     //USER DELETED ACCOUNT
     GETPACKAGE(DELETEACCOUNTGET,'cors',(data)=>{
         FINDER(data,'User',localStorage.getItem('User'),(user)=>{
@@ -66,7 +60,6 @@ const AUTOAPPDATADOWNLOAD=()=>{
           )
         })
     })
-
     //AUTOPREMIUM USERS
     GETPACKAGE(MTNPREMIUMPAYGET, 'cors', (data) => {
         REVERSE(data,(result)=>{
@@ -83,7 +76,5 @@ const AUTOAPPDATADOWNLOAD=()=>{
             });
         });    
     });
-    
-
 }
 export{AUTOAPPDATADOWNLOAD}

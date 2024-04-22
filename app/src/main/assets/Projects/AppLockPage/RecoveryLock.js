@@ -2,26 +2,16 @@ import { EMAILSENDERAPI, LOGINAPI } from "../../Modules/Module.js"
 import { APPLOCKDISPLAY } from "./AppLockDisplayPage.js"
 
 export const LOCKRECOVERY=()=>{
-
     WIDGET(`
-
         <img class='AppLogo' src='../Library/Images/app_icon.png'/>
-
-        <input class='Email' type='email' placeholder='Enter Email'/>
-        
+        <input class='Email' type='email' placeholder='Enter Email'/>    
         <button class='forestgreen' >Recover</button>
-
         <button class='brown' >Cancel</button>
-
-    `)
-
+    `);
     CLICKED('.brown',()=>{APPLOCKDISPLAY()})
-
     CLICKED('.forestgreen',()=>{
-
         const Email=document.querySelector('.Email');
         const BUTTON=document.querySelector('.forestgreen');
-
         CONDITION(Email.value,
             ()=>CHECK(Email.value,(result)=>{
                 LOADER(BUTTON);
@@ -37,23 +27,16 @@ export const LOCKRECOVERY=()=>{
                                 };
                                 POSTPACKAGE(EMAILSENDERAPI,'no-cors',EMAILDATA,(data)=>{
                                     WIDGET(`
-
-                                    <img class='AppLogo' src='../Library/Images/app_icon.png'/>
-                            
-                                    <h1>App Lock Recovered</h1>
-                            
+                                    <img class='AppLogo' src='../Library/Images/app_icon.png'/>                           
+                                    <h1>App Lock Recovered</h1>                        
                                     <p>
                                         User App Lock is Sent  <br><br> 
                                         ${sessionStorage.getItem('User')}
                                         <br><br>
                                         Check Email to get Your AppLock.
-
                                     </p>
-                                    
                                     <button class='teal' >Back</button>
-                            
                                 `)
-                            
                                 CLICKED('.teal',()=>{LOCKRECOVERY()})
                                 })
                             }),
@@ -68,7 +51,5 @@ export const LOCKRECOVERY=()=>{
             ),
             ()=>MESSAGE('Enter User Email')
         )
-
     })
-
 }
