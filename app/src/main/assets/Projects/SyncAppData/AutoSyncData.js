@@ -1,25 +1,18 @@
 import { CONNECTION } from "../../Connection/Connection.js";
-import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET } from "../../Modules/Module.js";
+import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET, PRIVACYTEXT } from "../../Modules/Module.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js";
 
 export const AUTOSYNC=()=>{
-
-    WIDGET(` 
-            
+    WIDGET(`   
         <img class='AppLogo' src='../Library/Images/app_icon.png'/>
         <h1 class='LoaderMessage'>Movie Lander Updating</h1>
         <p class='UpdatingData'></p>
         <img id='OfflineImage' class='LoadingIcon' src='${LOADERICON}'/>
         <button class='forestgreen'>Syncing...</button>
-
     `);
-
     const UpdatingData=document.querySelector('.UpdatingData');
-
     DISPLAY(UpdatingData,'Sync Started')
-
     DECLARATION('.forestgreen',(ELEMENT)=>{
-
         //USER DELETED ACCOUNT
         GETPACKAGE(DELETEACCOUNTGET,'cors',(data)=>{
             FINDER(data,'User',localStorage.getItem('User'),(user)=>{
@@ -35,7 +28,12 @@ export const AUTOSYNC=()=>{
                         JSONIFICATION(data,(data)=>{
                             STORE('local','FreeMovies',data)
                             DISPLAY(ELEMENT,'Movies Synced ');
-
+                            //PRIVACY  SECTION
+                            GETPACKAGE(PRIVACYTEXT,'cors',(data)=>{
+                                JSONIFICATION(data,(data)=>{
+                                    STORE('local','PrivacyText',data)
+                                })
+                            })
                             //MORE APPS SECTION
                             DISPLAY(UpdatingData,'App Sync ');
                             GETPACKAGE(MOREAPPSAPI,'cors',(data)=>{
@@ -111,7 +109,5 @@ export const AUTOSYNC=()=>{
             )
             })
         })
-    
     })
-
 }

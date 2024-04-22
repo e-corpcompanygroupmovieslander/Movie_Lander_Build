@@ -12,7 +12,7 @@ export const PRIVACYPOLICYPAGE=()=>{
     );
 
     DECLARATION('#PolicyDiv',(ELEMENT)=>{
-        GETPACKAGE(PRIVACYTEXT,'cors',(data)=>{
+        DEJSON('local','PrivacyText',(data)=>{
             DISPLAY(ELEMENT,data)
         })
     })
