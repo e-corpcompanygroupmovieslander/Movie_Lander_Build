@@ -12,5 +12,5 @@ export const RESENDVERIFICATIONPAGE=()=>{
         </p>
         <button class='teal'>Back</button>
     `)
-    CLICKED('.teal',()=>{EMAILVERIFICATIONPAGE()})
+    CLICKED('.teal',()=>{EMAILVERIFICATIONPAGE()});
 }
