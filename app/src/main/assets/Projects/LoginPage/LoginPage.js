@@ -3,34 +3,21 @@ import { CREATEACCOUNTPAGE } from "../CreateAccountPage/CreateAccountPage.js"
 import { FORGOTPASSWORDPAGE } from "../ForgotPasswordPage/ForgotPasswordPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js";
 
-export const LOGINPAGE=()=>{
-    
+export const LOGINPAGE=()=>{ 
     WIDGET(`
-
         <img class='AppLogo' src='../Library/Images/app_icon.png'/>
-
         <input class='Email' type='email' placeholder='Enter Email'/>
-
         <input class='Password' type='password' placeholder='Enter Password'/>
-        
         <h1 class='ForgotPassword'>Forgot Password? </h1>
-
         <button class='forestgreen' >Login</button>
-
         <button class='blue' >Create Account</button>
-    
     `);
-
     CLICKED('.blue',()=>{CREATEACCOUNTPAGE()});
-
     CLICKED('.ForgotPassword',()=>{FORGOTPASSWORDPAGE()});
-
     CLICKED('.forestgreen',()=>{
-
         const Email=document.querySelector('.Email');
         const Password=document.querySelector('.Password');
         const BUTTON=document.querySelector('.forestgreen');
-
         CONDITION(Email.value,
             ()=>CONDITION(Password.value,
                 ()=>CHECK(Password.value,(result)=>{
@@ -62,7 +49,6 @@ export const LOGINPAGE=()=>{
                                                                 HOMEPAGE();
                                                             })
                                                         })
-    
                                                     })
                                                 )
                                             })
@@ -85,8 +71,6 @@ export const LOGINPAGE=()=>{
             ),
             ()=>MESSAGE('Enter User Email')
         )
-
     });
-
 }
 
