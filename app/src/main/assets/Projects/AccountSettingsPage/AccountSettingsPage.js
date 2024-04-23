@@ -66,9 +66,11 @@ export const ACCOUNTSETTINGSPAGE=()=>{
     
             `,
             `
+                <img class='AppLogo' src='${ICONMODULE}secretcode.png'/>
+
                 <h2>User Has No Subscription</h2>
 
-                <p>Click The Upgrade Subscription To Unlock This Page</p>
+                <p>Click Upgrade Subscription To Unlock This Page</p>
     
                 <button class='forestgreen'>Upgrade Subsciption</button>
     
