@@ -6,7 +6,7 @@ import { LOGINPAGE } from "../Projects/LoginPage/LoginPage.js";
 
 const CONNECTION = () => {
 
-    HIDENAVIGATIONBAR()
+    HIDENAVIGATIONBAR();
 
     CONDITION(localStorage.getItem('AppLock'),
         ()=>APPLOCKDISPLAY(),
