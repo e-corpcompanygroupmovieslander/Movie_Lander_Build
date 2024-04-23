@@ -1,5 +1,5 @@
 import { CONNECTION } from "../../Connection/Connection.js"
-import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET, PRIVACYTEXT } from "../../Modules/Module.js"
+import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, HELPTEXT, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET, PRIVACYTEXT } from "../../Modules/Module.js"
 
 const AUTOAPPDATADOWNLOAD=()=>{
     //CATERGORIES DATA
@@ -25,10 +25,16 @@ const AUTOAPPDATADOWNLOAD=()=>{
             STORE('local','MoreAppps',data)
         })
     })
-    //MORE APPS SECTION
+    //PRIVACY SECTION
     GETPACKAGE(PRIVACYTEXT,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{
             STORE('local','PrivacyText',data)
+        })
+    })
+    //HELP  SECTION
+    GETPACKAGE(HELPTEXT,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{
+            STORE('local','HelpText',data)
         })
     })
     //PAYMENTS MESSAGES

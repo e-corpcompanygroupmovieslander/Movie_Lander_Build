@@ -9,8 +9,9 @@ export const HELPPAGE=()=>{
     ``,'PolicyDiv'
     );
 
+  
     DECLARATION('#PolicyDiv',(ELEMENT)=>{
-        GETPACKAGE(HELPTEXT,'cors',(data)=>{
+        DEJSON('local','HelpText',(data)=>{
             DISPLAY(ELEMENT,data)
         })
     })

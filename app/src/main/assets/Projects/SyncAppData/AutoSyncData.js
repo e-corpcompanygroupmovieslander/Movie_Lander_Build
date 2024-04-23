@@ -1,5 +1,5 @@
 import { CONNECTION } from "../../Connection/Connection.js";
-import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET, PRIVACYTEXT } from "../../Modules/Module.js";
+import { CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, HELPTEXT, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET, PRIVACYTEXT } from "../../Modules/Module.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js";
 
 export const AUTOSYNC=()=>{
@@ -32,6 +32,12 @@ export const AUTOSYNC=()=>{
                             GETPACKAGE(PRIVACYTEXT,'cors',(data)=>{
                                 JSONIFICATION(data,(data)=>{
                                     STORE('local','PrivacyText',data)
+                                    //HELP  SECTION
+                                    GETPACKAGE(HELPTEXT,'cors',(data)=>{
+                                        JSONIFICATION(data,(data)=>{
+                                            STORE('local','HelpText',data)
+                                        })
+                                    })
                                 })
                             })
                             //MORE APPS SECTION
