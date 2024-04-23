@@ -1,0 +1,28 @@
+<h1 class='SubTopic'>App Lock Policy</h1>
+
+<p class='Details'>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp
+To ensure the security of your device and data, the following app lock policy is in effect:
+
+<br><br>
+
+1. All apps containing sensitive or personal information, such as banking apps, email clients, and social media apps, are to be protected with a PIN or pattern lock.
+
+<br><br>
+
+2. Access to certain system settings and administrative functions, including app installations and uninstallations, is restricted to authorized users only.
+
+<br><br>
+
+3. In the event of a lost or stolen device, it is the user's responsibility to report the incident to the IT department immediately. The IT department will then take appropriate action, which may include remotely locking or wiping the device to prevent unauthorized access to sensitive information.
+
+<br><br>
+
+4. Users are advised to regularly review and update their app lock settings to ensure that all sensitive apps are adequately protected.
+
+<br><br>
+
+5. Any attempt to bypass or disable the app lock mechanism is strictly prohibited and may result in disciplinary action.
+
+</p>

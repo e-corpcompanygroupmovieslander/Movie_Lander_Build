@@ -8,7 +8,6 @@ export const HELPPAGE=()=>{
     `,
     ``,'PolicyDiv'
     );
-
   
     DECLARATION('#PolicyDiv',(ELEMENT)=>{
         DEJSON('local','HelpText',(data)=>{

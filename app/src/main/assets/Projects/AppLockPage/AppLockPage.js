@@ -17,8 +17,8 @@ export const APPLOCKPAGE=()=>{
 
     );
     DECLARATION('#DeleteAccountPolicy',(ELEMENT)=>{
-        GETPACKAGE(APPLOCKAPI,'cors',(data)=>{
-            DISPLAY(ELEMENT,data);
+        DEJSON('local','AppLockText',(data)=>{
+            DISPLAY(ELEMENT,data)
         })
     })
     DECLARATION('.DeleteButton',(ELEMENT)=>{
