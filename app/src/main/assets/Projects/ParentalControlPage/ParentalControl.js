@@ -1,4 +1,4 @@
-import { ICONMODULE, PARENTALCONTROLTEXT } from "../../Modules/Module.js";
+import { ICONMODULE } from "../../Modules/Module.js";
 import { SETTINGSPAGE } from "../SettingsPage/SettingsPage.js";
 
 export const PARENTALCONTROLPAGE=()=>{
@@ -19,8 +19,8 @@ export const PARENTALCONTROLPAGE=()=>{
     );
 
     DECLARATION('#DeleteAccountPolicy',(ELEMENT)=>{
-        GETPACKAGE(PARENTALCONTROLTEXT,'cors',(data)=>{
-            DISPLAY(ELEMENT,data);
+        DEJSON('local','ParentalControlText',(data)=>{
+            DISPLAY(ELEMENT,data)
         })
     })
 

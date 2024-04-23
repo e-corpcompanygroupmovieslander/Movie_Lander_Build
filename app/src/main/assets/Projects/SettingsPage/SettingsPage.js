@@ -61,6 +61,4 @@ export const SETTINGSPAGE=()=>{
 
     CLICKED('#Help',()=>{HELPPAGE()});
     
-
-    
 }

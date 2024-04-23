@@ -1,4 +1,3 @@
-import { PRIVACYTEXT } from "../../Modules/Module.js";
 import { SETTINGSPAGE } from "../SettingsPage/SettingsPage.js";
 
 export const PRIVACYPOLICYPAGE=()=>{

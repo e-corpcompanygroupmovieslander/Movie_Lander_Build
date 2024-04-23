@@ -1,5 +1,5 @@
 import { CONNECTION } from "../../Connection/Connection.js";
-import { APPLOCKAPI, ICONMODULE } from "../../Modules/Module.js";
+import { ICONMODULE } from "../../Modules/Module.js";
 import { SETTINGSPAGE } from "../SettingsPage/SettingsPage.js"
 export const APPLOCKPAGE=()=>{
     BACKHEADERWIDGET(()=>{SETTINGSPAGE()},

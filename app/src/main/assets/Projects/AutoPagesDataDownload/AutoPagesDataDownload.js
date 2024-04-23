@@ -1,5 +1,5 @@
 import { CONNECTION } from "../../Connection/Connection.js"
-import { APPLOCKAPI, CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, HELPTEXT, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET, PRIVACYTEXT } from "../../Modules/Module.js"
+import { APPLOCKAPI, CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, HELPTEXT, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET, PARENTALCONTROLTEXT, PRIVACYTEXT } from "../../Modules/Module.js"
 
 const AUTOAPPDATADOWNLOAD=()=>{
     //CATERGORIES DATA
@@ -35,6 +35,12 @@ const AUTOAPPDATADOWNLOAD=()=>{
     GETPACKAGE(APPLOCKAPI,'cors',(data)=>{
         JSONIFICATION(data,(data)=>{
             STORE('local','AppLockText',data)
+        })
+    })
+    //PARENTAL  SECTION
+    GETPACKAGE(PARENTALCONTROLTEXT,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{
+            STORE('local','ParentalControlText',data)
         })
     })
     //HELP  SECTION
