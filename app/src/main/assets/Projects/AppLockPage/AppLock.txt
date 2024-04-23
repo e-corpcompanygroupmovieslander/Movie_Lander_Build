@@ -5,24 +5,19 @@
 &nbsp &nbsp &nbsp &nbsp &nbsp
 To ensure the security of your device and data, the following app lock policy is in effect:
 
-<br><br>
-
-1. All apps containing sensitive or personal information, such as banking apps, email clients, and social media apps, are to be protected with a PIN or pattern lock.
-
-<br><br>
-
-2. Access to certain system settings and administrative functions, including app installations and uninstallations, is restricted to authorized users only.
+<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp
+AppLock allows you to secure the app every time you exit it. Once AppLock is activated, you will be prompted to enter the your set pin each time you launch the app. This feature ensures that your user data and personal information within the app remain protected and require proper authentication for access.
 
 <br><br>
 
-3. In the event of a lost or stolen device, it is the user's responsibility to report the incident to the IT department immediately. The IT department will then take appropriate action, which may include remotely locking or wiping the device to prevent unauthorized access to sensitive information.
+&nbsp &nbsp &nbsp &nbsp &nbsp To activate AppLock on the app, please enter the 5-digit PIN below that you can personally remember. Then, tap the 'Enable' button to activate AppLock immediately.
+
+<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp To deactivate AppLock on the app, please enter the 5-digit PIN below that you used to activate AppLock. Then, tap the 'Disable' button to deactivate AppLock immediately.
 
 <br><br>
-
-4. Users are advised to regularly review and update their app lock settings to ensure that all sensitive apps are adequately protected.
-
-<br><br>
-
-5. Any attempt to bypass or disable the app lock mechanism is strictly prohibited and may result in disciplinary action.
+<b>Note:<b><br>
+&nbsp &nbsp &nbsp &nbsp &nbsp In case you forget your AppLock PIN, tap the 'Forgot PIN' option at the opening of the app. You will then need to enter the email you used to sign up for the account and tap 'Recover'. The PIN will be sent to your email.
 
 </p>
