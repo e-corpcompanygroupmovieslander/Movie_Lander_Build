@@ -1,0 +1,19 @@
+<p class='Details'>
+&nbsp &nbsp &nbsp &nbsp &nbsp
+Parental control on the app will filter out all movies that are not suitable for young viewers. This feature will only allow access to the following categories: Animations, Cartoons, Family, and Religious. Additionally, the movies in these categories will further be sorted to cater to the preference of young viewers.
+
+<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp
+Also, additional suitable categories for young viewers may be added in the future.
+
+<br><br>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp
+To activate parental control on the app, please enter a 5-digit PIN below that you, as a parent, can remember. Then, tap the 'SET' button to activate parental control immediately.
+
+<br><br>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp
+To remove parental controls, you will need to enter the same 5-digit PIN you used to activate parental control. Type the PIN below and then tap the 'Clear' button to deactivate parental control immediately.
+
+</p>
