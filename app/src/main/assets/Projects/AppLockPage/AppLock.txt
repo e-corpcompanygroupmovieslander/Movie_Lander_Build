@@ -13,7 +13,7 @@ AppLock allows you to secure the app every time you exit it. Once AppLock is act
 
 &nbsp &nbsp &nbsp &nbsp &nbsp To activate AppLock on the app, please enter the 5-digit PIN below that you can personally remember. Then, tap the 'Enable' button to activate AppLock immediately.
 
-<br><br>
+<br><br><br>
 &nbsp &nbsp &nbsp &nbsp &nbsp To deactivate AppLock on the app, please enter the 5-digit PIN below that you used to activate AppLock. Then, tap the 'Disable' button to deactivate AppLock immediately.
 
 <br><br>
