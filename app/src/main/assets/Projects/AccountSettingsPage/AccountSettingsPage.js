@@ -4,7 +4,7 @@ import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 
 export const ACCOUNTSETTINGSPAGE=()=>{
 
-    REMOVESTORE('','PremiumPath')
+    REMOVESTORE('','PremiumPath');
 
     CONDITION(localStorage.getItem('PremiumUser'),
         ()=> DEJSON('local','PremiumUser',(data)=>{
