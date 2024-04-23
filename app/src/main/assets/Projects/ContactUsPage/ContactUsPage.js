@@ -37,6 +37,7 @@ export const CONTACTUSPAGE=()=>{
 
     CLICKED('#Gmail',()=>{GMAIL('movielander1999@gmail.com')});
     CLICKED('#Instagram',()=>{INSTAGRAM('e_corpCompanygroup')});
+    CLICKED('#facebook',()=>{WEBSITE('https://www.facebook.com/profile.php?id=100089825687989&mibextid=ZbWKwL')});
     CLICKED('#Site',()=>{WEBSITE('https://www.e-corpcompanygroup.com')});
 
 }
