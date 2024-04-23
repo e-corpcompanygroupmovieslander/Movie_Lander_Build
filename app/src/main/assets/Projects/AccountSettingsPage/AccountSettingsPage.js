@@ -17,19 +17,19 @@ export const ACCOUNTSETTINGSPAGE=()=>{
             `
                 <button class='MyDataButton'>
                     <h1 class='mytitle'>User Pay Code</h1>
-                    <img class='myIcon' src='${ICONMODULE}user.png'/>
+                    <img class='myIcon' src='${ICONMODULE}cart.png'/>
                     <h1 class='MyData'>${data.User}</h1>
                 </button>
     
                 <button class='MyDataButton'>
                     <h1 class='mytitle'>Subscription Date</h1>
-                    <img class='myIcon' src='${ICONMODULE}user.png'/>
+                    <img class='myIcon' src='${ICONMODULE}createdon.png'/>
                     <h1 class='MyData'>${data.PayDate}</h1>
                 </button>
     
                 <button class='MyDataButton'>
                     <h1 class='mytitle'>Subscription Expiry</h1>
-                    <img class='myIcon' src='${ICONMODULE}user.png'/>
+                    <img class='myIcon' src='${ICONMODULE}caution.png'/>
                     <h1 class='MyData'>${data.ExpiryDate}</h1>
                 </button>
     
