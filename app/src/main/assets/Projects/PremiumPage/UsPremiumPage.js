@@ -1,3 +1,4 @@
+import { ACCOUNTSETTINGSPAGE } from "../AccountSettingsPage/AccountSettingsPage.js";
 import { MOVIESDETAILSPAGE } from "../MoviesDetailsPage/MoviesDetailsPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 import { PAYMENTPAGE } from "./PaymentPage.js";
@@ -13,9 +14,12 @@ export const USPREMIUMPAGE=()=>{
         let NAVIGATOR='';
 
         CONDITION(sessionStorage.getItem('PremiumPath') === 'MoviesDetails' ,
-            ()=>NAVIGATOR=MOVIESDETAILSPAGE,
+        ()=>NAVIGATOR=MOVIESDETAILSPAGE,
+        ()=>CONDITION(sessionStorage.getItem('PremiumPath') === 'SETTINGS',
+            ()=>NAVIGATOR=ACCOUNTSETTINGSPAGE,
             ()=>NAVIGATOR=USERACCOUNTPAGE
         )
+    )
 
         BACKHEADERWIDGET(()=>{NAVIGATOR()},
         `

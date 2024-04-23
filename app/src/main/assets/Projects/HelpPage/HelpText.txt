@@ -6,3 +6,31 @@
 The series on the app are all zipped per season, so you cannot watch them on the app. However, you can download the zip files to your device. To unzip the series, download ZArchiver
 
 </p>
+
+<h1 class='SubTopic'>Sync Button</h1>
+
+<p class='Details'>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp
+The sync button in the profile section is used to check for available updates on the app and add them.<br>
+Syncing ensures you're up to date with system updates, new movies, subscription payments, account status, and more. It's recommended to sync at least once a day for optimal performance.
+
+</p>
+
+<h1 class='SubTopic'>Insight Section</h1>
+
+<p class='Details'>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp
+The Insight section on the movie watching page is a private space for your personal notes or thoughts about the movie. This section is not visible to other users on the app, ensuring that your notes remain confidential and cannot be accessed by anyone else.
+
+</p>
+
+<h1 class='SubTopic'>Comments Section</h1>
+
+<p class='Details'>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp
+Compared to the Insight section, the Comments section is public, meaning that your comments can be read by other users on the app. It is important to always keep these comments respectful and refrain from using obscene language.
+
+</p>
