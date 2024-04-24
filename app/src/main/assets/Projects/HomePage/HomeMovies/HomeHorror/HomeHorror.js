@@ -1,4 +1,5 @@
 import { MOVIESPATH } from "../../../../Modules/Module.js";
+import { MONITORING } from "../../../Monitoring/Monitoring.js";
 import { MOVIESDETAILSPAGE } from "../../../MoviesDetailsPage/MoviesDetailsPage.js";
 
 export const HOMEHORROR=()=>{
@@ -14,6 +15,7 @@ export const HOMEHORROR=()=>{
                         EVENT(ANIME,'click',()=>{
                             STORE('','Path','HOMEPAGE');
                             STORE('','MovieData',JSON.stringify(element));
+                            MONITORING('User Clicked Movie From HomePage Horror'+JSON.stringify(element))
                             MOVIESDETAILSPAGE();
                         })
                         ADD(ELEMENT,ANIME);

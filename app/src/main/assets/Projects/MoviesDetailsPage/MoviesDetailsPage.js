@@ -95,6 +95,11 @@ export const MOVIESDETAILSPAGE=()=>{
         DECLARATION('.brown',(ELEMENT)=>{
             STORE('','PremiumPath','MoviesDetails');
             CLICKED('.brown',()=>{
+                const DATA={
+                    "Premium":localStorage.getItem('Premium'),
+                    "Movie":JSON.stringify(data)
+                }
+                MONITORING(DATA)
                 CONDITION(data.Subscription ,
                 ()=>CONDITION(data.Subscription && localStorage.getItem('Premium'),
                     ()=>WEBSITE(`https://drive.google.com/uc?export=download&id=${data.MovieSource}`),

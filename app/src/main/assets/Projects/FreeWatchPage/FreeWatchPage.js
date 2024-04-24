@@ -1,7 +1,9 @@
 import { MOVIESPATH } from "../../Modules/Module.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
+import { MONITORING } from "../Monitoring/Monitoring.js";
 
 export const FREEWATCHPAGE=()=>{
+    MONITORING('User At Free Watch Section');
     BACKHEADERWIDGET(()=>{HOMEPAGE()},`
         <h1 class='Profile'>Free Watch</h1>
         `,
@@ -16,6 +18,7 @@ export const FREEWATCHPAGE=()=>{
                         <img class='MovieImage' src='${MOVIESPATH+element.MovieImage}'/>
                     `);
                     EVENT(HOLDER,'click',()=>{
+                        MONITORING('User Is Watching'+element.MovieName);
                         BACKHEADERWIDGET(()=>{FREEWATCHPAGE()},`
                             <h1 class='Profile'>${element.MovieName}</h1>
                         `,`

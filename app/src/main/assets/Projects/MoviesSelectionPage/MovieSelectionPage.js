@@ -1,9 +1,12 @@
 import { MOVIESPATH } from "../../Modules/Module.js";
 import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
+import { MONITORING } from "../Monitoring/Monitoring.js";
 import { MOVIESDETAILSPAGE } from "../MoviesDetailsPage/MoviesDetailsPage.js";
 
 export const MOVIESSELECTIONPAGE=()=>{
+
+    MONITORING('User Now On More Movies Section Pages')
 
     let NAVIGATION='';
 

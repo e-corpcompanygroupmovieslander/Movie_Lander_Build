@@ -1,4 +1,5 @@
 import { MOVIESPATH } from "../../../../Modules/Module.js";
+import { MONITORING } from "../../../Monitoring/Monitoring.js";
 import { MOVIESDETAILSPAGE } from "../../../MoviesDetailsPage/MoviesDetailsPage.js";
 
 export const HOMEANIMATION=()=>{
@@ -15,6 +16,7 @@ export const HOMEANIMATION=()=>{
                             STORE('','Path','HOMEPAGE');
                             STORE('','MovieData',JSON.stringify(element));
                             MOVIESDETAILSPAGE();
+                            MONITORING('User Clicked Movie From HomePage Animation'+JSON.stringify(element))
                         })
                         ADD(ELEMENT,ANIME);
                     })

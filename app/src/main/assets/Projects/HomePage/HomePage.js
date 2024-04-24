@@ -2,6 +2,7 @@ import { ICONMODULE } from "../../Modules/Module.js"
 import { AUTOREMOVEACCOUNT } from "../AutoRemoveAccout/AutoRemoveAccount.js";
 import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { FREEWATCHPAGE } from "../FreeWatchPage/FreeWatchPage.js";
+import { MONITORING } from "../Monitoring/Monitoring.js";
 import { MOVIESSELECTIONPAGE } from "../MoviesSelectionPage/MovieSelectionPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 import { HOMEANIMATION } from "./HomeMovies/AnimationMovies/AnimationMovies.js";
@@ -18,6 +19,8 @@ import { NONPARENTALCONTROLSECTION } from "./NonParentalControl.js";
 import { PARENTALCONTROLSECTION } from "./ParentalControlSection.js";
 
 export const  HOMEPAGE=()=>{
+
+    MONITORING('User At Home Page');
 
     AUTOREMOVEACCOUNT();
 
@@ -68,39 +71,45 @@ export const  HOMEPAGE=()=>{
                     STORE('','Path','SEEMORE');
                     STORE('local','CurrentSection','Animations');
                     MOVIESSELECTIONPAGE();
+                    MONITORING('User Clicked See More Animations')
                 }),
                 CLICKED('#MoreMovies',()=>{
                     STORE('','Path','SEEMORE');
                     STORE('local','CurrentSection','Action');
                     MOVIESSELECTIONPAGE();
+                    MONITORING('User Clicked See More Actions Movies')
                 }),
                 CLICKED('#MoreMarathons',()=>{
                     STORE('','Path','SEEMORE');
                     STORE('local','CurrentSection','Marathons');
                     MOVIESSELECTIONPAGE();
+                    MONITORING('User Clicked See More MArathons')
                 }),
                 CLICKED('#MoreSeries',()=>{
                     STORE('','Path','SEEMORE');
                     STORE('local','CurrentSection','Series');
                     MOVIESSELECTIONPAGE();
+                    MONITORING('User Clicked See More Series')
                 }),
                 CLICKED('#MoreAdventure',()=>{
                     STORE('','Path','SEEMORE');
                     STORE('local','CurrentSection','Adventure');
                     MOVIESSELECTIONPAGE();
+                    MONITORING('User Clicked See More Adventure')
                 }),
                 CLICKED('#MoreHorror',()=>{
                     STORE('','Path','SEEMORE');
                     STORE('local','CurrentSection','Horror');
                     MOVIESSELECTIONPAGE();
+                    MONITORING('User Clicked See More Horror')
                 })
 
             })
         )
     })
 
-    CLICKED('.CatergoryPage',()=>{CATERGORYPAGE()});
-    CLICKED('.FreeWatch',()=>{FREEWATCHPAGE()});
-    CLICKED('.UserAccount',()=>{USERACCOUNTPAGE()});
+    CLICKED('.CatergoryPage',()=>{ MONITORING('User Clicked Catergory Page'),CATERGORYPAGE()});
+    CLICKED('.FreeWatch',()=>{MONITORING('User Clicked Free Movies Page'),FREEWATCHPAGE()});
+    CLICKED('.UserAccount',()=>{MONITORING('User Clicked User Account Page'),USERACCOUNTPAGE()});
 
 }

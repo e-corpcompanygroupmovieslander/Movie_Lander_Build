@@ -1,4 +1,5 @@
 import { MOVIESPATH } from "../../../../Modules/Module.js"
+import { MONITORING } from "../../../Monitoring/Monitoring.js"
 import { MOVIESDETAILSPAGE } from "../../../MoviesDetailsPage/MoviesDetailsPage.js"
 
 export const LATESTANIMATION=()=>{
@@ -13,6 +14,7 @@ export const LATESTANIMATION=()=>{
                 CLICKED('#LatestAnimation',()=>{
                     STORE('','Path','HOMEPAGE');
                     STORE('','MovieData',JSON.stringify(data));
+                    MONITORING('User Clicked Movie From HomePage Latest Animation'+JSON.stringify(data))
                     MOVIESDETAILSPAGE();
                 })
             })

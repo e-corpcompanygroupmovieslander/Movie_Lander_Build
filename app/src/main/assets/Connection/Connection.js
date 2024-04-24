@@ -3,6 +3,7 @@ import { AUTOAPPDATADOWNLOAD } from "../Projects/AutoPagesDataDownload/AutoPages
 import { EMAILVERIFICATIONPAGE } from "../Projects/EmailVerificationPage/EmailVerificationPage.js";
 import { HOMEPAGE } from "../Projects/HomePage/HomePage.js";
 import { LOGINPAGE } from "../Projects/LoginPage/LoginPage.js";
+import { MONITORING } from "../Projects/Monitoring/Monitoring.js";
 
 const CONNECTION = () => {
 
@@ -11,7 +12,10 @@ const CONNECTION = () => {
     CONDITION(localStorage.getItem('AppLock'),
         ()=>APPLOCKDISPLAY(),
         ()=>CONDITION(localStorage.getItem('User'),
-        ()=>HOMEPAGE(),
+        ()=>CHECK(localStorage.getItem('User'),(result)=>{
+            MONITORING('User Has Visited The App');
+            HOMEPAGE();
+        }),
             ()=>CONDITION(localStorage.getItem('UserData') && !localStorage.getItem('User'),
                 ()=>EMAILVERIFICATIONPAGE(),
                 ()=>LOGINPAGE()

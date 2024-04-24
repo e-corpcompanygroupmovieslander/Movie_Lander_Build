@@ -1,4 +1,5 @@
 import { ICONMODULE } from "../../Modules/Module.js";
+import { MONITORING } from "../Monitoring/Monitoring.js";
 import { PREMIUMPAGE } from "./PremiumPage.js";
 
 export const PAYMENTPAGE = () => {
@@ -38,6 +39,8 @@ export const PAYMENTPAGE = () => {
     )
 
     CLICKED('.forestgreen',()=>{
+
+        MONITORING('Wants to Pay')
 
         DECLARATION('#HomePaymentDiv',(ELEMENT)=>{
             DISPLAY(ELEMENT,`
