@@ -1,6 +1,8 @@
+import { MONITORING } from "../Monitoring/Monitoring.js"
 import { MOVIESDETAILSPAGE } from "../MoviesDetailsPage/MoviesDetailsPage.js"
 export const INSIGHTPAGE=()=>{
     DEJSON('','MovieData',(data)=>{
+        MONITORING('User At Insight Page For Movie For'+ data.MovieName)
         CONDITION(localStorage.getItem(data.MovieName),
             ()=> DEJSON('local',data.MovieName,(data)=>{
                 STORE('','MovieInsight',data.MyInsight)
@@ -24,6 +26,7 @@ export const INSIGHTPAGE=()=>{
                 };
                 JSONIFICATION(DATA,(info)=>{
                     STORE('local',data.MovieName,info);
+                    MONITORING('User has Insighted Thoughts Movie For'+ data.MovieName+'Here Are Their Insights'+info)
                 });
             });
         });
