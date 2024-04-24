@@ -1,8 +1,7 @@
 import { ICONMODULE, UPDATEAPI } from "../../Modules/Module.js"
 import { ABOUTMEPAGE } from "../AboutMePage/AboutMePage.js";
 import { ACCOUNTSETTINGSPAGE } from "../AccountSettingsPage/AccountSettingsPage.js";
-import { BUSINESSTOOLSPAGE } from "../BusinessTools/BusinessTools.js";
-import { COMMUNITYPAGE } from "../CommunityPage.js/CommunityPage.js";
+import { MOVIEREQUESTPAGE } from "../CommunityPage.js/CommunityPage.js";
 import { CONTACTUSPAGE } from "../ContactUsPage/ContactUsPage.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js"
 import { LIBRARYPAGE } from "../LibraryPage/Library.js";
@@ -43,17 +42,9 @@ export const USERACCOUNTPAGE=()=>{
 
         <button id='Community' class='Button'>
 
-            <h1 class='Title' >Community</h1>
+            <h1 class='Title' >Requests</h1>
 
             <img class='Icons' src='${ICONMODULE}group-users.png'/>
-        
-        </button>
-
-        <button id='BusinessTools' class='Button'>
-
-            <h1 class='Title' >Business Tools</h1>
-
-            <img class='Icons' src='${ICONMODULE}suitcase.png'/>
         
         </button>
 
@@ -113,9 +104,7 @@ export const USERACCOUNTPAGE=()=>{
 
         CLICKED('#Premium',()=>{STORE('','PremiumPath','Direct'),PREMIUMPAGE()});
 
-        CLICKED('#Community',()=>{COMMUNITYPAGE()});
-
-        CLICKED('#BusinessTools',()=>{BUSINESSTOOLSPAGE()});
+        CLICKED('#Community',()=>{MOVIEREQUESTPAGE()});
 
         CLICKED('#Library',()=>{LIBRARYPAGE()});
 
