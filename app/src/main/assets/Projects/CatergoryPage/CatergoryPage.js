@@ -1,8 +1,10 @@
 import { CATERGORIESPATH, CATERGORYAPI } from "../../Modules/Module.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js";
+import { MONITORING } from "../Monitoring/Monitoring.js";
 import { MOVIESSELECTIONPAGE } from "../MoviesSelectionPage/MovieSelectionPage.js";
 
 export const CATERGORYPAGE=()=>{
+    MONITORING('User At Catergory Page');
     BACKHEADERWIDGET(()=>{HOMEPAGE()},`
         <h1 class='Profile'>Catergory</h1>
     `,
@@ -21,6 +23,7 @@ export const CATERGORYPAGE=()=>{
                     EVENT(HOLDER,'click',()=>{
                         STORE('','Path','CATERGORYPAGE');
                         STORE('local','CurrentSection',element.Sections);
+                        MONITORING('User Selects ' + element.Sections +'Section' );
                         MOVIESSELECTIONPAGE();
                     })    
                     ADD(ELEMENT,HOLDER);

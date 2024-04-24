@@ -45,6 +45,8 @@ export const MOVIESSELECTIONPAGE=()=>{
                     EVENT(HOLDER,'click',()=>{
 
                         STORE('','MovieData',JSON.stringify(element));
+
+                        MONITORING('User Selects ' + element.MovieName +'From'+ localStorage.getItem('CurrentSection')+ 'Section' );
     
                         MOVIESDETAILSPAGE();
                         
