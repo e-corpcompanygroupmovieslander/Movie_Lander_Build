@@ -98,7 +98,7 @@ export const MOVIESDETAILSPAGE=()=>{
         DECLARATION('.brown',(ELEMENT)=>{
             STORE('','PremiumPath','MoviesDetails');
             CLICKED('.brown',()=>{
-                MONITORING("Movie Data" + data)
+                MONITORING("Movie Data" + JSON.stringify(data))
                 CONDITION(data.Subscription ,
                 ()=>CONDITION(data.Subscription && localStorage.getItem('Premium'),
                     ()=>CHECK(data.Subscription,(result)=>{
