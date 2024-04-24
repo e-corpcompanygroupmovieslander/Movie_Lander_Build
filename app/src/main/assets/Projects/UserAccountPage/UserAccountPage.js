@@ -28,7 +28,7 @@ export const USERACCOUNTPAGE=()=>{
 
             <h1 class='UserName'>${data.UserName}</h1>
 
-            <img id='UserSettingsAccount' class='UserSettingsImage' src='${ICONMODULE}setting.png'/>
+            <h2 id='UserSettingsAccount' class='UserSettingsImage' >Basic</h2>
                 
         </div>
 
@@ -97,6 +97,13 @@ export const USERACCOUNTPAGE=()=>{
         </button>
 
     `);
+
+        DECLARATION('#UserSettingsAccount',(ELEMENT)=>{
+            CONDITION(localStorage.getItem('Premium'),
+                ()=>DISPLAY(ELEMENT,'Premium'),
+                ()=>DISPLAY(ELEMENT,'Basic')
+            )
+        })
         
         CLICKED('#UserSettingsAccount',()=>{ACCOUNTSETTINGSPAGE()});
 
