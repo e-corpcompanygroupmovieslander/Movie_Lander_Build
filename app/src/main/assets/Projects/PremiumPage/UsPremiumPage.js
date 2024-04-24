@@ -1,4 +1,5 @@
 import { ACCOUNTSETTINGSPAGE } from "../AccountSettingsPage/AccountSettingsPage.js";
+import { MONITORING } from "../Monitoring/Monitoring.js";
 import { MOVIESDETAILSPAGE } from "../MoviesDetailsPage/MoviesDetailsPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 import { PAYMENTPAGE } from "./PaymentPage.js";
@@ -7,6 +8,8 @@ import { PESAPAL } from "./PesaPal.js";
 
 export const USPREMIUMPAGE=()=>{
 
+    MONITORING('User At Us Premium Page')
+
     REMOVESTORE('', 'Link');
 
     DEJSON('local','UserData',(data)=>{
@@ -14,12 +17,12 @@ export const USPREMIUMPAGE=()=>{
         let NAVIGATOR='';
 
         CONDITION(sessionStorage.getItem('PremiumPath') === 'MoviesDetails' ,
-        ()=>NAVIGATOR=MOVIESDETAILSPAGE,
-        ()=>CONDITION(sessionStorage.getItem('PremiumPath') === 'SETTINGS',
-            ()=>NAVIGATOR=ACCOUNTSETTINGSPAGE,
-            ()=>NAVIGATOR=USERACCOUNTPAGE
+            ()=>NAVIGATOR=MOVIESDETAILSPAGE,
+            ()=>CONDITION(sessionStorage.getItem('PremiumPath') === 'SETTINGS',
+                ()=>NAVIGATOR=ACCOUNTSETTINGSPAGE,
+                ()=>NAVIGATOR=USERACCOUNTPAGE
+            )
         )
-    )
 
         BACKHEADERWIDGET(()=>{NAVIGATOR()},
         `
@@ -32,7 +35,7 @@ export const USPREMIUMPAGE=()=>{
 
                 <h1 class='PremuimTitle'>Daily</h1>
 
-                <h1 class='Price'>1USD</h1>
+                <h1 class='Price'>1 USD</h1>
 
                 <h2 class='PremiumFeatures'>Features</h2>
 
@@ -124,6 +127,8 @@ export const USPREMIUMPAGE=()=>{
         DECLARATION('#UGDaily',(ELEMENT)=>{
         
             EVENT(ELEMENT,'click',()=>{
+
+                MONITORING('User Clicks Daily Payment Of USA');
     
                 DECLARATION('#UGWeekly',(ELEMENT)=>{
     
@@ -152,10 +157,14 @@ export const USPREMIUMPAGE=()=>{
                     STORE('','Link',data)
     
                     if (sessionStorage.getItem('Link')) {
+
+                        MONITORING('User Taken To Payments Page for Daily USD Payment');
                         
                         PAYMENTPAGE();
     
                     } else {
+
+                        MONITORING('Error Happened During USD Daily Payment');
                         
                         MESSAGE('Something Went Wrong ');
     
@@ -170,6 +179,8 @@ export const USPREMIUMPAGE=()=>{
         DECLARATION('#UGWeekly',(ELEMENT)=>{
     
             EVENT(ELEMENT,'click',()=>{
+
+                MONITORING('User Wants To Pay Weekly USD ');
     
                 DECLARATION('#UGDaily',(ELEMENT)=>{
     
@@ -197,10 +208,14 @@ export const USPREMIUMPAGE=()=>{
                     STORE('','Link',data)
     
                     if (sessionStorage.getItem('Link')) {
+
+                        MONITORING('User Now Redirected To Pay Weekly USD ');
                         
                         PAYMENTPAGE();
     
                     } else {
+
+                        MONITORING('Weekly Payment Error ');
                         
                         MESSAGE('Something Went Wrong ');
     
@@ -215,6 +230,8 @@ export const USPREMIUMPAGE=()=>{
         DECLARATION('#UGMonthly',(ELEMENT)=>{
     
             EVENT(ELEMENT,'click',()=>{
+
+                MONITORING('User Wants To Pay Monthly USD Payment ');
     
                 DECLARATION('#UGDaily',(ELEMENT)=>{
     
@@ -237,15 +254,19 @@ export const USPREMIUMPAGE=()=>{
     
                 LOADER(ELEMENT)
     
-                PESAPAL(`https://e-corpcompanygroupmovieslander.github.io/Movie-Lander-Build/app/src/main/assets/Pages/PaymentPages/MonthlyPayment/index.html?MyData=${localStorage.getItem('User')}`,20,'USD',(data)=>{
+                PESAPAL(`https://e-corpcompanygroupmovieslander.github.io/Movie-Lander-Build/app/src/main/assets/Pages/PaymentPages/MonthlyPayment/index.html?MyData=${localStorage.getItem('User')}`,25,'USD',(data)=>{
     
                 STORE('','Link',data)
     
                     if (sessionStorage.getItem('Link')) {
+
+                        MONITORING('User Now Redirected To Pay Monthly USD ');
                         
                         PAYMENTPAGE();
     
                     } else {
+
+                        MONITORING('Error With Monthly Payment USD ');
                         
                         MESSAGE('Something Went Wrong ');
     
@@ -261,6 +282,8 @@ export const USPREMIUMPAGE=()=>{
         DECLARATION('#UGYearly',(ELEMENT)=>{
     
             EVENT(ELEMENT,'click',()=>{
+
+                MONITORING('User About To Pay Yearly USD Payment ');
     
                 DECLARATION('#UGDaily',(ELEMENT)=>{
     
@@ -288,10 +311,14 @@ export const USPREMIUMPAGE=()=>{
                 STORE('','Link',data)
     
                     if (sessionStorage.getItem('Link')) {
+
+                        MONITORING('User Now Redirected To Pay Yearly USD ');
                         
                         PAYMENTPAGE();
     
                     } else {
+
+                        MONITORING('Yearly USD Payment Error');
                         
                         MESSAGE('Something Went Wrong ');
     

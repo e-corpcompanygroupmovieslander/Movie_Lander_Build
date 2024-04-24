@@ -4,6 +4,8 @@ import { PREMIUMPAGE } from "./PremiumPage.js";
 
 export const PAYMENTPAGE = () => {
 
+    MONITORING('User At Payment Page')
+
     BACKHEADERWIDGET(()=>{PREMIUMPAGE()},
     `
         <h1 class='Profile'>Payments</h1>
@@ -40,7 +42,7 @@ export const PAYMENTPAGE = () => {
 
     CLICKED('.forestgreen',()=>{
 
-        MONITORING('Wants to Pay')
+        MONITORING('Wants to Pay For Their Package')
 
         DECLARATION('#HomePaymentDiv',(ELEMENT)=>{
             DISPLAY(ELEMENT,`

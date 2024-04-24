@@ -1,4 +1,5 @@
 import { ACCOUNTSETTINGSPAGE } from "../AccountSettingsPage/AccountSettingsPage.js";
+import { MONITORING } from "../Monitoring/Monitoring.js";
 import { MOVIESDETAILSPAGE } from "../MoviesDetailsPage/MoviesDetailsPage.js";
 import { USERACCOUNTPAGE } from "../UserAccountPage/UserAccountPage.js"
 import { PAYMENTPAGE } from "./PaymentPage.js";
@@ -6,6 +7,8 @@ import { PESAPAL } from "./PesaPal.js";
 
 
 export const UGANDANPREMIUMPAGE=()=>{
+
+    MONITORING('User At Ugandan Premium Page')
 
     REMOVESTORE('', 'Link');
 
@@ -124,6 +127,8 @@ export const UGANDANPREMIUMPAGE=()=>{
         DECLARATION('#UGDaily',(ELEMENT)=>{
         
             EVENT(ELEMENT,'click',()=>{
+
+                MONITORING('User Clicks Daily Payment Of Ugandan');
     
                 DECLARATION('#UGWeekly',(ELEMENT)=>{
     
@@ -152,10 +157,14 @@ export const UGANDANPREMIUMPAGE=()=>{
                     STORE('','Link',data)
     
                     if (sessionStorage.getItem('Link')) {
+
+                        MONITORING('User Taken To Payments Page for Daily Ugandan Payment');
                         
                         PAYMENTPAGE();
     
                     } else {
+
+                        MONITORING('Error Happened During Ugandan Daily Payment');
                         
                         MESSAGE('Something Went Wrong ');
     
@@ -170,6 +179,8 @@ export const UGANDANPREMIUMPAGE=()=>{
         DECLARATION('#UGWeekly',(ELEMENT)=>{
     
             EVENT(ELEMENT,'click',()=>{
+
+                MONITORING('User Wants To Pay Weekly Ugandan ');
     
                 DECLARATION('#UGDaily',(ELEMENT)=>{
     
@@ -197,10 +208,14 @@ export const UGANDANPREMIUMPAGE=()=>{
                     STORE('','Link',data)
     
                     if (sessionStorage.getItem('Link')) {
+
+                        MONITORING('User Now Redirected To Pay Weekly Ugandan ');
                         
                         PAYMENTPAGE();
     
                     } else {
+
+                        MONITORING('Weekly Payment Error ');
                         
                         MESSAGE('Something Went Wrong ');
     
@@ -215,6 +230,8 @@ export const UGANDANPREMIUMPAGE=()=>{
         DECLARATION('#UGMonthly',(ELEMENT)=>{
     
             EVENT(ELEMENT,'click',()=>{
+
+                MONITORING('User Wants To Pay Monthly Ugandan Payment ');
     
                 DECLARATION('#UGDaily',(ELEMENT)=>{
     
@@ -242,10 +259,14 @@ export const UGANDANPREMIUMPAGE=()=>{
                 STORE('','Link',data)
     
                     if (sessionStorage.getItem('Link')) {
+
+                        MONITORING('User Now Redirected To Pay Monthly Ugandan ');
                         
                         PAYMENTPAGE();
     
                     } else {
+
+                        MONITORING('Error With Monthly Payment ');
                         
                         MESSAGE('Something Went Wrong ');
     
@@ -261,6 +282,8 @@ export const UGANDANPREMIUMPAGE=()=>{
         DECLARATION('#UGYearly',(ELEMENT)=>{
     
             EVENT(ELEMENT,'click',()=>{
+
+                MONITORING('User About To Pay Yearly Ugandan Payment ');
     
                 DECLARATION('#UGDaily',(ELEMENT)=>{
     
@@ -288,10 +311,14 @@ export const UGANDANPREMIUMPAGE=()=>{
                 STORE('','Link',data)
     
                     if (sessionStorage.getItem('Link')) {
+
+                        MONITORING('User Now Redirected To Pay Yearly Ugandan ');
                         
                         PAYMENTPAGE();
     
                     } else {
+
+                        MONITORING('Yearly Ugandan Payment Error');
                         
                         MESSAGE('Something Went Wrong ');
     
