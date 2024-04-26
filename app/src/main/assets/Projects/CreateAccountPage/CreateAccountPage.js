@@ -124,11 +124,7 @@ export const CREATEACCOUNTPAGE=()=>{
                                                             ORIGIN(ELEMENT,'Create Account')
                                                         }),
                                                         ()=>CHECK(data,(result)=>{
-                                                            var EMAILDATA = {
-                                                                recipientEmail: USEREMAIL.value ,
-                                                                subject: "Movie Lander Registration",
-                                                                body: `Dear ${USERNAME.value},\n\nThank you for using Movie Lander. To complete your registration, please use the following verification code:\n\nVerification Code: ${secretCode}\n\nThis code will expire in 30 minutes. If you did not request this code, please ignore this email.\n\nBest regards, Movie Lander Team\n\n https://www.e-corpcompanygroup.com`
-                                                            };
+                                                            
                                                             POSTPACKAGE(EMAILSENDERAPI,'no-cors',EMAILDATA,(data)=>{
                                                                 STORE('local','UserData',JSON.stringify(UserData))
                                                                 EMAILVERIFICATIONPAGE();

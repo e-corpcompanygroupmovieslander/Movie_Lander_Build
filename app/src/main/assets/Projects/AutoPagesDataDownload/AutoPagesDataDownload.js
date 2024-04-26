@@ -1,5 +1,5 @@
 import { CONNECTION } from "../../Connection/Connection.js"
-import { APPLOCKAPI, CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, HELPTEXT, LOGINAPI, MOREAPPSAPI, MTNPREMIUMPAYGET, PARENTALCONTROLTEXT, PRIVACYTEXT } from "../../Modules/Module.js"
+import { APPLOCKAPI, CATERGORYAPI, DELETEACCOUNTGET, FREEMOVIESAPI, HELPTEXT, LOGINAPI, MOREAPPSAPI, MOVIECOMMENTS, MTNPREMIUMPAYGET, PARENTALCONTROLTEXT, PRIVACYTEXT } from "../../Modules/Module.js"
 
 const AUTOAPPDATADOWNLOAD=()=>{
     //CATERGORIES DATA
@@ -100,5 +100,15 @@ const AUTOAPPDATADOWNLOAD=()=>{
             });
         });    
     });
+
+
+    //COMMENTS
+    GETPACKAGE(MOVIECOMMENTS,'cors',(data)=>{
+        JSONIFICATION(data,(data)=>{
+            STORE('local','Comments',data)
+        })
+    })
+    
+
 }
 export{AUTOAPPDATADOWNLOAD}
