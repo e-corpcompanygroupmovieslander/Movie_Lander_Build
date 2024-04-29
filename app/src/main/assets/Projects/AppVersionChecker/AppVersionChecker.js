@@ -4,7 +4,9 @@ export const APPVERSIONCHECKER=()=>{
 
     DEJSON('local','UserData',(data)=>{
 
-        CONDITION(data.AppVersion === localStorage.getItem('AppVersion') ,
+        const CURRENTVERSION='0.0.5';
+
+        CONDITION( CURRENTVERSION === localStorage.getItem('AppVersion') ,
         
             ()=>console.log('SameVersion'),
             ()=>CHECK(localStorage.getItem('AppVersion'),(result)=>{
