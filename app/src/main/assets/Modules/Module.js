@@ -34,7 +34,7 @@ const Termslinks='https://e-corpcompanygroupmovieslander.github.io/MovieLander/T
 
 const ADVERTSPATH=`https://e-corpcompanygroupmovieslander.github.io/MovieLander/AdvertsImages/`;
 
-const CREATEACCOUNTAPI=`https://script.google.com/macros/s/AKfycbyxZa-t073EY1dMSxIUXuiXD9B03gcgaJyGTpXvV8qpRPG6TGMtk6WKocQ8Rsf0aXEF/exec`;
+const CREATEACCOUNTAPI=`https://script.google.com/macros/s/AKfycbwugS6RXRjyOgOXDQRqaEKx1unt7j5Mbvnqevqc8NTB3o8DXzyjvPxS_Uzj37zz1zmd/exec`;
 
 const MTNPREMIUMPAY=`https://script.google.com/macros/s/AKfycbwgGvYpjnmCe3h6SKdyIlKajs5fuN2287dXQqQ2VWTKfNMBY1mIKHlSDai8PY__u-pb/exec`;
 
