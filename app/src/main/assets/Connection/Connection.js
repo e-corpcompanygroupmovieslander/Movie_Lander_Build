@@ -9,6 +9,8 @@ const CONNECTION = () => {
 
     HIDENAVIGATIONBAR();
 
+    AUTOAPPDATADOWNLOAD();
+
     CONDITION(localStorage.getItem('AppLock'),
         ()=>APPLOCKDISPLAY(),
         ()=>CONDITION(localStorage.getItem('User'),
@@ -22,8 +24,6 @@ const CONNECTION = () => {
             )
         )
     )
-
-    AUTOAPPDATADOWNLOAD();
 
 };
 
