@@ -1,4 +1,6 @@
 import { ICONMODULE } from "../../Modules/Module.js"
+import { APPVERSIONCHECKER } from "../AppVersionChecker/AppVersionChecker.js";
+import { APPVERSIONUPDATER } from "../AppVersionChecker/AppVersionUpdater.js";
 import { AUTOREMOVEACCOUNT } from "../AutoRemoveAccout/AutoRemoveAccount.js";
 import { CATERGORYPAGE } from "../CatergoryPage/CatergoryPage.js";
 import { FREEWATCHPAGE } from "../FreeWatchPage/FreeWatchPage.js";
@@ -19,6 +21,8 @@ import { NONPARENTALCONTROLSECTION } from "./NonParentalControl.js";
 import { PARENTALCONTROLSECTION } from "./ParentalControlSection.js";
 
 export const  HOMEPAGE=()=>{
+
+    APPVERSIONUPDATER();
 
     MONITORING('User At Home Page');
 
@@ -111,5 +115,7 @@ export const  HOMEPAGE=()=>{
     CLICKED('.CatergoryPage',()=>{ MONITORING('User Clicked Catergory Page'),CATERGORYPAGE()});
     CLICKED('.FreeWatch',()=>{MONITORING('User Clicked Free Movies Page'),FREEWATCHPAGE()});
     CLICKED('.UserAccount',()=>{MONITORING('User Clicked User Account Page'),USERACCOUNTPAGE()});
+
+    APPVERSIONCHECKER();
 
 }
