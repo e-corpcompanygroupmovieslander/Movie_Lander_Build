@@ -1,5 +1,5 @@
 import { CONNECTION } from "../../Connection/Connection.js";
-import { DELETEACCOUNTPOLICY, DELETEACCOUNTPOST, EMAILSENDERAPI, ICONMODULE } from "../../Modules/Module.js";
+import { DELETEACCOUNTPOLICY, EMAILSENDERAPI, ICONMODULE } from "../../Modules/Module.js";
 import { ABOUTMEPAGE } from "../AboutMePage/AboutMePage.js"
 
 export const DELETEACCOUNTPAGE=()=>{
@@ -28,13 +28,33 @@ export const DELETEACCOUNTPAGE=()=>{
             ()=>DEJSON('local','UserData',(data)=>{
                 DECLARATION('.DeleteButton',(ELEMENT)=>{
                     LOADER(ELEMENT);
-                    const DATA={
-                        "User":data.SecretCode,
-                        "Message":DELETEINPUT.value,
-                        "Terms":"ON",
-                        "Date":new Date()
-                    }
-                    POSTPACKAGE(DELETEACCOUNTPOST,'cors',DATA,(users)=>{
+                     //Get Users Data for Updating
+                    function getBrowserVersion() { return navigator.appVersion; }
+
+                    const UserData = {
+                        "UserName": data.UserName,
+                        "Email": data.Email,
+                        "Password": data.Password,
+                        "Password2": data.Password2,
+                        "Date": data.Date,
+                        "Telephone": data.Telephone,
+                        "Location": data.Location,
+                        "CreatedOn": data.CreatedOn,
+                        "SecretCode": data.SecretCode,
+                        "Premium":data.Premium ,
+                        "AppVersion": localStorage.getItem('AppVersion'),
+                        "Device": getBrowserVersion(),
+                        "AccountDeleteMessage":DELETEINPUT.value,
+                        "AccountDeleted":"TRUE",
+                        "AccountDeletedDate":new Date(),
+                        "AppLockPin":data.AppLockPin,
+                        "ParenralControlPin":data.ParenralControlPin,
+                        "Active":"OFF",
+                        "LastActiveDate":new Date()
+                    };
+                    const UPDATELINK='https://script.google.com/macros/s/AKfycbwtBSaG-FZi2t5Hdi4xGu0TpC2pQiBmHAQ0ZgfRKERsVMUrlrV7TqfcUhInC2ywQwFo/exec';
+
+                    POSTPACKAGE(UPDATELINK,'no-cors',UserData,(users)=>{
                         var EMAILDATA = {
                             recipientEmail: data.Email,
                             subject: "Movie Lander Account Deletion",
@@ -43,7 +63,7 @@ export const DELETEACCOUNTPAGE=()=>{
                         POSTPACKAGE(EMAILSENDERAPI,'no-cors',EMAILDATA,(user)=>{
                             MESSAGE('User Account Deleted');
                             setTimeout(() => {
-                                CLEARDATA()
+                                localStorage.clear();
                                 CONNECTION();    
                             }, 2000);
                         })
