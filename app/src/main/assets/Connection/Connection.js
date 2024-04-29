@@ -5,12 +5,9 @@ import { HOMEPAGE } from "../Projects/HomePage/HomePage.js";
 import { LOGINPAGE } from "../Projects/LoginPage/LoginPage.js";
 import { MONITORING } from "../Projects/Monitoring/Monitoring.js";
 
-const CONNECTION = () => {
-
+export const CONNECTION = () => {
     HIDENAVIGATIONBAR();
-
     AUTOAPPDATADOWNLOAD();
-
     CONDITION(localStorage.getItem('AppLock'),
         ()=>APPLOCKDISPLAY(),
         ()=>CONDITION(localStorage.getItem('User'),
@@ -24,8 +21,4 @@ const CONNECTION = () => {
             )
         )
     )
-
 };
-
-
-export { CONNECTION };
