@@ -15,8 +15,8 @@ APPSTART=()=>{
                     <img id='OfflineImage' class='LoadingIcon' src='${LOADERICON}'/>
                     <button class='forestgreen'>Please Wait</button>
                 `);
-                EXTERNALCSS(`../Connection/Connection.css`);
-                MODULE('../../Connection/Connection.js','CONNECTION',(CONNECTION) => {CONNECTION()});
+                EXTERNALCSS(APPCSSPATH);
+                MODULE(APPPATH,'CONNECTION',(CONNECTION) => {CONNECTION()});
             }),
             ()=>CHECK(data,(result)=>{
                 WIDGET(` 
