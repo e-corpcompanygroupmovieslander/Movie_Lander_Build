@@ -16,14 +16,14 @@ export const LOGINUSERPAGE=()=>{
                                     ()=>CHECK(user,(result)=>{
                                         CONDITION(user.AccountDeleted,
                                             ()=>CHECK(user,(result)=>{
-                                                MESSAGE('Something Went Wrong')
-                                                ORIGIN(BUTTON,'Login')
+                                                MESSAGE('Something Went Wrong');
+                                                ORIGIN(BUTTON,'Login');
                                             }),
                                             ()=>CHECK(user,(result)=>{
                                                 JSONIFICATION(result,(data)=>{
                                                     STORE('local','User',data.SecretCode);
                                                     STORE('local','UserData',data);
-                                                    HOMEPAGE()
+                                                    HOMEPAGE();
                                                 })
                                             }),
                                         
