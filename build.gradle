@@ -14,10 +14,10 @@ task clean(type: Delete) {
 task writeDataToJSClean {
     doLast {
         // Data for clean process
-        def cleanData = "ENVIRONMENT('Test');STORE('local','FrameWork','Advance-Native');STORE('local','FrameWorkVersion','0.0.1');STORE('local','Device','Android');ZOOM();CLICKED('body',()=>{HIDENAVIGATIONBAR()});"
+        def cleanData = "ENVIRONMENT('Test');ZOOM();\nSTORE('local','FrameWork','Advance-Native');\nSTORE('local','FrameWorkVersion','0.0.1');\nSTORE('local','Device','Android');\nCLICKED('body',()=>{HIDENAVIGATIONBAR()});"
 
         // Specify the path to the JS file for clean
-        def jsFile = file('/app/src/main/assets/Components/Environment.js')
+        def jsFile = file('/app/src/main/assets/Components/tools/Environment.js')
 
         // Write data to the JS file for clean
         jsFile.text = cleanData
@@ -28,10 +28,10 @@ task writeDataToJSClean {
 task writeDataToJSBuild {
     doLast {
         // Data for build process
-        def buildData = "ENVIRONMENT('');STORE('local','FrameWork','Advance-Native');STORE('local','FrameWorkVersion','0.0.1');STORE('local','Device','Android');ZOOM();CLICKED('body',()=>{HIDENAVIGATIONBAR()});"
+        def buildData = "ENVIRONMENT('');ZOOM();\nSTORE('local','FrameWork','Advance-Native');\nSTORE('local','FrameWorkVersion','0.0.1');\nSTORE('local','Device','Android');\nCLICKED('body',()=>{HIDENAVIGATIONBAR()});"
 
         // Specify the path to the JS file for build
-        def jsFile = file('/app/src/main/assets/Components/Environment.js')
+        def jsFile = file('/app/src/main/assets/Components/tools/Environment.js')
 
         // Write data to the JS file for build
         jsFile.text = buildData

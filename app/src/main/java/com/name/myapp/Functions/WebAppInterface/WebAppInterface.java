@@ -1,4 +1,4 @@
-package com.movie_lander;
+package com.advance_native;
 
 import android.content.Context;
 import android.webkit.JavascriptInterface;
@@ -9,6 +9,7 @@ public class WebAppInterface {
     private NavigationBarHider navigationBarHider;
     private NavigationBarShower navigationBarShower;
     private ContactsInterface contactsInterface;
+    private NetworkManager networkManager;
 
     public WebAppInterface(Context context) {
         vibrationInterface = new VibrationInterface(context);
@@ -16,6 +17,7 @@ public class WebAppInterface {
         navigationBarHider = new NavigationBarHider((MainActivity) context); 
         navigationBarShower = new NavigationBarShower((MainActivity) context); 
         contactsInterface = new ContactsInterface(context);
+        networkManager = new NetworkManager(context);
     }
 
     @JavascriptInterface
@@ -41,5 +43,10 @@ public class WebAppInterface {
     @JavascriptInterface
     public String getContacts() {
         return contactsInterface.getContacts();
+    }
+
+    @JavascriptInterface
+    public boolean isNetworkAvailable() {
+        return networkManager.isNetworkAvailable();
     }
 }

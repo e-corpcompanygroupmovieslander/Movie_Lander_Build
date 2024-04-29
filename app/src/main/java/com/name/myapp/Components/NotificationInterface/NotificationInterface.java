@@ -1,4 +1,4 @@
-package com.movie_lander;
+package com.advance_native;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
