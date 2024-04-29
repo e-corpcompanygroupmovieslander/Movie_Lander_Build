@@ -22,7 +22,7 @@ export const USERACCOUNTPAGE=()=>{
     `
         <div id='ProfileImageHolder' class='View'>
 
-            <img class='ProfileImage' src='../Library/Images/app_icon.png'/>
+            <img class='ProfileImage' src='${IMAGESPATH}app_icon.png'/>
                     
             <button class='About'>About</button>
 
@@ -103,30 +103,6 @@ export const USERACCOUNTPAGE=()=>{
                 ()=>DISPLAY(ELEMENT,'Premium'),
                 ()=>DISPLAY(ELEMENT,'Basic')
             )
-        })
-
-        CLICKED('.ProfileImage',()=>{
-            FILES((data)=>{
-
-                const IMAGEUPLOAD='https://script.google.com/macros/s/AKfycbw94hKoGaXEpa5VEphPCAuLqRYLZc_pSUGNtkfhbB_9eUx6O08ZkjZvp1MRuPuVrINu/exec';
-
-                fetch(IMAGEUPLOAD,{
-                    method:"Post",
-                    body:JSON.stringify({base64Data:data})
-                })
-
-                .then(res =>res.json ())
-
-                .then(data =>{
-                    
-                    DECLARATION('.ProfileImage',(ELEMENT)=>{
-                        ELEMENT.src=data.fileUrl;
-                    })
-
-                } )
-
-                .catch(error =>{console.log(error)} )
-            })
         })
         
         CLICKED('#UserSettingsAccount',()=>{ACCOUNTSETTINGSPAGE()});
