@@ -48,13 +48,13 @@
 
                 <!-- Define the scheme, host, and path for your deep link -->
                 <data android:scheme="http"
-                 android:host="*" 
-                 android:path="/app/src/main/assets/App/index.html"
+                 android:host="e-corpcompanygroupmovieslander.github.io" 
+                 android:path="/Movie_Lander_Build/app/src/main/assets/App/index.html"
                 />
 
                 <data android:scheme="https"
-                 android:host="*"
-                 android:path="/app/src/main/assets/App/index.html"
+                 android:host="e-corpcompanygroupmovieslander.github.io"
+                 android:path="/Movie_Lander_Build/app/src/main/assets/App/index.html"
                 />
 
             </intent-filter>

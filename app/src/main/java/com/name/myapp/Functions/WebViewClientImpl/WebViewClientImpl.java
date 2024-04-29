@@ -1,4 +1,4 @@
-package com.advance_native;
+package com.movie_lander;
 
 import android.content.Intent;
 import android.net.Uri;

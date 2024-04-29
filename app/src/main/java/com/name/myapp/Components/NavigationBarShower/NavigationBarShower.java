@@ -1,4 +1,4 @@
-package com.advance_native;
+package com.movie_lander;
 
 import android.app.Activity;
 import android.view.View;

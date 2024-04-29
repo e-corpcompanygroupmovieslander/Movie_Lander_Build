@@ -2,6 +2,8 @@ APPMODE('','','#121212');
 
 STORE('local','AppName','Movie Lander');
 
+STORE('local','AppVersion','0.0.5');
+
 APPSTART=()=>{
     NETWORKSTATE((data)=>{
         CONDITION(data === true ,
@@ -17,7 +19,6 @@ APPSTART=()=>{
                 MODULE(APPPATH,'CONNECTION',(CONNECTION) => {CONNECTION()});
             }),
             ()=>CHECK(data,(result)=>{
-
                 WIDGET(` 
                     <img class='AppLogo' src='${IMAGESPATH}app_icon.png'/>
                     <h1 class='LoaderMessage'>Your Offline</h1>
@@ -30,7 +31,6 @@ APPSTART=()=>{
             })
         )
     })
-
 }
 
 APPSTART();
