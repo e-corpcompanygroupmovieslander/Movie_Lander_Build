@@ -8,9 +8,9 @@ export const LOGINPAGE=()=>{
 
         <img class='AppLogo' src='../Library/Images/app_icon.png'/>
 
-        <input class='Email' type='email' placeholder='Enter Email'/>
+        <input class='LoginEmail' type='email' placeholder='Enter Email'/>
 
-        <input class='Password' type='password' placeholder='Enter Password'/>
+        <input class='LoginPassword' type='password' placeholder='Enter Password'/>
 
         <h1 class='ForgotPassword'>Forgot Password? </h1>
 

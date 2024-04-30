@@ -1,4 +1,4 @@
-import { DELETEACCOUNTPOLICY, DELETEACCOUNTPOST, EMAILSENDERAPI, ICONMODULE, LOGINAPI } from "../../Modules/Module.js";
+import { DELETEACCOUNTPOLICY, DELETEACCOUNTPOST, EMAILSENDERAPI, ICONMODULE, LOGINAPI, UPDATELINK } from "../../Modules/Module.js";
 
 APPMODE(localStorage.getItem('AppColur'),'','#121212');
 APPCOLOR('','#dcdcdc')
@@ -30,13 +30,35 @@ CLICKED('.DeleteButton',()=>{
                     FINDER(data,'Email',DELETEINPUT.value,(user)=>{
                         CONDITION(user.Email === DELETEINPUT.value,
                             ()=>CHECK(user,(result)=>{
-                                const DATA={
-                                    "User":result.SecretCode,
-                                    "Message":'Requested To Delete From Google Play Store',
-                                    "Terms":"ON",
-                                    "Date":new Date()
+                                const UserData={
+                                    "AccountDeleteMessage":DELETEINPUT.value ,
+                                    "AccountDeleted": "True",
+                                    "AccountDeletedDate": new Date (),
+                                    "Active": "FALSE",
+                                    "AppLockPin": data.AppLockPin,
+                                    "AppVersion": data.AppVersion,
+                                    "CreatedOn": data.CreatedOn,
+                                    "Date": data.Date,
+                                    "Device": getBrowserVersion(),
+                                    "Email": data.Email,
+                                    "LastActiveDate": new Date (),
+                                    "Location": data.Location,
+                                    "ParentalControlPin": data.ParentalControlPin,
+                                    "Password": data.Password,
+                                    "Password2": data.Password2,
+                                    "Premium": data.Premium,
+                                    "PremiumDateExpiry": data.PremiumDateExpiry,
+                                    "PremiumDatePay": data.PremiumDatePay,
+                                    "PremiumMessage": data.PremiumMessage,
+                                    "PremiumNumber": data.PremiumNumber,
+                                    "PremiumType": data.PremiumType,
+                                    "SavedMovies":data.SavedMovies,
+                                    "SecretCode": data.SecretCode,
+                                    "Telephone": data.Telephone,
+                                    "UserData": data.UserData,
+                                    "UserName": data.UserName
                                 }
-                                POSTPACKAGE(DELETEACCOUNTPOST,'cors',DATA,(data)=>{
+                                POSTPACKAGE(UPDATELINK,'cors',UserData,(data)=>{
                                     var EMAILDATA = {
                                         recipientEmail: result.Email,
                                         subject: "Movie Lander Account Deletion",

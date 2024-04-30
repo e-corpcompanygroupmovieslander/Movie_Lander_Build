@@ -1,50 +1,78 @@
-import { DELETEACCOUNTGET, DEVICELOGINAPI, LOGINAPI } from "../../Modules/Module.js";
+import { LOGINAPI } from "../../Modules/Module.js";
 import { HOMEPAGE } from "../HomePage/HomePage.js";
 
 export const LOGINUSERPAGE=()=>{ 
-    const Email=document.querySelector('.Email');
-        const Password=document.querySelector('.Password');
-        const BUTTON=document.querySelector('.forestgreen');
-        CONDITION(Email.value,
-            ()=>CONDITION(Password.value,
-                ()=>CHECK(Password.value,(result)=>{
-                    LOADER(BUTTON);
-                    GETPACKAGE(LOGINAPI,'cors',(data)=>{
-                        FINDER(data,'Email',Email.value,(user)=>{
-                            CONDITION(user.Email === Email.value,
-                                ()=>CONDITION(user.Password === Password.value ,
+    
+    const EMAIL=document.querySelector('.LoginEmail');
+    const PASSWORD=document.querySelector('.LoginPassword');
+   
+    CONDITION(EMAIL.value,
+        ()=>CONDITION(PASSWORD.value,
+            ()=>DECLARATION('.forestgreen',(ELEMENT)=>{
+
+                LOADER(ELEMENT);
+
+                GETPACKAGE(LOGINAPI,'cors',(data)=>{
+
+                    FINDER(data,'Email',EMAIL.value,(user)=>{
+
+                        CONDITION(user.Email === EMAIL.value,
+
+                            ()=>CONDITION(user.Password === PASSWORD.value,
+
+                                ()=>CONDITION(user.AccountDeleted,
+
                                     ()=>CHECK(user,(result)=>{
-                                        CONDITION(user.AccountDeleted,
-                                            ()=>CHECK(user,(result)=>{
-                                                MESSAGE('Something Went Wrong');
-                                                ORIGIN(BUTTON,'Login');
-                                            }),
-                                            ()=>CHECK(user,(result)=>{
-                                                JSONIFICATION(result,(data)=>{
-                                                    STORE('local','User',data.SecretCode);
-                                                    STORE('local','UserData',data);
-                                                    HOMEPAGE();
-                                                })
-                                            }),
-                                        
-                                        )
+        
+                                        ORIGIN(ELEMENT,'Login');
+        
+                                        MESSAGE('Something Went Wrong');
+        
                                     }),
                                     ()=>CHECK(user,(result)=>{
-                                        MESSAGE('Wrong User Password')
-                                        ORIGIN(BUTTON,'Login')
+        
+                                        STORE('local','User',result.SecretCode);
+
+                                        JSONIFICATION(result,(data)=>{
+
+                                            STORE('local','UserData',data);
+
+                                            HOMEPAGE();
+
+                                        });
+        
                                     })
+                                
                                 ),
                                 ()=>CHECK(user,(result)=>{
-                                    MESSAGE('Wrong User Email')
-                                    ORIGIN(BUTTON,'Login')
+    
+                                    ORIGIN(ELEMENT,'Login');
+    
+                                    MESSAGE('Wrong User Password');
+    
                                 })
-                            )
-                        })
+                            
+                            ),
+                            ()=>CHECK(user,(result)=>{
+
+                                ORIGIN(ELEMENT,'Login');
+
+                                MESSAGE('Wrong User Email');
+
+                            })
+                        
+                        )
+
                     })
-                }),
-                ()=>MESSAGE('Enter User Password')
-            ),
-            ()=>MESSAGE('Enter User Email')
+
+                })
+
+            }),
+            ()=>MESSAGE('Enter User Password')
         )
+    ,
+        ()=>MESSAGE('Enter User Email')
+    )
+        
 }
 
