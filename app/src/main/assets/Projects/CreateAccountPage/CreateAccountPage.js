@@ -98,18 +98,7 @@ export const CREATEACCOUNTPAGE=()=>{
                                                 "SecretCode": secretCode,
                                                 "Premium": "TRUE",
                                                 "AppVersion": localStorage.getItem('AppVersion'),
-                                                "Device": {
-                                                    "Browser": {
-                                                        "Name": getBrowserName(),
-                                                        "Version": getBrowserVersion()
-                                                    },
-                                                    "OS": {
-                                                        "Name": getOSName(),
-                                                        "Version": getOSVersion()
-                                                    },
-                                                    "ScreenWidth": screen.width,
-                                                    "ScreenHeight": screen.height
-                                                }
+                                                "Device": getBrowserVersion()
                                             };
                                             // Functions to get browser and OS information
                                             function getBrowserName() { return navigator.appName; }
