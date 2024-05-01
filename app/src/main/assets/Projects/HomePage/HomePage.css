@@ -42,5 +42,6 @@
 
 .RoundFooter{
     background: #12121290;
+    height: 40px;
     border: 1px solid #dcdcdc10;
 }
