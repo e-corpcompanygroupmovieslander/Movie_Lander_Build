@@ -96,7 +96,7 @@ export const CREATEACCOUNTPAGE=()=>{
                                                 "Location": USERLOCATION.value,
                                                 "CreatedOn": new Date(),
                                                 "SecretCode": secretCode,
-                                                "Premium": "TRUE",
+                                                "Premium": "",
                                                 "AppVersion": localStorage.getItem('AppVersion'),
                                                 "Device": getBrowserVersion()
                                             };
