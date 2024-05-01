@@ -35,3 +35,11 @@
     display: inline-flex;
     background: transparent;
 }
+
+.AppHeader{
+    border: none;
+}
+
+.RoundFooter{
+    background: #121212;
+}
