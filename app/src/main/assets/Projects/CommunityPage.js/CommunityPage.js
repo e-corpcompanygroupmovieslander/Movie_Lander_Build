@@ -22,6 +22,12 @@ export const MOVIEREQUESTPAGE=()=>{
     `,''
     )
 
+    DECLARATION('.DeleteButton',(ELEMENT)=>{
+
+        STYLED(ELEMENT,'background','forestgreen')
+
+    })
+
     DECLARATION('#DeleteAccountPolicy',(ELEMENT)=>{
 
         GETPACKAGE(MOVIIEREQUESTEDAPI,'cors',(data)=>{
