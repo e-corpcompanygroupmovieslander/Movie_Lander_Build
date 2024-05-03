@@ -24,7 +24,7 @@ export const MOVIEREQUESTPAGE=()=>{
 
     DECLARATION('.DeleteButton',(ELEMENT)=>{
 
-        STYLED(ELEMENT,'background','forestgreen')
+        STYLED(ELEMENT,'background','forestgreen');
 
     })
 
@@ -50,27 +50,33 @@ export const MOVIEREQUESTPAGE=()=>{
 
                     ADD(ELEMENT,button)
 
-                    CHECK(element.Commentor === 'Admin',(result)=>{
+                    CONDITION(element.Commentor === !'Admin',
+                        ()=>CHECK(element,(result)=>{
 
-                        DECLARATION('.mytitle',(TITLE)=>{
-
-                            STYLED(TITLE,'color','teal')
-
-                            DECLARATION('.MyData',(TITLE)=>{
-
+                            DECLARATION('.mytitle',(TITLE)=>{
+    
                                 STYLED(TITLE,'color','teal')
     
+                                DECLARATION('.MyData',(TITLE)=>{
+    
+                                    STYLED(TITLE,'color','teal')
+        
+                                })
+    
                             })
+    
+                            DECLARATION('.myIcon',(TITLE)=>{
+    
+                                TITLE.src=`${ICONMODULE}profile.png`
+    
+                            })
+    
+                        } ),
+                        ()=>console.log('none')
+                    
+                    )
 
-                        })
 
-                        DECLARATION('.myIcon',(TITLE)=>{
-
-                            TITLE.src=`${ICONMODULE}profile.png`
-
-                        })
-
-                    } )
 
                 })
 
