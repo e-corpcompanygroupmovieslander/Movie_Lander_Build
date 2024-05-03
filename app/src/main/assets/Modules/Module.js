@@ -2,6 +2,12 @@ const ICONMODULE='https://e-corpcompanygroupmovieslander.github.io/Movie_Lander_
 
 const LOGINAPI='https://script.googleusercontent.com/macros/echo?user_content_key=FrRUgOqf3VCxfuxM0DsEGIbG4WJO7w6hzhW1PCjyGpXHv6s8QNW9KDYTTTgy6pgCb5mZAG3Xu4iV4iuzcr_Qqk6eBXABdmilm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnC6FucGMPJDFo1vc7xUPuBYfMxKKRVodlYbzMzCKjeT4wckk24qUxiiMTCfM25DUQrZEICugxLUlQqQnl1bAwtTGq09GeSHZLQ&lib=MVjI1E0k9FXqhcOE_zgy4zMSoMAbC-O1l';
 
+const CREATEACCOUNTAPI='https://script.google.com/macros/s/AKfycbxGVT_4s9mEW6G1a5CwvFWOzzqwwmrAbyx9RhI5f2gYOSFlpQIr3h-_cOdyl9-KxOKZ/exec';
+
+const UPDATELINK='https://script.google.com/macros/s/AKfycbxv_2WIwjQECROS5loEKDXajLmCTppX6MPRakrHztd6uUUbSkcgx6kDPBVAoN_Ytran/exec';
+
+const EMAILSENDERAPI='https://script.google.com/macros/s/AKfycbzmJa92eilnyZLZPKlBB3Oj9cyVy_xRb56TA2UbnTvDJBvppd8duPI_PgP-FUt0NElA/exec';
+
 const ADVERTSAPI='https://script.googleusercontent.com/macros/echo?user_content_key=_FX5ZQszJTEaomt8vckUHZsbkYxs62AufD0I_MQsx3CbUUTVaKGIsVxa81TnknHluq86maqwEExLI40xhzNBlzOz-3r4R4-bm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMm14i5DlW2geHNLZPLM52lioxem8eoSFBSyqk07ilFVS9WmMu3qXi9UzJNBBOXMuvjnNWGKIg_NChXL98fYqjXBIndAU2515A&lib=M6UN6W68Hd-KGliVyb1fwhsSoMAbC-O1l';
 
 const ANIMATIONAPI='https://script.googleusercontent.com/macros/echo?user_content_key=B9fqEvmtnCCHwDCnZ-5sSu71toz4MzoTxrf315wtfIEHuxNM5Cu_h2HZT9xGl4tilFh7FjC1IIzjdkEWCGntE5bEmMeoK2vDm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnOAkcG97VzAwakN9YYUAFyQRPRZikRmdTl4f6LGzID4_cBMsR6pkaEiX2dzEcjXvsk_3lB6gifItW4UIJWMKj6fcYTTmUjnljQ&lib=Mr4rCsHrrWb3rNW8Tj5K_BsSoMAbC-O1l';
@@ -34,8 +40,6 @@ const Termslinks='https://e-corpcompanygroupmovieslander.github.io/MovieLander/T
 
 const ADVERTSPATH=`https://e-corpcompanygroupmovieslander.github.io/MovieLander/AdvertsImages/`;
 
-const CREATEACCOUNTAPI=`https://script.google.com/macros/s/AKfycbwugS6RXRjyOgOXDQRqaEKx1unt7j5Mbvnqevqc8NTB3o8DXzyjvPxS_Uzj37zz1zmd/exec`;
-
 const MTNPREMIUMPAY=`https://script.google.com/macros/s/AKfycbwgGvYpjnmCe3h6SKdyIlKajs5fuN2287dXQqQ2VWTKfNMBY1mIKHlSDai8PY__u-pb/exec`;
 
 const MTNPREMIUMPAYGET=`https://script.googleusercontent.com/macros/echo?user_content_key=kYLhamRqUj16-aL1rdJ_VtjUbS7NaKp1k04OM4xZ29mCQO9sX8YRvyz_MNUVPM65knFD3UoNIC1vWmx_XngMw7UoyevKxdE6m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnB6qUJyy0-nbgIYqHld3JutVMF0GqNpXCKea3hKLtzI0ajmYczC2uRoJrh6ibkKg85PhHPJVPaEYuGB3l_Sk1xmqIpQGL8q6bw&lib=Mp7RLsbiuB3aWCASYYtzoScSoMAbC-O1l`;
@@ -64,8 +68,6 @@ const DEVICELOGINAPI='https://script.google.com/macros/s/AKfycbyAcmACiGB_9snZ0eC
 
 const DEVICELOGGEDINAPI='https://script.googleusercontent.com/macros/echo?user_content_key=Qbl5wchz8dSyx7tsqyoQ0T5Ctxep4aj8r4TtRN4ejJPTyJuqBZYmk266N7fcBWBE28to5xdpMD9OMBZART4FzXwDbaFFa2eCm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnEwrA_D7VNWaAuuWae8VeKj6aW_5NRJI0Hr3m1gJ2q9fumWUIPww0nF0W2d-cYDOtsMRm62VhTKcubTIlIs7tEG3EKWky9eiWdz9Jw9Md8uu&lib=MK6r_Kpo7IT2Bbfrm-N1YMezilWmV86UI';
 
-const EMAILSENDERAPI='https://script.google.com/macros/s/AKfycbx2ggoY0dlGnZwTnMvB7fsS09xhNsMKHWnI_ydFwRM1phACjVyFO-5ueBz9jsOpd_E/exec';
-
 const APPLOCKAPI='https://e-corpcompanygroupmovieslander.github.io/Movie_Lander_Build/app/src/main/assets/Projects/AppLockPage/AppLock.txt';
 
 const MOVIECOMMENTS='https://script.googleusercontent.com/macros/echo?user_content_key=_3oKMULiIWFJmozegu6rwD0dyRQGgdTSIt9GBt2HA77ga2OrifmOnixOHX8XjmbQdKdP4P5K61dCALFplYAI0515hS0VHeC2m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnNV2rXD589_JEJ30XxBvf_QgKDXY2bZLoRnIJ9FGJGPafPkblolgJiszgpm28GOBMjhaypgBOK84NL4r98NLZF-e5vBpJ-ueFtz9Jw9Md8uu&lib=MR-C6dZ5Kz2htDo2AXf6_I-zilWmV86UI';
@@ -74,6 +76,5 @@ const MOVIECOMMENTSPOST='https://script.google.com/macros/s/AKfycbw8PqJXQKKACLCN
 
 const MONITORINGPOST='https://script.google.com/macros/s/AKfycbzPZxosEYENrhFMl1CdghFHvKKYqDd_narQk62fINkfKc1RVmlBaie0qwY5c3pojtFf/exec';
 
-const UPDATELINK='https://script.google.com/macros/s/AKfycbwtBSaG-FZi2t5Hdi4xGu0TpC2pQiBmHAQ0ZgfRKERsVMUrlrV7TqfcUhInC2ywQwFo/exec';
 
 export{UPDATELINK,MONITORINGPOST,MOVIECOMMENTSPOST,MOVIECOMMENTS,APPLOCKAPI,EMAILSENDERAPI,DEVICELOGINAPI,DEVICELOGGEDINAPI,YOUTUBELINK,ROMANCEAPI,HORRORAPI,ADVENTUREAPI,ICONMODULE,LOGINAPI,ADVERTSAPI,ADVERTSPATH,ANIMATIONAPI,MOVIESPATH,SERIESAPI,MARATHONAPI,MOVIESAPI,CREATEACCOUNTAPI,PRIVACYTEXT,CATERGORYAPI,CATERGORIESPATH,UPDATEAPI,MTNPREMIUMPAY,MTNPREMIUMPAYGET,FREEMOVIESAPI,MOREAPPSAPI,DELETEACCOUNTGET,DELETEACCOUNTPOST,HELPTEXT,PARENTALCONTROLTEXT,DELETEACCOUNTPOLICY,MOVIIEREQUESTAPI,MOVIIEREQUESTEDAPI,NIGERIANAPI}
