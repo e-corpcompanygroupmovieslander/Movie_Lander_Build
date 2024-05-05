@@ -18,7 +18,7 @@ export const LOGINUSERPAGE=()=>{
 
                         CONDITION(user.Email === EMAIL.value,
 
-                            ()=>CONDITION(JSON.stringify(user.Password) === PASSWORD.value,
+                            ()=>CONDITION(JSON.stringify(user.Password) || user.Password === PASWORD.value,
 
                                 ()=>CONDITION(user.AccountDeleted,
 
