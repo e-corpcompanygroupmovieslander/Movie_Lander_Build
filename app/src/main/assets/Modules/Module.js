@@ -4,7 +4,7 @@ const LOGINAPI='https://script.googleusercontent.com/macros/echo?user_content_ke
 
 const CREATEACCOUNTAPI='https://script.google.com/macros/s/AKfycbxGVT_4s9mEW6G1a5CwvFWOzzqwwmrAbyx9RhI5f2gYOSFlpQIr3h-_cOdyl9-KxOKZ/exec';
 
-const UPDATELINK='https://script.google.com/macros/s/AKfycbxv_2WIwjQECROS5loEKDXajLmCTppX6MPRakrHztd6uUUbSkcgx6kDPBVAoN_Ytran/exec';
+const UPDATELINK='https://script.google.com/macros/s/AKfycbzJDLzOlQYfL-65FCy8Qzk8NX9cTSchs_ykOtxHMuqrnW6wJfPaxCTlkwBoPXM5QB3Y/exec';
 
 const EMAILSENDERAPI='https://script.google.com/macros/s/AKfycbzmJa92eilnyZLZPKlBB3Oj9cyVy_xRb56TA2UbnTvDJBvppd8duPI_PgP-FUt0NElA/exec';
 
