@@ -10,7 +10,7 @@ export const HOMESERIES=()=>{
                 REDUX(data,(element)=>{
                     CREATEELEMENT('div','AnimationsHolder',(ANIME)=>{
                         DISPLAY(ANIME,`
-                            <img class='AnimationsImage' src='${MOVIESPATH + element.MovieImage}'/>
+                            <img class='AnimationsImage' src='${MOVIESPATH +element.MovieImage}'/>
                         `)
                         EVENT(ANIME,'click',()=>{
                             STORE('','Path','HOMEPAGE');

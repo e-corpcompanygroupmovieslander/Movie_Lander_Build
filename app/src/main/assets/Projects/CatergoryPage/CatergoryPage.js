@@ -16,7 +16,7 @@ export const CATERGORYPAGE=()=>{
             REDUX(data,(element)=>{
                 CREATEELEMENT('div','FreeDivHolder',(HOLDER)=>{
                     DISPLAY(HOLDER,`
-                        <img class='MovieImage' src='${element.Image}'/>
+                        <img class='MovieImage' src='${CATERGORIESPATH+element.Image}'/>
                         <button class='CatergoryButton'>${element.Sections}</button>
                     `);
      

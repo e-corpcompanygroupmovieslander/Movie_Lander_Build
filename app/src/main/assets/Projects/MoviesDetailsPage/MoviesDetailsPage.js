@@ -15,7 +15,7 @@ export const MOVIESDETAILSPAGE=()=>{
 
         DISPLAY('',`
 
-            <img class='Movie_Image' src='${data.MovieImage}'/>
+            <img class='Movie_Image' src='${MOVIESPATH+data.MovieImage}'/>
 
             <header class='AppHeader'>
 
