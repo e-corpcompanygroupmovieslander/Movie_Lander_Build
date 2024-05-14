@@ -38,7 +38,7 @@ export const MOVIESSELECTIONPAGE=()=>{
 
                     DISPLAY(HOLDER,`
 
-                        <img class='MovieImage' src='${MOVIESPATH+element.MovieImage}'/>
+                        <img class='MovieImage' src='${element.MovieImage}'/>
                     
                     `);
 
